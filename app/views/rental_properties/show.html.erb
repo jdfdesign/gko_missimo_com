@@ -1,0 +1,132 @@
+<%# resource_cache(resource) do %>
+<% 
+options = @rental_property.content_options
+has_options = options.try(:any?)
+tags = []
+tags << realty_meta_tag("bedroom_count", @rental_property.bedroom_count)
+tags << realty_meta_tag("bathroom_count", @rental_property.bathroom_count)
+tags << realty_meta_tag("min_price", rental_min_price_value(@rental_property))
+if @rental_property.area.present? 
+  tags << realty_meta_tag("area", @rental_property.area.name)
+end
+if @rental_property.children_policy.present? 
+  tags << realty_meta_tag("children_policy", @rental_property.children_policy)
+end
+if @rental_property.pets_policy.present? 
+  tags << realty_meta_tag("pets_policy", @rental_property.pets_policy)
+end
+@rental_property.content_options.each do |o|
+  tags << "<strong>#{o.option_type.presentation}: </strong>#{o.option_value.presentation}"
+end
+%>
+<% content_for :page_header do -%>
+  <%= render "search" %>
+<% end %>
+<%= render "fb_share" %>
+<article class="property rental-property">
+  <!-- Header
+  ================================================== -->
+  <div class='row row-padded'>
+    <div class='col-sm-8'>
+      <h1><%= @rental_property.title %></h1>
+      <% if @rental_property.area.present? %>
+        <%= @rental_property.area.name %>
+        <%= @rental_property.area.city.name %>
+      <% end %>
+      <% if @rental_property.meta and @rental_property.meta.code.present? %>
+        <%= @rental_property.meta.code %>
+      <% end %>
+    </div>
+    <div class='col-sm-4'>
+        <p class="property-min-price"><%= t(:'realty.price_from') %><%= rental_min_price_value(@rental_property) %></p>
+        <p class="property-status"><%= "Status".html_safe %></p>
+    </div>
+  </div>
+  <div class='row row-padded'>
+    <div class='col-sm-12'>
+      <!-- Slider
+      ================================================== -->
+      <%= render "slider", :images => resource.images %>
+    </div>
+  </div>
+  
+  <div class='row'>
+    
+    <div class="col-sm-8 left-col">
+      
+      <div class='row row-padded'>
+        <div class='col-sm-12'>
+          <h3 class="h4 text-uppercase"><%= t(:'realty.specificities') %></h3>
+        </div>
+      </div>
+        <!-- Detail
+        ================================================== -->
+      <div class='row'>
+        <div class='col-sm-6'>
+          <ul class="nav stickers-nav">
+          <% @rental_property.stickers.translated.each do |s| %>
+              <li><%= link_to(s.name, s.public_url, :class => "btn btn-success") %></li>
+          <% end %>
+         </ul>
+        </div>
+        
+        <div class='col-sm-6'>
+          <%= tags.compact.join("<br/>").html_safe %>
+        </div>
+      </div>
+      
+      <hr class="hr-border-success">
+      
+      <!-- Description
+      ================================================== -->
+      <div class='row row-padded'>
+        <div class='col-sm-12'>
+          <%= render_copy_text(resource.body) %>
+            <% if @rental_property.meta and @rental_property.meta.video_url.present? %>
+              <br/>
+              <div class="embed-responsive embed-responsive-16by9 hidden-print">
+                <iframe src="//player.vimeo.com/video/<%= @rental_property.meta.video_url %>"></iframe>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+      
+      <hr class="hr-border-success">
+      
+      <!-- Rates
+      ================================================== -->
+      <div class='row row-padded'>
+        <div class='col-sm-12'>
+          <h3 class="h4 text-uppercase"><%= t(:'rates') %></h3>
+          <%= render 'rental_properties/seasons' %>
+        </div>
+      </div>
+      
+      <!-- Socials
+      ================================================== -->
+      <div class='row row-padded'>
+        <div class='col-sm-12'>
+          <%= render 'property_social_links' %>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Right column
+    ================================================== -->
+    <div class="col-sm-4 right-col row-padded">
+      <!-- Contact form
+      ================================================== -->
+      <h3 class="h4 text-uppercase"><%= t(:'realty.request_availability') %></h3>
+      <%= render :partial => 'rental_property_inquiries/form' %>
+
+      <% if @rental_property.lat_long.present? %>
+        <!-- Map
+          ================================================== -->
+        <%= render('gmap', :point => @rental_property.lat_long) %> 
+      <% end %>
+    </div>
+  </div>
+</article>
+<%# end %> 

@@ -1,0 +1,23 @@
+en:
+  listing: Listing
+  about_us: About Remax
+  description: Description
+  details: Details
+  informations: Informations
+  footer_remaxislandproperties: "<a href='http://www.remaxislandproperties.com' target='_blank'>Looking for properties in St Martin/St Maarten ?</a><br/><a href='http://www.remaxislandproperties.com' target='_blank'>Visit Remax Island Properties in St Martin/St Maarten.</a><br/>©Remax Island Properties St Barths."
+  realty:
+    view_all_promotions: View all promotions
+    price_from: "Price from "
+    price_notes: "A 10% service charge will be added to all rates. All villa prices are subject to an additional 5% Accommodation Tax. Rates are based on 2 guests per bedroom. Above rates are subject to change without any prior notice.<br/>Currency conversion provided for information only and subject to confirmation through our agents."
+    specificities: Specificities
+  sale_properties:
+    collection:
+      empty: "Please contact us for our selection of properties for sale."
+
+  helpers:
+    select:
+      lifestyle:
+        prompt: "lifestyles"
+      
+      
+      

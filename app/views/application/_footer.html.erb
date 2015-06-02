@@ -1,0 +1,25 @@
+<%# cache([site, I18n.locale, 'footer']) do %>
+<footer id='footer' class="hidden-print">
+  <div class='container footer-container'>
+    
+    <div class='row'>
+      <div class="col-sm-4">
+        <h5>Navigation</h5>
+        <%= render_menu("footer-nav") %>
+      </div>
+      <div class="col-sm-4">
+        <h5>Newsletter</h5>
+        <%= render 'newsletter' %>
+      </div> 
+      <div class="col-sm-4">
+        <h5>Contact</h5>
+        <p><%= "Missimmo - St Barths<br>Rue du Bord de Mer - Gustavia<br>97133 Saint Barthélemy French West Indies".html_safe %></p>
+        <p><%= "Tel. +590 590 511 854<br>Fax +590 590 510 073<br>".html_safe %><%= mail_to('info@missimmo.com', 'info@missimmo.com', :encode => "javascript") %></p>
+        <%= render('gmap', :point => "") %>
+      </div>
+      
+    </row>
+
+  </div> 
+</footer>
+<%# end %>

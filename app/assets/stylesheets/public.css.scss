@@ -1,0 +1,219 @@
+$font-family-alt:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$logo-height-sm: 95px;
+$logo-height-sm-min: 135px;
+
+/* IMPORTS
+-------------------------------------------------- */
+@import "theme/variables";
+@import "bootstrap/bootstrap";
+@import "font-awesome-4.2.0/font-awesome";
+@import "theme/bootstrap-datepicker3";
+@import "theme/form";
+@import "theme/search-form";
+@import "theme/navs";
+@import "theme/navbar";
+@import "theme/panels";
+//@import "theme/buttons";
+@import "theme/flexslider";
+.flex-direction-nav a:before {
+  font-size: 30px !important;
+}
+
+#hero-slider {
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  .slides > li {
+    position: relative;
+  }
+  .flex-caption {
+    position: absolute;
+    z-index: 100;
+    right: 30px;
+    top: 30px;
+    background: rgba(255,255,255,.8);
+    color: #000 !important;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .flex-caption-content {
+    display: block;
+    padding: 2%;
+  }
+  .flex-caption-title {
+    font-size: 16px;
+    margin: 0 !important;
+  }
+  .slide-link {
+    background: rgba(0,0,0,.8);
+    margin: 0;
+    bottom: 0;
+    width: 100;
+    padding: 2%;
+  }
+}
+//@import "theme/sections";
+@import "theme/footer";
+@import "theme/home";
+@import "theme/property";
+
+/* FIX FOR GMAP BUG
+-------------------------------------------------- */
+#map-canvas {
+  height: 400px;
+  img {
+    max-width: none;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+/* GLOBAL
+-------------------------------------------------- */
+.main-container,
+.footer-container {
+  max-width: 960px;
+}
+.main-container {
+  background-color: #fff;
+}
+
+.hr-border-primary {
+  border-color: $brand-primary;
+}
+.hr-border-success {
+  border-color: $brand-success;
+}
+
+.thumbnail-property {
+
+  padding: 0;
+  border: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 16px;
+    color: $brand-success;
+  }
+  
+  .thumbnail-inner {
+    position: relative;
+    padding: 0;
+    border: none;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    
+    .caption {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #000;
+      padding: 16px;
+      color: #fff;
+      @include opacity(0);
+      @include transition(all 0.5s ease);
+      
+      .thumbnail-price,
+      .thumbnail-area {
+        color: $brand-success;
+      }
+    }
+    
+    .thumbnail-badges {
+      position: absolute;
+      top: 7px;
+      margin: 0;
+      color: #fff;
+      left: 0;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 10px;
+      @include opacity(1);
+      @include transition(all 0.5s ease);
+      
+      .thumbnail-info {
+        background-color: #03A9F4;
+        padding: 8px;
+      }
+      .thumbnail-badge {
+        background-color: #FF5252 !important;
+        padding: 8px;
+      }
+    }
+    
+    &:hover {
+      .thumbnail-badges {
+        @include opacity(0);
+      }
+      .caption {
+        @include opacity(.9);
+      }
+    }
+  }
+
+  .thumbnail-infos {
+    background-color: $gray;
+    color: #fff;
+    padding: 16px;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    p {
+      margin: 0;
+    }
+  }
+
+}
+
+.post-item {
+  //col-sm-6 col-md-4
+  @media (max-width: $screen-sm-min) {
+    &:nth-child(2n) {
+      @include clearfix();
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    &:nth-child(3n) {
+      @include clearfix();
+    }
+  }
+
+}
+
+.background-image-holder {
+  //position: absolute;
+  //top: 0px;
+  //left: 0px;
+  width: 100%;
+  height: 160px;
+  background-size: cover !important;
+  //z-index: 0;
+  background-position: 50% 50% !important;
+  background-image: image-url("bg-header.jpg");
+}
+.background-image-holder.parallax-background {
+  height: 120%;
+  top: -10%;
+}
+.hover-background .background-image-holder,
+.hover-background .foreground-image-holder {
+  @include transition(all 0.3s ease-out);
+}
+.hover-background .background-image-holder {
+  height: 110%;
+  width: 110%;
+}
+
+
+@media print {
+  img {
+    @extend .visible-print-block;
+  }
+}

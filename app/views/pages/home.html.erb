@@ -1,0 +1,111 @@
+<%
+if @rent_section ||= site.rental_property_lists.live.first
+  @promotions = @rent_section.rental_properties.live.with_promo.limit(6).order("RAND()")
+  @infos = @rent_section.rental_properties.live.with_info.limit(8).order("RAND()")
+  @end_display = @rent_section.rental_properties.end_display.live.limit(8).order("RAND()")
+end
+
+if @sale_section ||= site.sale_property_lists.live.first 
+  @sale_properties = @sale_section.sale_properties.in_city(site.cities.first).in_homepage.live.limit(6).order("RAND()")
+end
+
+geom = case request.env['mobvious.device_type']
+  when :mobile
+    "480x300#"
+  when :tablet
+    "1024x560#"
+  else
+    "1400x762#"
+  end
+  
+if @rent_section && @sale_section
+%>
+
+<!-- Hero
+  ================================================== -->
+  <section class="flexslider" id="hero-slider">
+    
+    <%= render "search_button" %>
+    
+    <ul class="slides">
+      <% site.features.live.each do |feature| %>
+      <li class="overlayx">
+        <% if image = feature.thumbnail(geom) %>
+        <div class="background-image-holder parallax-background ">
+          <%= image_tag(image.url, :class => "background-image img-responsive") %>
+        </div>
+        <% end %>
+        <% if feature.title.present? || feature.body.present? %>
+        <div class="flex-caption">
+          <div class="flex-caption-content">
+            <%= content_tag(:h1, feature.title, :class => "flex-caption-title") if feature.title.present? %>
+            <%= feature.body.html_safe if feature.body.present? %>
+          </div>
+          <% if feature.owner and url = feature.owner.public_url %>
+            <div class="slide-link">
+              <%= link_to(t("features.view_more"), url) %>
+            </div>
+          <% end %>
+          
+        </div><!--end of container-->
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </section>
+
+<!-- Search
+  ================================================== -->
+  
+  <%= render "search" %>
+
+<!-- Presentation
+  ================================================== -->
+ <section class="section-presentation">
+   <div class="row">
+     <div class="col-xs-12">
+   <p class="text-uppercase">MISSIMMO est une agence immobillière qui vous propose un service personnalisé 
+par l’écoute et la recherche de votre satisfaction dans l’intérêt mutuel des parties. 
+MISSIMMO adhère au premier Syndicat Professionnel de l’Immobilier, la FNAIM, 
+qui regroupe plus de 10 000 agences en France et dans les DOM-TOM 
+mais n’en reste pas moins une agence à taille humaine. </p>
+</div>
+</div>
+ </section>
+
+<!-- StBarth
+  ================================================== -->
+ <section class="section-stbarth">
+   <div class="row">
+     <div class="col-xs-12">
+       <h3>Perles des Caraibes</h3>
+       <p class="text-uppercase">MISSIMMO est une agence immobillière qui vous propose un service personnalisé 
+par l’écoute et la recherche de votre satisfaction dans l’intérêt mutuel des parties. 
+MISSIMMO adhère au premier Syndicat Professionnel de l’Immobilier, la FNAIM, 
+qui regroupe plus de 10 000 agences en France et dans les DOM-TOM 
+mais n’en reste pas moins une agence à taille humaine. </p>
+    </div>
+  </div>
+ </section>
+ 
+ <!-- new properties
+   ================================================== -->
+  <section class="section-new-properties">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Nouveautés</h3>
+      </div>
+    </div>
+    <div class="row">
+    <% @end_display.each do | property | %>
+      <article class="col-sm-6 col-md-4 post-item">
+        <%= render "rental_properties/property_thumbnail", :record => property %>
+      </article>
+   <% end %>
+   </div>
+  </section>
+  
+<% end %>
+
+
+

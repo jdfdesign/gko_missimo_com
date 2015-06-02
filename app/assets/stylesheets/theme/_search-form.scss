@@ -1,0 +1,39 @@
+
+.btn-search {
+  position: absolute;
+  bottom: 0;
+}
+/* FORM
+-------------------------------------------------- */
+
+.form-search {
+  padding: $line-height-computed 0;
+  
+  input, select, textarea {
+    width: 100%;
+  }
+  .btn-link {
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    border-bottom: 3px solid darken(#ebeae6, 5%);
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: #000;
+      background-color: transparent;
+      color: #000;
+    }
+  }
+}
+
+.tab-pane-sales {
+  background-color: #40c7f4;
+}
+
+.tab-pane-rentals {
+  background-color: #98bf3f;
+}

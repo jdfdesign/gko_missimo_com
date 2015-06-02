@@ -1,0 +1,22 @@
+<% resource_cache(resource) do %>
+<article class="page">
+
+  <!-- Slider
+  ================================================== -->
+<%= render("page_slider", :images => resource.images) if resource.images.any?  %>
+
+  <!-- Header
+  ================================================== -->
+  <section class="property-header">
+    <div class="container">
+      <div class='row'>
+        <div class='col-sm-8'>
+          <h1><%= resource.title %></h1>
+          <hr>
+          <%= render_copy_text(resource.body) %>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+<% end %>

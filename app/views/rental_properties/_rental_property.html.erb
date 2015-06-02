@@ -1,0 +1,11 @@
+<%# collection_row_cache(rental_property) do %>
+<article class="col-sm-6 col-md-4 post-item">
+  <%= render "rental_properties/property_thumbnail", :record => rental_property %>
+</article> 
+<%# Get a 3 columns grid at md+ and a 2 columns grid at sm %>
+<% if rental_property_counter%3 == 1 %>
+  <div class="clearfix visible-sm-block"></div>
+<% elsif rental_property_counter%3 == 2 %>
+  <div class="clearfix visible-md-block visible-lg-block"></div>
+<% end %>
+<%# end %> 
