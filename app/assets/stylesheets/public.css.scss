@@ -1,6 +1,6 @@
 $font-family-alt:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$logo-height-sm: 95px;
-$logo-height-sm-min: 135px;
+$logo-height-sm: 107px;
+$logo-height-sm-min: 107px;
 
 /* IMPORTS
 -------------------------------------------------- */
@@ -14,43 +14,9 @@ $logo-height-sm-min: 135px;
 @import "theme/navbar";
 @import "theme/panels";
 //@import "theme/buttons";
+@import "theme/page_header";
 @import "theme/flexslider";
-.flex-direction-nav a:before {
-  font-size: 30px !important;
-}
-
-#hero-slider {
-  margin-bottom: 0 !important;
-  border: 0 !important;
-  .slides > li {
-    position: relative;
-  }
-  .flex-caption {
-    position: absolute;
-    z-index: 100;
-    right: 30px;
-    top: 30px;
-    background: rgba(255,255,255,.8);
-    color: #000 !important;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .flex-caption-content {
-    display: block;
-    padding: 2%;
-  }
-  .flex-caption-title {
-    font-size: 16px;
-    margin: 0 !important;
-  }
-  .slide-link {
-    background: rgba(0,0,0,.8);
-    margin: 0;
-    bottom: 0;
-    width: 100;
-    padding: 2%;
-  }
-}
+@import "theme/custom_flexslider";
 //@import "theme/sections";
 @import "theme/footer";
 @import "theme/home";
@@ -70,12 +36,17 @@ $logo-height-sm-min: 135px;
 
 /* GLOBAL
 -------------------------------------------------- */
+
+.bg-success {
+  background-color: $brand-success !important;
+}
+
+.text-success {
+  color: $brand-success !important;
+}
 .main-container,
 .footer-container {
-  max-width: 960px;
-}
-.main-container {
-  background-color: #fff;
+  max-width: 1020px;
 }
 
 .hr-border-primary {
@@ -89,25 +60,25 @@ $logo-height-sm-min: 135px;
 
   padding: 0;
   border: none;
-  
+
   &:hover {
     text-decoration: none;
   }
-  
+
   h3 {
     margin-top: 0;
     margin-bottom: 0;
     padding: 16px;
     color: $brand-success;
   }
-  
+
   .thumbnail-inner {
     position: relative;
     padding: 0;
     border: none;
     font-size: 14px !important;
     font-weight: 300 !important;
-    
+
     .caption {
       position: absolute;
       bottom: 0;
@@ -119,13 +90,13 @@ $logo-height-sm-min: 135px;
       color: #fff;
       @include opacity(0);
       @include transition(all 0.5s ease);
-      
+
       .thumbnail-price,
       .thumbnail-area {
         color: $brand-success;
       }
     }
-    
+
     .thumbnail-badges {
       position: absolute;
       top: 7px;
@@ -137,7 +108,7 @@ $logo-height-sm-min: 135px;
       font-size: 10px;
       @include opacity(1);
       @include transition(all 0.5s ease);
-      
+
       .thumbnail-info {
         background-color: #03A9F4;
         padding: 8px;
@@ -147,7 +118,7 @@ $logo-height-sm-min: 135px;
         padding: 8px;
       }
     }
-    
+
     &:hover {
       .thumbnail-badges {
         @include opacity(0);
@@ -159,13 +130,28 @@ $logo-height-sm-min: 135px;
   }
 
   .thumbnail-infos {
+    display: table;
     background-color: $gray;
     color: #fff;
+    width: 100%;
     padding: 16px;
     font-size: 14px !important;
     font-weight: 300 !important;
     p {
       margin: 0;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: left;
+    }
+  }
+  
+  .thumbnail-icons {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    margin: 0;
+    > li > img {
+      @include square(24px);
     }
   }
 

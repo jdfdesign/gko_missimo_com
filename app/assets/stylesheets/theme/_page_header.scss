@@ -1,0 +1,22 @@
+.page-header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  .btn-search-collapse {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    font-size: 32px;
+    color: $gray-light;
+    i {
+      color: $brand-primary !important;
+      margin-right: 14px;
+    }
+    span {
+      font-size: 22px;
+    }
+  }
+}

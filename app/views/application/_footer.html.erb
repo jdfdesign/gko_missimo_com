@@ -1,7 +1,7 @@
 <%# cache([site, I18n.locale, 'footer']) do %>
 <footer id='footer' class="hidden-print">
   <div class='container footer-container'>
-    
+
     <div class='row'>
       <div class="col-sm-4">
         <h5>Navigation</h5>
@@ -10,16 +10,17 @@
       <div class="col-sm-4">
         <h5>Newsletter</h5>
         <%= render 'newsletter' %>
-      </div> 
+      </div>
       <div class="col-sm-4">
         <h5>Contact</h5>
-        <p><%= "Missimmo - St Barths<br>Rue du Bord de Mer - Gustavia<br>97133 Saint Barthélemy French West Indies".html_safe %></p>
-        <p><%= "Tel. +590 590 511 854<br>Fax +590 590 510 073<br>".html_safe %><%= mail_to('info@missimmo.com', 'info@missimmo.com', :encode => "javascript") %></p>
+        <p><%= "<span class='text-success'>Missimmo</span><br/>Rue du Bord de Mer - Gustavia<br>97133 Saint Barthélemy French West Indies".html_safe %></p>
+        <p><%= "<i class='fa fa-phone text-success'></i>&#8239;Tel. +590 590 511 854<br><i class='fa fa-fax text-success'></i>&#8239;Fax +590 590 510 073<br>".html_safe %>
+          <i class='fa fa-envelope text-success'></i>&#8239;<%= mail_to('info@missimmo.com', 'info@missimmo.com', :encode => "javascript") %></p>
         <%= render('gmap', :point => "") %>
       </div>
-      
+
     </row>
 
-  </div> 
+  </div>
 </footer>
 <%# end %>

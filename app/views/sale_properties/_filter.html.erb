@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="background-image-holder">
+        <%= image_tag("stbarthview.jpg", :class => "img-responsive") %>
+        <a class="btn btn-primary btn-search-collapse" data-toggle="collapse" href="#rental-properties-form" aria-expanded="false" aria-controls="collapseExample">
+          <i class="fa fa-search"></i> Vous recherchez
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="collapse bg-primary form-search-wrapper" id="rental-properties-form">
+    <%= render "sale_properties/filter_form" %>
+  </div>
+</div>

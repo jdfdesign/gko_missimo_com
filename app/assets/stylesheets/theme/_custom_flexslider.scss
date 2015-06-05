@@ -1,0 +1,104 @@
+.flex-direction-nav a:before {
+  font-size: 30px !important;
+}
+
+#hero-slider {
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  .slides > li {
+    position: relative;
+    height: 500px;
+  }
+
+  .flex-caption {
+    position: absolute;
+    z-index: 100;
+    right: 30%;
+    top: 30%;
+    background: rgba(255,255,255,1);
+    color: $text-color !important;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .flex-caption-content {
+    display: block;
+    padding: 6%;
+  }
+  .flex-caption-title {
+    font-size: 16px;
+    margin: 0 !important;
+    color: $text-color !important;
+  }
+  .slide-link {
+    background: $brand-success;
+    margin: 0;
+    bottom: 0;
+    width: 100;
+    padding: 2%;
+    padding: 6%;
+    a {
+      color: $text-color;
+      text-transform: uppercase;
+      display: block;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.flexslider .flex-direction-nav a.flex-prev,
+.flexslider .flex-direction-nav a.flex-next {
+  @include transition(none);
+  @include opacity(1);
+}
+.flex-direction-nav {
+  //@extend .container;
+  max-width: 1020px;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  
+  
+  //  position: relative;
+}
+.flex-direction-nav a {
+  background-color: $text-color;
+  text-align: center;
+  @include opacity(1);
+  &:before {
+    font-size: 20px;
+    color: $brand-success;
+    text-shadow: none;
+  }
+}
+.flex-direction-nav .flex-prev {
+  left: 0;
+}
+.flex-direction-nav .flex-next {
+  right: 0;
+  text-align: center;
+}
+.flexslider:hover .flex-direction-nav .flex-prev {
+  @include opacity(1);
+  left: 0;
+}
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+  @include opacity(1);
+  background-color: $brand-success;
+  &:before {
+    color: $text-color;
+  }
+}
+.flexslider:hover .flex-direction-nav .flex-next {
+  @include opacity(1);
+  right: 0;
+}
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+  @include opacity(1);
+  background-color: $brand-success;
+  &:before {
+    color: $text-color;
+  }
+}

@@ -1,10 +1,11 @@
 en:
+  searching: 'You are searching…'
+  want_to_rent: 'I want to rent'
+  want_to_buy: 'I want to buy'  
   listing: Listing
-  about_us: About Remax
   description: Description
   details: Details
   informations: Informations
-  footer_remaxislandproperties: "<a href='http://www.remaxislandproperties.com' target='_blank'>Looking for properties in St Martin/St Maarten ?</a><br/><a href='http://www.remaxislandproperties.com' target='_blank'>Visit Remax Island Properties in St Martin/St Maarten.</a><br/>©Remax Island Properties St Barths."
   realty:
     view_all_promotions: View all promotions
     price_from: "Price from "

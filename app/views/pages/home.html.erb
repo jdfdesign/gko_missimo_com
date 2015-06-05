@@ -5,7 +5,7 @@ if @rent_section ||= site.rental_property_lists.live.first
   @end_display = @rent_section.rental_properties.end_display.live.limit(8).order("RAND()")
 end
 
-if @sale_section ||= site.sale_property_lists.live.first 
+if @sale_section ||= site.sale_property_lists.live.first
   @sale_properties = @sale_section.sale_properties.in_city(site.cities.first).in_homepage.live.limit(6).order("RAND()")
 end
 
@@ -15,18 +15,27 @@ geom = case request.env['mobvious.device_type']
   when :tablet
     "1024x560#"
   else
-    "1400x762#"
+    "1400x500#"
   end
-  
+
 if @rent_section && @sale_section
 %>
+<% content_for :page_header do -%>
 
 <!-- Hero
   ================================================== -->
+<section class="page-header">
+  
+  <div class="container main-container">
+    <div class="row">
+      <div class="col-xs-12">
+        <%= render "search_button" %>
+    </div>
+    </div>
+  </div>
+  
   <section class="flexslider" id="hero-slider">
-    
-    <%= render "search_button" %>
-    
+
     <ul class="slides">
       <% site.features.live.each do |feature| %>
       <li class="overlayx">
@@ -43,69 +52,130 @@ if @rent_section && @sale_section
           </div>
           <% if feature.owner and url = feature.owner.public_url %>
             <div class="slide-link">
-              <%= link_to(t("features.view_more"), url) %>
+              <%= link_to(url) do %>
+                <%= t("features.view_more") %> <i class="fa fa-chevron-right"></i>
+              <% end %>
             </div>
           <% end %>
-          
+
         </div><!--end of container-->
         <% end %>
       </li>
       <% end %>
     </ul>
-  </section>
 
-<!-- Search
-  ================================================== -->
-  
-  <%= render "search" %>
+  </section>
+</section>
+<% end %>
+  <!-- Search
+    ================================================== -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="collapse bg-success form-search-wrapper" id="global-search-panel">
+      <div role="tabpanel">
+        <ul class="nav nav-pills" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#rental-properties-panel" aria-controls="rental-properties-panel" role="tab" data-toggle="tab">
+              <%= t(:want_to_rent) %>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#sale-properties-panel" aria-controls="sale-properties-panel" role="tab" data-toggle="tab">
+               <%= t(:want_to_buy) %>
+            </a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="rental-properties-panel">
+            <%= render "rental_properties/filter_form" %>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="sale-properties-panel">
+            <%= render "sale_properties/filter_form" %>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Presentation
   ================================================== -->
- <section class="section-presentation">
+<section class="section-presentation">
    <div class="row">
      <div class="col-xs-12">
-   <p class="text-uppercase">MISSIMMO est une agence immobillière qui vous propose un service personnalisé 
-par l’écoute et la recherche de votre satisfaction dans l’intérêt mutuel des parties. 
-MISSIMMO adhère au premier Syndicat Professionnel de l’Immobilier, la FNAIM, 
-qui regroupe plus de 10 000 agences en France et dans les DOM-TOM 
-mais n’en reste pas moins une agence à taille humaine. </p>
-</div>
-</div>
- </section>
+       <p class="text-uppercase"><span>MISSIMMO</span> est une agence immobillière qui vous propose <span>un service personnalisé</span>
+par l’écoute et la recherche de <span>votre satisfaction</span> dans l’intérêt mutuel des parties.
+MISSIMMO adhère au premier Syndicat Professionnel de l’Immobilier, la FNAIM,
+qui regroupe plus de 10 000 agences en France et dans les DOM-TOM
+mais n’en reste pas moins une <span>agence à taille humaine.</span></p>
+    </div>
+  </div>
+</section>
 
 <!-- StBarth
   ================================================== -->
  <section class="section-stbarth">
    <div class="row">
      <div class="col-xs-12">
-       <h3>Perles des Caraibes</h3>
-       <p class="text-uppercase">MISSIMMO est une agence immobillière qui vous propose un service personnalisé 
-par l’écoute et la recherche de votre satisfaction dans l’intérêt mutuel des parties. 
-MISSIMMO adhère au premier Syndicat Professionnel de l’Immobilier, la FNAIM, 
-qui regroupe plus de 10 000 agences en France et dans les DOM-TOM 
-mais n’en reste pas moins une agence à taille humaine. </p>
+       <h4 class="text-uppercase section-title">Bienvenue à Saint-Barth</h4>
+       <div>
+         <%= image_tag("stbarthview.jpg", :class => "img-responsive") %>
+       </div>
+       <div class="inner">
+         <h2 class="text-uppercase">Perles des Caraibes</h2>
+         <p><strong>Nichée entre la mer des Caraïbes et l'Océan Atlantique, au nord de l'Arc Antillais</strong> St-Barth, peitie île de 25 km2 allie avec bonheur modernisme et traditions. Elle a su préserver le charme de sa nature sauvage et son environnement précieux.<br\>St-Barth c'est aussi 17 plages, une capitale, Gustavia, des villages, une hostellerie de luxe mais aussi des auberges de charme pour le plus grand plaisir de ses visiteurs.</p>
+       </div>
     </div>
   </div>
  </section>
- 
+
  <!-- new properties
    ================================================== -->
-  <section class="section-new-properties">
+  <section class="section-offers">
+    
     <div class="row">
       <div class="col-xs-12">
-        <h3>Nouveautés</h3>
+        <h4 class="text-uppercase section-title">Nouveautés</h4>
       </div>
     </div>
+    
     <div class="row">
-    <% @end_display.each do | property | %>
-      <article class="col-sm-6 col-md-4 post-item">
-        <%= render "rental_properties/property_thumbnail", :record => property %>
-      </article>
-   <% end %>
+      <div class="col-sm-6 col-left">
+        
+        <a href="#" class="thumbnail pink">
+          <div class="img-wrapper background-image-holder">
+            <%= image_tag("lifetyle_01.jpg") %>
+          </div>
+          <div class="caption">
+            <h3 class="title"><span>Location Annuelle</span></h3>
+          </div>
+        </a>
+        
+        <a href="#" class="thumbnail green">
+          <div class="img-wrapper background-image-holder">
+            <%= image_tag("lifetyle_02.jpg") %>
+          </div>
+          <div class="caption">
+            <h3 class="title"><span>Location Saisonnière</span></h3>
+          </div>
+        </a>
+        
+      </div>
+      <div class="col-sm-6 col-right">
+        
+        <a href="#" class="thumbnail blue">
+          <div class="img-wrapper background-image-holder">
+            <%= image_tag("lifetyle_03.jpg") %>
+          </div>
+          <div class="caption">
+            <h3 class="title"><span>Vente</span></h3>
+          </div>
+        </a>
+        
+      </div>
    </div>
   </section>
-  
+
 <% end %>
-
-
-

@@ -1,20 +1,20 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: 238c667f8609c793bee9b5f971607782fe6b47f6
+  revision: f920f0e025ded2fa2f144a2cdb9c95d274544d60
   specs:
-    gko_realty (0.2.7)
+    gko_realty (0.2.8)
       gko_core
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: d4daa8309cae932c5e03dfa6dccb6a4bbbf31b9a
-  tag: v0.8.17
+  revision: bf00a1d8a4121c7f208ecbcf9bc40117f969cb2e
+  tag: v0.8.18
   specs:
-    gko_auth (0.8.17)
+    gko_auth (0.8.18)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_categories (0.8.17)
-    gko_core (0.8.17)
+    gko_categories (0.8.18)
+    gko_core (0.8.18)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
       babosa (~> 0.3.8)
@@ -55,13 +55,13 @@ GIT
       uglifier (~> 2.4.0)
       uuid (~> 2.3.7)
       will_paginate (~> 3.0.2)
-    gko_documents (0.8.17)
+    gko_documents (0.8.18)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_features (0.8.17)
-    gko_inquiries (0.8.17)
+    gko_features (0.8.18)
+    gko_inquiries (0.8.18)
       filters_spam (~> 0.2)
-    gko_stickers (0.8.17)
+    gko_stickers (0.8.18)
 
 GEM
   remote: https://rubygems.org/
@@ -267,7 +267,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    uuid (2.3.7)
+    uuid (2.3.8)
       macaddr (~> 1.0)
     warden (1.2.3)
       rack (>= 1.0)
@@ -289,7 +289,7 @@ DEPENDENCIES
   gko_documents!
   gko_features!
   gko_inquiries!
-  gko_realty (= 0.2.7)!
+  gko_realty (= 0.2.8)!
   gko_stickers!
   money (= 5.0.0)
   nokogiri (~> 1.5.1)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150129162951) do
+ActiveRecord::Schema.define(:version => 20150605082620) do
 
   create_table "annual_rental_options", :force => true do |t|
     t.text     "notes"
@@ -784,6 +784,7 @@ ActiveRecord::Schema.define(:version => 20150129162951) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "path"
+    t.string   "css"
   end
 
   add_index "stickers", ["name"], :name => "index_stickers_on_name"

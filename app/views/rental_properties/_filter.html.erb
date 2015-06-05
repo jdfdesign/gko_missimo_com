@@ -1,66 +1,19 @@
-
-	<% 
-  price_options = []
-  price_options << t(:'realty.filters.price.less_than', :price => 4000)
-  price_options << "4000 - 10000"
-  price_options << t(:'realty.filters.price.more_than', :price => 10000)
-  price_options.compact.join("\n").html_safe
-  properties = site.rental_properties.published.in_city(site.cities.first).with_translations(I18n.locale).order('content_translations.title ASC')
-%>
-<div class="partial filter rental_properties hide-on-print">
-  <h4 class="widget-title" ><%= t(:listing).html_safe %></h4>
- 
-	<%= collection_select "rental_property", "id", properties, :public_url, 
-	    :title, {:prompt => "Select a property" }, {:class => "form-control" } %>
-  <h4 class="widget-title" ><%= t(:search).html_safe %></h4>
-  <%= simple_form_for(:search, 
-	  :url => section.public_url, 
-	  :method => :get, 
-	  :html => {:class => "filter rental_property"}) do |form| %>
-    <%= form.input :page, 
-        :as => :hidden,
-        :input_html => { :value => "1" } %>
-  	<div class='form-group'>
-      <%= form.input :with_title,
-  		:label => false,
-  		:placeholder => "Name",
-  		:as => :string,
-      :input_html => { :class => "form-control", 
-        :value => (params[:search].present? ? params[:search][:with_title] : nil) } %>
+<% content_for :page_header do -%>
+<div class="page-header">   
+  <div class="background-image-holder">
+    <%= image_tag("stbarthview.jpg", :class => "img-responsive") %>
+  </div>
+  <div class="container main-container">
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="btn btn-success btn-search-collapse" data-toggle="collapse" href="#rental-properties-form" aria-expanded="false" aria-controls="collapseExample">
+          <i class="fa fa-search"></i> Vous recherchez
+        </a>
     </div>
-    <%= render "shared/bedroom_count_select", :f => form %>
-    <%#= render "shared/area_select", :f => form %> 
-    <div class='form-group'>
-      <%= form.select :in_area, 
-        options_from_collection_for_select(site.cities.first.areas, :id, :name, params[:search].present? ? params[:search][:in_area] : nil),
-        { :prompt => t(:'helpers.select.area.prompt').html_safe }, 
-        { :class => "form-control", :id => 'search_area_id' } %>
-    </div>  
-    <div class='form-group'>
-      <%= form.input :price, 
-        :collection => price_options, 
-        :prompt => t(:'helpers.select.price.prompt').html_safe,
-        :label => false,
-        :as => :select,
-        :selected => params[:search].present? ? params[:search][:price] : nil,
-        :input_html => { :class => "form-control" } %>
     </div>
-  	<div class='form-group'>
-      <%= form.input :with_pool,
-  		:as => :boolean,
-  		:label => false,
-      :input_html => {:checked => params[:search].present? && params[:search][:with_pool] == '1' ? true : false},
-  		:inline_label => t(:'realty.filters.with_pool') %>
-    </div>
-  	<div class='form-group'>
-      <%= form.input :with_beachfront,
-  		:as => :boolean,
-  		:label => false,
-      :input_html => {:checked => params[:search].present? && params[:search][:with_beachfront] == '1' ? true : false},
-  		:inline_label => t(:'realty.filters.with_beachfront') %>
-    </div>
-    <div class='form-group'> 
-      <%= form.button 'submit', t('search'), :class => "btn btn-default search" %>
-    </div> 
-  <% end %>
+  </div>
+</div>
+<% end %>
+<div class="collapse bg-success form-search-wrapper" id="rental-properties-form">
+  <%= render "rental_properties/filter_form" %>
 </div>

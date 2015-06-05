@@ -1,4 +1,6 @@
-<%= render "search", :tab => 'sale' %>
+<% content_for :page_header do -%>
+  <%= render "filter" %>
+<% end %>
 <% if collection.any? %>
   <div class="row">
     <%= render collection %>

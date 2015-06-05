@@ -1,5 +1,5 @@
 <%# resource_cache(resource) do %>
-<% 
+<%
 options = @sale_property.content_options
 has_options = options.try(:any?)
 tags = []
@@ -10,15 +10,15 @@ tags << realty_meta_tag("year_built", @sale_property.year_built)
 if @sale_property.acreage.present?
   tags << realty_meta_tag("acreage", "#{@sale_property.acreage} m2")
 end
-if @sale_property.building_size.present? 
+if @sale_property.building_size.present?
   tags << realty_meta_tag("building_size", "#{@sale_property.building_size} m2")
 end
-if @sale_property.area.present? 
+if @sale_property.area.present?
   tags << realty_meta_tag("area", @sale_property.area.name)
 end
 %>
 <% content_for :page_header do -%>
-  <%= render "search" %>
+  <%= render "filter" %>
 <% end %>
 <%= render "fb_share" %>
 <article class="property rental-property">
@@ -41,15 +41,15 @@ end
         <p class="property-status"><%= "Status".html_safe %></p>
     </div>
   </div>
-  
+
   <div class='row row-padded'>
     <div class='col-sm-12'>
       <!-- Slider
       ================================================== -->
-      <%= render "slider", :images => resource.images %>
+      <%= render "page_slider", :images => resource.images %>
     </div>
   </div>
- 
+
  <div class='row'>
    <div class="col-sm-8 left-col">
      <!-- Header
@@ -64,18 +64,18 @@ end
      <div class='row row-padded'>
        <div class='col-sm-6'>
          <ul class="nav stickers-nav">
-           <% @sale_property.stickers.translated.each do |s| %>
-             <li><%= link_to(s.name, s.public_url, :class => "btn btn-success") %></li>
-          <% end %>
+           <%= tags.compact.join("<br/>").html_safe %>
         </ul>
       </div>
       <div class='col-sm-6'>
-        <%= tags.compact.join("<br/>").html_safe %>
+        <% @sale_property.stickers.translated.each do |s| %>
+          <li><%= link_to(s.name, s.public_url, :class => "btn btn-success") %></li>
+        <% end %>
       </div>
     </div>
-       
+
     <hr class="hr-border-success">
-       
+
     <!-- Description
       ================================================== -->
     <div class='row row-padded'>
@@ -89,7 +89,7 @@ end
          <% end %>
        </div>
      </div>
-      
+
      <hr class="hr-border-success">
 
       <!-- Socials
@@ -99,7 +99,7 @@ end
           <%= render 'property_social_links' %>
         </div>
       </div>
-      
+
     </div>
 
    <div class="col-sm-4 right-col row-padded">
@@ -110,4 +110,4 @@ end
    </div>
   </div>
 </article>
-<%# end %> 
+<%# end %>

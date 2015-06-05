@@ -97,6 +97,29 @@
   }
 }
 
+.property-sticker {
+  background-color: $brand-success;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: 6px center;
+  color: #fff;
+  vertical-align: middle;
+  padding: 14px 1px 14px 54px;
+  //height: 40px;
+  &.pool {
+    background-image: url(image_path('icon_pool.svg'))
+  }
+  &.view {
+    background-image: url(image_path('icon_view.svg'))
+  }
+  &.sport {
+    background-image: url(image_path('icon_sport.svg'))
+  }
+  &.jaccuzzi {
+    background-image: url(image_path('icon_jaccuzzi.svg'))
+  }
+}
+
 .widget-details {
     font-family: $font-family-sans-serif;
     font-size: 16px;
