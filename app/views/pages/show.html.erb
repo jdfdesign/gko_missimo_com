@@ -1,22 +1,32 @@
-<% resource_cache(resource) do %>
-<article class="page">
+<%# resource_cache(resource) do %>
+<% content_for :page_header do -%>
+<div class="page-header">   
+  <div class="background-image-holder">
+    <%= image_tag("stbarthview.jpg", :class => "img-responsive") %>
+  </div>
+</div>
+<% end %>
 
-  <!-- Slider
-  ================================================== -->
-<%= render("page_slider", :images => resource.images) if resource.images.any?  %>
+<article class="page">
+  
+  <% if resource.images.any? %>
+  <div class='row row-padded'>
+    <div class='col-sm-12'>
+      <!-- Slider
+      ================================================== -->
+      <%= render "page_slider", :images => resource.images %>
+    </div>
+  </div>
+  <% end %>
 
   <!-- Header
   ================================================== -->
-  <section class="property-header">
-    <div class="container">
-      <div class='row'>
-        <div class='col-sm-8'>
-          <h1><%= resource.title %></h1>
-          <hr>
-          <%= render_copy_text(resource.body) %>
-        </div>
-      </div>
+  <div class='row'>
+    <div class='col-sm-12'>
+      <h1><%= resource.title %></h1>
+        <%= render_copy_text(resource.body) %>
     </div>
-  </section>
+  </div>
+  
 </article>
-<% end %>
+<%# end %>

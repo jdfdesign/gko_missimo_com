@@ -46,9 +46,9 @@
       z-index: 3;
       background-color: transparent !important;
       padding: 0;
-      opacity: 1;
       overflow: hidden;
       padding: 24px;
+      @include opacity(1);
       &:before {
         content: '';
         display: block;
@@ -58,6 +58,8 @@
         top: 0;
         width: 100%;
         z-index: 1;
+        @include opacity(0.7);
+        @include transition(all 0.3s ease);
       }
       .title {
         display: table;
@@ -80,16 +82,24 @@
         }
       }
     }
+    
+    &:hover {
+       .caption {
+         &:before {
+           @include opacity(0.9);
+         }
+       }
+    }
   }
   
   .thumbnail.green .caption::before {
-    background-color: rgba(152, 191, 64, 0.8) !important;
+    background-color: rgba(152, 191, 64, 1) !important;
   }
   .thumbnail.pink .caption::before {
-    background-color: rgba(237, 70, 162, 0.8) !important;
+    background-color: rgba(237, 70, 162, 1) !important;
   }
   .thumbnail.blue .caption::before {
-    background-color: rgba(64, 199, 244, 0.8) !important;
+    background-color: rgba(64, 199, 244, 1) !important;
   }
 }
 

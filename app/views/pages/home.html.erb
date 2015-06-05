@@ -25,15 +25,7 @@ if @rent_section && @sale_section
 <!-- Hero
   ================================================== -->
 <section class="page-header">
-  
-  <div class="container main-container">
-    <div class="row">
-      <div class="col-xs-12">
-        <%= render "search_button" %>
-    </div>
-    </div>
-  </div>
-  
+
   <section class="flexslider" id="hero-slider">
 
     <ul class="slides">
@@ -65,6 +57,15 @@ if @rent_section && @sale_section
     </ul>
 
   </section>
+  
+  <div class="container main-container">
+    <div class="row">
+      <div class="col-xs-12">
+        <%= render "search_button" %>
+    </div>
+    </div>
+  </div>
+  
 </section>
 <% end %>
   <!-- Search
@@ -119,13 +120,13 @@ mais n’en reste pas moins une <span>agence à taille humaine.</span></p>
  <section class="section-stbarth">
    <div class="row">
      <div class="col-xs-12">
-       <h4 class="text-uppercase section-title">Bienvenue à Saint-Barth</h4>
+       <h4 class="text-uppercase section-title">Welcome to Saint-Barth</h4>
        <div>
          <%= image_tag("stbarthview.jpg", :class => "img-responsive") %>
        </div>
        <div class="inner">
          <h2 class="text-uppercase">Perles des Caraibes</h2>
-         <p><strong>Nichée entre la mer des Caraïbes et l'Océan Atlantique, au nord de l'Arc Antillais</strong> St-Barth, peitie île de 25 km2 allie avec bonheur modernisme et traditions. Elle a su préserver le charme de sa nature sauvage et son environnement précieux.<br\>St-Barth c'est aussi 17 plages, une capitale, Gustavia, des villages, une hostellerie de luxe mais aussi des auberges de charme pour le plus grand plaisir de ses visiteurs.</p>
+         <p><%= t("home_sb") %></p>
        </div>
     </div>
   </div>
@@ -137,11 +138,11 @@ mais n’en reste pas moins une <span>agence à taille humaine.</span></p>
     
     <div class="row">
       <div class="col-xs-12">
-        <h4 class="text-uppercase section-title">Nouveautés</h4>
+        <h4 class="text-uppercase section-title">Our offers</h4>
       </div>
     </div>
     
-    <div class="row">
+    <div class="row equal-height">
       <div class="col-sm-6 col-left">
         
         <a href="#" class="thumbnail pink">

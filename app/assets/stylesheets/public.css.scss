@@ -21,6 +21,7 @@ $logo-height-sm-min: 107px;
 @import "theme/footer";
 @import "theme/home";
 @import "theme/property";
+@import "theme/sale_property";
 
 /* FIX FOR GMAP BUG
 -------------------------------------------------- */
@@ -56,6 +57,18 @@ $logo-height-sm-min: 107px;
   border-color: $brand-success;
 }
 
+.btn-gray {
+  @include button-variant(#fff, $gray, $gray);
+}
+
+.btn-pink {
+  @include button-variant(#fff, #ed46a2, #ed46a2);
+}
+
+.btn-facebook {
+  @include button-variant(#fff, #3b5998, #3b5998);
+}
+
 .thumbnail-property {
 
   padding: 0;
@@ -89,7 +102,7 @@ $logo-height-sm-min: 107px;
       padding: 16px;
       color: #fff;
       @include opacity(0);
-      @include transition(all 0.5s ease);
+      @include transition(all 0.3s ease);
 
       .thumbnail-price,
       .thumbnail-area {

@@ -1,11 +1,3 @@
-<%
-  metas = ""
-  metas += "bedrooms #{record.meta.bedroom_count}" if record.meta.bedroom_count
-  metas += " - #{record.meta.area.name}" if record.meta.area
-  geom = local_assigns.has_key?(:geometry) ? geometry : '720x440#'
-%>
-
-
 <%= link_to(record.public_url, :class => "thumbnail thumbnail-property") do %>
   <h3 class="h5"><%= record.title %></h3>
   
@@ -15,21 +7,16 @@
     <div class="caption">
      	
       <% if record.meta.area %>
-        <p class="area"><i class="fa fa-map-marker"></i> <%= record.meta.area.name %></p>
+        <p class="thumbnail-area"><i class="fa fa-map-marker"></i> <%= record.meta.area.name %></p>
       <% end %>
       
-      <%= content_tag(:p, :class => "small body") do %>
+      <%= content_tag(:p, :class => "small thumbnail-body") do %>
         <%= truncate_html(strip_tags(record.body), :length => 120, :omission => "...") %>
       <% end if record.body.present? %>
       
-      <p class="thumbnail-price"><%= sale_price_value(record) %></p>
+      <p class="thumbnail-price"><%= annual_price_value(record) %></p>
     </div>
-    
-    <% unless record.badge.blank? %>
-      <div class="thumbnail-badges">
-        <span class="thumbnail-badge"><%= record.badge %></span>
-      </div>
-    <% end %>
+
   </div>
   
   <div class="thumbnail-infos">

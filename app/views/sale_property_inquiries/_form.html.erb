@@ -1,5 +1,8 @@
 <%= simple_form_for(:sale_property_inquiry, 
-  :url => sale_property_inquiries_path, :method => :post, :remote => true) do |form| %>
+  :url => sale_property_inquiries_path, 
+  :method => :post, 
+  :remote => true, 
+  :html => {:class => "form-contact"}) do |form| %>
   <%= hidden_field_tag(:return_to, request.url) %>
   <%= form.hidden_field :site_id, :value => site.id %>
   <%= form.hidden_field :property_id %>
@@ -28,7 +31,7 @@
     </div> 
   <%= render 'anti_spam_field', :f => form %>
   <div class='form-group'>
-    <%= form.button :submit, t("send_inquiry"), :class => "btn btn-primary submit" %>
+    <%= form.button :submit, t("send_inquiry"), :class => "btn btn-primary btn-submit" %>
   </div>
   <p id="thanks" data-alert="" class="alert alert-success"><%= t("gko.inquiry_thanks") %></p>
 <% end %>  

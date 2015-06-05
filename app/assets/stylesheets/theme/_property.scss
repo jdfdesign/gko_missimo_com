@@ -34,12 +34,10 @@
   }
 }
 
-.btn-video {
-  position: absolute;
-  right: 15px;
-  top: -4px;
-  z-index: 200;//arbitrary
+.share-links {
+  float: right;
 }
+
 
 /* HEADER
 -------------------------------------------------- */
@@ -55,6 +53,7 @@
   color: #fff;
   margin-bottom: 0;
   padding: 2px 6px;
+  text-transform: uppercase;
 }
 
 .rental-property {
@@ -150,10 +149,6 @@
   padding-left: 0;
   ul {
     list-style-type: none;
-    //font-size: 16px;
-    //font-style: italic;
-    //line-height: 24px;
-    //color: $text-color;
   }
 }
 .realty-season-title {
@@ -174,7 +169,7 @@
   border-bottom: 1px solid $gray-lighter;
 }
 .price_notes_extra {
-    font-size: 16px;
-    line-height: 24px;
-    color: $headings-color;
+  font-size: 16px;
+  line-height: 24px;
 }
+

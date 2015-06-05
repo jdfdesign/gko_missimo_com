@@ -31,3 +31,10 @@ span.valid{
   background-color:#22b573; 
   color: #fff;
 }
+
+.form-contact {
+  .btn-submit {
+    text-transform: uppercase;
+    color: $text-color;
+  }
+}

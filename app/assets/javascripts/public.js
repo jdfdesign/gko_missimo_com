@@ -5,6 +5,7 @@ $(document).ready(function() {
 
   "use strict";
 
+  var win = $( window );
  $('.datepicker').datepicker();
 
  //===========================================================
@@ -18,8 +19,18 @@ $(document).ready(function() {
    $(this).children('img').hide();
    $(this).css('background-position', '50% 0%');
  });
-
  
+ $( window ).resize(function() {
+   
+   var width = $(window).width();
+
+   if ( width >= 768 ) {
+     console.log($(".equal-height > .col-left").height());
+     $(".equal-height > .col-right > .thumbnail").css("height", $(".equal-height > .col-left").height() - 22);
+   }
+   
+ });
+
 });
 
 $(window).load(function(){
@@ -51,5 +62,7 @@ $(window).load(function(){
       $('body').removeClass('loading');
     }
   });
+
+  $( window ).trigger('resize');
   
 });

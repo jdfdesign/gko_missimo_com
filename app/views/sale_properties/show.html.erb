@@ -20,8 +20,7 @@ end
 <% content_for :page_header do -%>
   <%= render "filter" %>
 <% end %>
-<%= render "fb_share" %>
-<article class="property rental-property">
+<article class="property sale-property">
   <!-- Header
   ================================================== -->
   <div class='row row-padded'>
@@ -38,7 +37,7 @@ end
     <div class='col-sm-4'>
         <p class="property-min-price">
           <%= sale_price_value(@sale_property, true) %></p>
-        <p class="property-status"><%= "Status".html_safe %></p>
+        <p class="property-status bg-primary"><%= "Status".html_safe %></p>
     </div>
   </div>
 
@@ -68,13 +67,17 @@ end
         </ul>
       </div>
       <div class='col-sm-6'>
-        <% @sale_property.stickers.translated.each do |s| %>
-          <li><%= link_to(s.name, s.public_url, :class => "btn btn-success") %></li>
-        <% end %>
+        <ul class="unstyled nav stickers-nav">
+          <% @sale_property.stickers.translated.each do |s| %>
+            <%= content_tag :li, :class => "property-sticker #{s.css} bg-primary" do %>
+              <%= s.name %>
+            <% end if s.css.present? %>
+          <% end %>
+        </ul>
       </div>
     </div>
 
-    <hr class="hr-border-success">
+    <hr class="hr-border-primary">
 
     <!-- Description
       ================================================== -->
@@ -90,13 +93,13 @@ end
        </div>
      </div>
 
-     <hr class="hr-border-success">
+     <hr class="hr-border-primary">
 
       <!-- Socials
       ================================================== -->
       <div class='row row-padded'>
         <div class='col-sm-12'>
-          <%= render 'property_social_links' %>
+          <%= render 'share_links' %>
         </div>
       </div>
 
