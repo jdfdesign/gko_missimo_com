@@ -10925,46 +10925,52 @@ span.valid {
   background-color: #41c7f4;
 }
 
+/* line 28, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar-brand {
+  width: 200px;
+}
+
 @media (min-width: 768px) {
-  /* line 37, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 40, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar > .container-fluid {
     padding: 0;
   }
 
-  /* line 40, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 43, ../../app/assets/stylesheets/theme/_navbar.scss */
   .container-fluid > .navbar-header {
     float: none !important;
     text-align: center;
     background-color: #f6f6f6;
   }
 
-  /* line 46, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 49, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     float: none;
     display: inline-block;
+    width: 300px;
   }
 
-  /* line 51, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 55, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav {
     width: 100%;
     text-align: center;
   }
-  /* line 54, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 58, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li {
     float: none;
     display: inline-block;
   }
 
-  /* line 60, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 64, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     padding: 12px 15px;
   }
 }
-/* line 66, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 70, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li {
   padding: 42.5px 10px;
 }
-/* line 70, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 74, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a {
   padding: 0;
   border-bottom: 3px solid #404344;
@@ -10973,13 +10979,13 @@ span.valid {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 76, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 80, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a:hover, #locales > li > a:focus {
   border-bottom-color: #404344;
   background-color: transparent;
 }
 
-/* line 82, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 86, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-form {
   position: absolute;
   right: 0px;

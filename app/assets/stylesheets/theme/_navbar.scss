@@ -25,6 +25,9 @@
     }
 }
 
+.navbar-brand {
+  width: 200px;
+}
 
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
@@ -46,6 +49,7 @@
   .navbar-brand {
     float: none;
     display: inline-block;
+    width: 300px;
   }
 
   .navbar-nav {
