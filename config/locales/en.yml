@@ -20,6 +20,12 @@ en:
     select:
       lifestyle:
         prompt: "lifestyles"
-      
-      
+      order:
+        prompt: "Order by"
+      price_per_week:
+        prompt: "Price per week"
+      price_per_month:
+        prompt: "Price per month"
+      price:
+        prompt: "Price"
       

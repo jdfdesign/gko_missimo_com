@@ -7207,7 +7207,7 @@ button.close {
 }
 
 /* line 4, ../../app/assets/stylesheets/font-awesome-4.2.0/_core.scss */
-.fa {
+.fa, #contact, #homepage {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -7292,11 +7292,11 @@ button.close {
 }
 
 /* line 14, ../../app/assets/stylesheets/font-awesome-4.2.0/_bordered-pulled.scss */
-.fa.pull-left {
+.fa.pull-left, .pull-left#contact, .pull-left#homepage {
   margin-right: .3em;
 }
 /* line 15, ../../app/assets/stylesheets/font-awesome-4.2.0/_bordered-pulled.scss */
-.fa.pull-right {
+.fa.pull-right, .pull-right#contact, .pull-right#homepage {
   margin-left: .3em;
 }
 
@@ -7522,7 +7522,7 @@ button.close {
 }
 
 /* line 27, ../../app/assets/stylesheets/font-awesome-4.2.0/_icons.scss */
-.fa-home:before {
+.fa-home:before, #homepage:before {
   content: "\f015";
 }
 
@@ -8431,7 +8431,7 @@ button.close {
 }
 
 /* line 224, ../../app/assets/stylesheets/font-awesome-4.2.0/_icons.scss */
-.fa-envelope:before {
+.fa-envelope:before, #contact:before {
   content: "\f0e0";
 }
 
@@ -10825,10 +10825,6 @@ span.valid {
 .form-search input, .form-search select, .form-search textarea {
   width: 100%;
 }
-/* line 22, ../../app/assets/stylesheets/theme/_search-form.scss */
-.form-search .last-row .form-group {
-  margin-bottom: 0;
-}
 
 /* line 28, ../../app/assets/stylesheets/theme/_search-form.scss */
 .tab-pane-sales {
@@ -10928,49 +10924,53 @@ span.valid {
 /* line 28, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand {
   width: 200px;
+  height: auto;
 }
 
 @media (min-width: 768px) {
   /* line 40, ../../app/assets/stylesheets/theme/_navbar.scss */
+  .navbar-brand {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  /* line 47, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar > .container-fluid {
     padding: 0;
   }
 
-  /* line 43, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 50, ../../app/assets/stylesheets/theme/_navbar.scss */
   .container-fluid > .navbar-header {
     float: none !important;
     text-align: center;
     background-color: #f6f6f6;
   }
 
-  /* line 49, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 56, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     float: none;
     display: inline-block;
     width: 300px;
+    padding-bottom: 0;
+    padding: 12px 15px 0 15px;
   }
 
-  /* line 55, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 64, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav {
     width: 100%;
     text-align: center;
   }
-  /* line 58, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 67, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li {
     float: none;
     display: inline-block;
   }
-
-  /* line 64, ../../app/assets/stylesheets/theme/_navbar.scss */
-  .navbar-brand {
-    padding: 12px 15px;
-  }
 }
-/* line 70, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 76, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li {
   padding: 42.5px 10px;
 }
-/* line 74, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 80, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a {
   padding: 0;
   border-bottom: 3px solid #404344;
@@ -10979,13 +10979,13 @@ span.valid {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 80, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 86, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a:hover, #locales > li > a:focus {
   border-bottom-color: #404344;
   background-color: transparent;
 }
 
-/* line 86, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 92, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-form {
   position: absolute;
   right: 0px;
@@ -10993,6 +10993,34 @@ span.valid {
   z-index: 1;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/* line 107, ../../app/assets/stylesheets/theme/_navbar.scss */
+#contact {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/* line 111, ../../app/assets/stylesheets/theme/_navbar.scss */
+#contact:before {
+  color: #fff;
+  font: normal normal normal 18px/1 FontAwesome;
+}
+
+/* line 117, ../../app/assets/stylesheets/theme/_navbar.scss */
+#homepage {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/* line 121, ../../app/assets/stylesheets/theme/_navbar.scss */
+#homepage:before {
+  color: #fff;
+  font: normal normal normal 18px/1 FontAwesome;
 }
 
 /* PANELS
@@ -12010,32 +12038,37 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 /* GLOBAL
 -------------------------------------------------- */
 /* line 41, ../../app/assets/stylesheets/public.css.scss */
+.no-border {
+  border: none !important;
+}
+
+/* line 45, ../../app/assets/stylesheets/public.css.scss */
 .bg-success {
   background-color: #98bf3f !important;
 }
 
-/* line 45, ../../app/assets/stylesheets/public.css.scss */
+/* line 49, ../../app/assets/stylesheets/public.css.scss */
 .text-success {
   color: #98bf3f !important;
 }
 
-/* line 49, ../../app/assets/stylesheets/public.css.scss */
+/* line 53, ../../app/assets/stylesheets/public.css.scss */
 .main-container,
 .footer-container {
   max-width: 1020px;
 }
 
-/* line 53, ../../app/assets/stylesheets/public.css.scss */
+/* line 57, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-primary {
   border-color: #41c7f4;
 }
 
-/* line 56, ../../app/assets/stylesheets/public.css.scss */
+/* line 60, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-success {
   border-color: #98bf3f;
 }
 
-/* line 60, ../../app/assets/stylesheets/public.css.scss */
+/* line 64, ../../app/assets/stylesheets/public.css.scss */
 .btn-gray {
   color: white;
   background-color: #555555;
@@ -12062,7 +12095,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   background-color: white;
 }
 
-/* line 64, ../../app/assets/stylesheets/public.css.scss */
+/* line 68, ../../app/assets/stylesheets/public.css.scss */
 .btn-pink {
   color: white;
   background-color: #ed46a2;
@@ -12089,7 +12122,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   background-color: white;
 }
 
-/* line 68, ../../app/assets/stylesheets/public.css.scss */
+/* line 72, ../../app/assets/stylesheets/public.css.scss */
 .btn-facebook {
   color: white;
   background-color: #3b5998;
@@ -12116,23 +12149,23 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   background-color: white;
 }
 
-/* line 72, ../../app/assets/stylesheets/public.css.scss */
+/* line 76, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property {
   padding: 0;
   border: none;
 }
-/* line 77, ../../app/assets/stylesheets/public.css.scss */
+/* line 81, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property:hover {
   text-decoration: none;
 }
-/* line 81, ../../app/assets/stylesheets/public.css.scss */
+/* line 85, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property h3 {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 16px;
+  padding: 16px 0 4px 0;
   color: #98bf3f;
 }
-/* line 88, ../../app/assets/stylesheets/public.css.scss */
+/* line 92, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner {
   position: relative;
   padding: 0;
@@ -12140,7 +12173,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   font-size: 14px !important;
   font-weight: 300 !important;
 }
-/* line 95, ../../app/assets/stylesheets/public.css.scss */
+/* line 99, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner .caption {
   position: absolute;
   bottom: 0;
@@ -12156,12 +12189,12 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 108, ../../app/assets/stylesheets/public.css.scss */
+/* line 112, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner .caption .thumbnail-price,
 .thumbnail-property .thumbnail-inner .caption .thumbnail-area {
   color: #98bf3f;
 }
-/* line 113, ../../app/assets/stylesheets/public.css.scss */
+/* line 117, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner .thumbnail-badges {
   position: absolute;
   top: 7px;
@@ -12177,27 +12210,27 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 125, ../../app/assets/stylesheets/public.css.scss */
+/* line 129, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner .thumbnail-badges .thumbnail-info {
   background-color: #03A9F4;
   padding: 8px;
 }
-/* line 129, ../../app/assets/stylesheets/public.css.scss */
+/* line 133, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner .thumbnail-badges .thumbnail-badge {
   background-color: #FF5252 !important;
   padding: 8px;
 }
-/* line 136, ../../app/assets/stylesheets/public.css.scss */
+/* line 140, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner:hover .thumbnail-badges {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-/* line 139, ../../app/assets/stylesheets/public.css.scss */
+/* line 143, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-inner:hover .caption {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-/* line 145, ../../app/assets/stylesheets/public.css.scss */
+/* line 149, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-infos {
   display: table;
   background-color: #555555;
@@ -12207,21 +12240,21 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   font-size: 14px !important;
   font-weight: 300 !important;
 }
-/* line 153, ../../app/assets/stylesheets/public.css.scss */
+/* line 157, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-infos p {
   margin: 0;
   display: table-cell;
   vertical-align: middle;
   text-align: left;
 }
-/* line 161, ../../app/assets/stylesheets/public.css.scss */
+/* line 165, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-icons {
   display: table-cell;
   vertical-align: middle;
   text-align: right;
   margin: 0;
 }
-/* line 166, ../../app/assets/stylesheets/public.css.scss */
+/* line 170, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-property .thumbnail-icons > li > img {
   width: 24px;
   height: 24px;
@@ -12250,7 +12283,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   }
 }
 
-/* line 189, ../../app/assets/stylesheets/public.css.scss */
+/* line 193, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
   width: 100%;
   height: 160px;
@@ -12259,13 +12292,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   background-image: url(/assets/bg-header-12ac3894e5ae4b5dc836c92a778a0065.jpg);
 }
 
-/* line 200, ../../app/assets/stylesheets/public.css.scss */
+/* line 204, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder.parallax-background {
   height: 120%;
   top: -10%;
 }
 
-/* line 205, ../../app/assets/stylesheets/public.css.scss */
+/* line 209, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder,
 .hover-background .foreground-image-holder {
   -webkit-transition: all 0.3s ease-out;
@@ -12273,7 +12306,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   transition: all 0.3s ease-out;
 }
 
-/* line 208, ../../app/assets/stylesheets/public.css.scss */
+/* line 212, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder {
   height: 110%;
   width: 110%;

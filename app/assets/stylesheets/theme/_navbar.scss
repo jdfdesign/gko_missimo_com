@@ -27,6 +27,7 @@
 
 .navbar-brand {
   width: 200px;
+  height: auto;
 }
 
 .navbar-default .navbar-nav > .open > a, 
@@ -35,6 +36,12 @@
     //background-color: $navbar-default-link-hover-bg;
     //color: $navbar-default-link-hover-color;
 }
+@media (min-width: $screen-sm-min) {
+  .navbar-brand {
+    padding-bottom: 0;
+  }
+}
+
 @media (min-width: $grid-float-breakpoint) {
     
   .navbar > .container-fluid {
@@ -50,6 +57,8 @@
     float: none;
     display: inline-block;
     width: 300px;
+    padding-bottom: 0;
+    padding: 12px 15px 0 15px;
   }
 
   .navbar-nav {
@@ -60,10 +69,7 @@
       display: inline-block;
     }
   }
-  
-  .navbar-brand {
-    padding: 12px 15px;
-  }
+
 }
 #locales {
 
@@ -97,3 +103,23 @@
 //     top: 26px;
 //     z-index: 1;
 // }
+
+#contact {
+  @extend .fa;
+  @extend .fa-envelope;
+  @include text-hide();
+  &:before {
+    color: #fff;
+    font: normal normal normal 18px/1 FontAwesome;
+  }
+}
+
+#homepage {
+  @extend .fa;
+  @extend .fa-home;
+  @include text-hide();
+  &:before {
+    color: #fff;
+    font: normal normal normal 18px/1 FontAwesome;
+  }
+}

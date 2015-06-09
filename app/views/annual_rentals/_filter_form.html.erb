@@ -27,7 +27,7 @@ if @rental_properties_section
           :selected => params[:search].present? ? params[:search][:with_category] : nil,
           :label_method => :title,
           :value_method => :id,
-          :prompt => "Type de bien",
+          :prompt => "Type",
           :label => false,
           :as => :select,
           :input_html => { :class => "form-control" } %>
@@ -61,7 +61,7 @@ if @rental_properties_section
           <%= form.input :price, 
           :collection => price_options,
           :selected => params[:search].present? ? params[:search][:price] : nil,
-          :prompt => t(:'helpers.select.price.prompt').html_safe,
+          :prompt => t(:'helpers.select.price_per_month.prompt').html_safe,
           :label => false,
           :as => :select,
           :input_html => { :class => "form-control" } %>
@@ -71,7 +71,7 @@ if @rental_properties_section
         <%= form.input :order, 
         :collection => [:title, :price],
         :selected => params[:search].present? ? params[:search][:order] : nil,
-        :prompt => t(:'helpers.select.price.prompt').html_safe,
+        :prompt => t(:'helpers.select.order.prompt').html_safe,
         :label => false,
         :as => :select,
         :input_html => { :class => "form-control" } %>

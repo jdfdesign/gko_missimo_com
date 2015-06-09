@@ -25,8 +25,8 @@ $(document).ready(function() {
    var width = $(window).width();
 
    if ( width >= 768 ) {
-     console.log($(".equal-height > .col-left").height());
-     $(".equal-height > .col-right > .thumbnail").css("height", $(".equal-height > .col-left").height() - 22);
+     //console.log($(".equal-height > .col-left").height());
+     $(".equal-height > .col-right > .thumbnail > .background-image-holder").css("height", $(".equal-height > .col-left").height() - 22);
    }
    
  });

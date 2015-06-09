@@ -38,6 +38,10 @@ $logo-height-sm-min: 107px;
 /* GLOBAL
 -------------------------------------------------- */
 
+.no-border {
+  border: none !important;
+}
+
 .bg-success {
   background-color: $brand-success !important;
 }
@@ -81,7 +85,7 @@ $logo-height-sm-min: 107px;
   h3 {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 16px;
+    padding: 16px 0 4px 0;
     color: $brand-success;
   }
 

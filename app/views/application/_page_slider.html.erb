@@ -18,6 +18,7 @@
     <% end %>
   </ul>
 </div><!--end of image slider-->
+<% if images.length > 1 %>
 <div class="flexslider" id="carousel">
   <ul class="slides">
     <% images.each do |img| %>
@@ -35,3 +36,4 @@
     <% end %>
   </ul>
 </div><!--end of image slider-->
+<% end %>

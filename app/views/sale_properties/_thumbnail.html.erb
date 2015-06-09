@@ -7,7 +7,8 @@
 
 
 <%= link_to(record.public_url, :class => "thumbnail thumbnail-property") do %>
-  <h3 class="h5"><%= record.title %></h3>
+  <h3 class="h4"><%= record.title %></h3>
+  <em><%= record.meta.code %></em>
   
   <div class="thumbnail-inner">
     <%= image_fu(record.thumbnail, "720x440#", :class => "img-responsive") %>

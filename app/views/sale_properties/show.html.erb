@@ -16,6 +16,16 @@ end
 if @sale_property.area.present?
   tags << realty_meta_tag("area", @sale_property.area.name)
 end
+
+flags = []
+if @sale_property.area.present?
+  flags << @sale_property.area.name
+  flags << @sale_property.area.city.name
+end
+if @sale_property.meta and @sale_property.meta.code.present?
+  flags << @sale_property.meta.code
+end
+
 %>
 <% content_for :page_header do -%>
   <%= render "filter" %>
@@ -26,13 +36,7 @@ end
   <div class='row row-padded'>
     <div class='col-sm-8'>
       <h1><%= @sale_property.title %></h1>
-      <% if @sale_property.area.present? %>
-        <%= @sale_property.area.name %>
-        <%= @sale_property.area.city.name %>
-      <% end %>
-      <% if @sale_property.meta and @sale_property.meta.code.present? %>
-        <%= @sale_property.meta.code %>
-      <% end %>
+      <%= flags.compact.join(" - ").html_safe %>
     </div>
     <div class='col-sm-4'>
         <p class="property-min-price">

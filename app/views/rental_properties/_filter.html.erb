@@ -7,13 +7,14 @@
     <div class="row">
       <div class="col-xs-12">
         <a class="btn btn-success btn-search-collapse" data-toggle="collapse" href="#rental-properties-form" aria-expanded="false" aria-controls="collapseExample">
-          <i class="fa fa-search"></i> Vous recherchez
+          <i class="fa fa-search"></i>
+          <input type="text" class="no-border" id="exampleInputName2" placeholder="<%= t('searching') %>">
         </a>
     </div>
     </div>
   </div>
 </div>
 <% end %>
-<div class="collapse bg-success form-search-wrapper" id="rental-properties-form">
+<div class="collapse fade in bg-success form-search-wrapper" id="rental-properties-form">
   <%= render "rental_properties/filter_form" %>
 </div>

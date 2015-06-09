@@ -28,13 +28,15 @@ if @sale_section
         <%= render "shared/area_select", :f => form %>  
       </div>
       <div class="col-md-3">
-         <%= form.input :order, 
-         :collection => [:title, :price],
-         :selected => params[:search].present? ? params[:search][:order] : nil,
-         :prompt => t(:'helpers.select.price.prompt').html_safe,
-         :label => false,
-         :as => :select,
-         :input_html => { :class => "form-control" } %>
+        <div class='form-group'>
+          <%= form.input :order, 
+           :collection => [:title, :price],
+           :selected => params[:search].present? ? params[:search][:order] : nil,
+           :prompt => t(:'helpers.select.order.prompt').html_safe,
+           :label => false,
+           :as => :select,
+           :input_html => { :class => "form-control" } %>
+        </div>
       </div>
     </div>
     <div class="row"> 

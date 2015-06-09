@@ -12,6 +12,14 @@ end
 #@annual_rental.content_options.each do |o|
 #  tags << "<strong>#{o.option_type.presentation}: </strong>#{o.option_value.presentation}"
 #end
+flags = []
+if @annual_rental.area.present?
+  flags << @annual_rental.area.name
+  flags << @annual_rental.area.city.name
+end
+if @annual_rental.meta and @annual_rental.meta.code.present?
+  flags << @annual_rental.meta.code
+end
 %>
 
 <%= render "filter" %>
@@ -22,13 +30,7 @@ end
   <div class='row row-padded'>
     <div class='col-sm-8'>
       <h1><%= @annual_rental.title %></h1>
-      <% if @annual_rental.area.present? %>
-        <%= @annual_rental.area.name %>
-        <%= @annual_rental.area.city.name %>
-      <% end %>
-      <% if @annual_rental.meta and @annual_rental.meta.code.present? %>
-        <%= @annual_rental.meta.code %>
-      <% end %>
+      <%= flags.compact.join(" - ").html_safe %>
     </div>
     <div class='col-sm-4'>
         <p class="property-min-price"><%= annual_price_value(@annual_rental) %> / month</p>
