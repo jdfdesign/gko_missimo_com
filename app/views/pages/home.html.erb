@@ -1,13 +1,7 @@
 <%
-if @rent_section ||= site.rental_property_lists.live.first
-  @promotions = @rent_section.rental_properties.live.with_promo.limit(6).order("RAND()")
-  @infos = @rent_section.rental_properties.live.with_info.limit(8).order("RAND()")
-  @end_display = @rent_section.rental_properties.end_display.live.limit(8).order("RAND()")
-end
-
-if @sale_section ||= site.sale_property_lists.live.first
-  @sale_properties = @sale_section.sale_properties.in_city(site.cities.first).in_homepage.live.limit(6).order("RAND()")
-end
+@rent_section ||= site.rental_property_lists.live.first
+@sale_section ||= site.sale_property_lists.live.first
+@sannual_section ||= site.annual_rental_lists.live.first
 
 geom = case request.env['mobvious.device_type']
   when :mobile
@@ -17,8 +11,6 @@ geom = case request.env['mobvious.device_type']
   else
     "1400x500#"
   end
-
-if @rent_section && @sale_section
 %>
 <% content_for :page_header do -%>
 
@@ -72,7 +64,7 @@ if @rent_section && @sale_section
     ================================================== -->
 <div class="row">
   <div class="col-xs-12">
-    <div class="collapse bg-success form-search-wrapper" id="global-search-panel">
+    <div class="collapse form-search-wrapper" id="global-search-panel">
       <div role="tabpanel">
         <ul class="nav nav-pills" role="tablist">
           <li role="presentation" class="active">
@@ -106,80 +98,82 @@ if @rent_section && @sale_section
 <section class="section-presentation">
    <div class="row">
      <div class="col-xs-12">
-       <p class="text-uppercase"><span>MISSIMMO</span> est une agence immobillière qui vous propose <span>un service personnalisé</span>
-par l’écoute et la recherche de <span>votre satisfaction</span> dans l’intérêt mutuel des parties.
+       <p class="text-uppercase"><strong>MISSIMMO</strong> est une agence immobillière qui vous propose <strong>un service personnalisé</strong>
+par l’écoute et la recherche de <strong>votre satisfaction</strong> dans l’intérêt mutuel des parties.
 MISSIMMO adhère au premier Syndicat Professionnel de l’Immobilier, la FNAIM,
 qui regroupe plus de 10 000 agences en France et dans les DOM-TOM
-mais n’en reste pas moins une <span>agence à taille humaine.</span></p>
+mais n’en reste pas moins une <strong>agence à taille humaine.</strong></p>
     </div>
   </div>
 </section>
 
 <!-- StBarth
-  ================================================== -->
- <section class="section-stbarth">
-   <div class="row">
-     <div class="col-xs-12">
-       <h4 class="text-uppercase section-title">Welcome to Saint-Barth</h4>
-       <div>
-         <%= image_tag("stbarthview.jpg", :class => "img-responsive") %>
-       </div>
-       <div class="inner">
-         <h2 class="text-uppercase">Perles des Caraibes</h2>
-         <p><%= t("home_sb").html_safe %></p>
-         <%= link_to(@sbhpage.public_url, :class => "btn btn-primary") do %>
-            <%= raw("Read more") %> <i class="fa fa-chevron-right"></i>
-          <% end if @sbhpage = site.sections.named("stbarth") %>
-       </div>
+================================================== -->
+<section class="section-stbarth">
+ <div class="row">
+   <div class="col-xs-12">
+     <h4 class="text-uppercase section-title">Welcome to Saint-Barth</h4>
+     <div class="firt-row-inner background-image-holder">
+       <%= image_tag("stbarthview.jpg") %>
+       <p class="col-sm-6 col-sm-offset-6"><span>Missimmo</span><br/><span>vous propose une sélection</span><br/><span>des plus belles villas de Saint-Barth</span><br/>
+       <%= link_to("Partez à l'aventure", @rent_section.public_url, :class => "btn btn-white") %></p>
+       
+     </div>
+     <div class="second-row-inner">
+       <h2 class="text-uppercase">Perles des Caraibes</h2>
+       <p><%= t("home_sb").html_safe %></p>
+       <%= link_to(@sbhpage.public_url, :class => "btn btn-primary") do %>
+          <%= raw("Read more") %> <i class="fa fa-chevron-right"></i>
+        <% end if @sbhpage = site.sections.named("stbarth") %>
+     </div>
+  </div>
+</div>
+</section>
+
+<!-- new properties
+ ================================================== -->
+<section class="section-offers">
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <h4 class="text-uppercase section-title">Our offers</h4>
     </div>
   </div>
- </section>
-
- <!-- new properties
-   ================================================== -->
-  <section class="section-offers">
-    
-    <div class="row">
-      <div class="col-xs-12">
-        <h4 class="text-uppercase section-title">Our offers</h4>
-      </div>
+  
+  <div class="row equal-height">
+    <div class="col-sm-6 col-left">
+      
+      <%= link_to(@sannual_section.public_url, :class => "thumbnail pink" ) do %>
+        <div class="img-wrapper background-image-holder">
+          <%= image_tag("lifetyle_01.jpg") %>
+        </div>
+        <div class="caption">
+          <h3 class="title"><span>Annual rental</span></h3>
+        </div>
+      <% end if @sannual_section %>
+      
+      <%= link_to(@rent_section.public_url, :class => "thumbnail green" ) do %>
+        <div class="img-wrapper background-image-holder">
+          <%= image_tag("lifetyle_02.jpg") %>
+        </div>
+        <div class="caption">
+          <h3 class="title"><span>Vacation villas</span></h3>
+        </div>
+      <% end if @rent_section %>
+      
     </div>
     
-    <div class="row equal-height">
-      <div class="col-sm-6 col-left">
-        
-        <a href="#" class="thumbnail pink">
-          <div class="img-wrapper background-image-holder">
-            <%= image_tag("lifetyle_01.jpg") %>
-          </div>
-          <div class="caption">
-            <h3 class="title"><span>Annual rental</span></h3>
-          </div>
-        </a>
-        
-        <a href="#" class="thumbnail green">
-          <div class="img-wrapper background-image-holder">
-            <%= image_tag("lifetyle_02.jpg") %>
-          </div>
-          <div class="caption">
-            <h3 class="title"><span>Vacation villas</span></h3>
-          </div>
-        </a>
-        
-      </div>
-      <div class="col-sm-6 col-right">
-        
-        <a href="#" class="thumbnail blue">
-          <div class="img-wrapper background-image-holder">
-            <%= image_tag("lifetyle_03.jpg") %>
-          </div>
-          <div class="caption">
-            <h3 class="title"><span>Real estate</span></h3>
-          </div>
-        </a>
-        
-      </div>
-   </div>
-  </section>
-
-<% end %>
+    <div class="col-sm-6 col-right">
+      
+      <%= link_to(@sale_section.public_url, :class => "thumbnail blue" ) do %>
+        <div class="img-wrapper background-image-holder">
+          <%= image_tag("lifetyle_03.jpg") %>
+        </div>
+        <div class="caption">
+          <h3 class="title"><span>Real estate</span></h3>
+        </div>
+      <% end if @sale_section %>
+      
+    </div>
+ </div>
+</section>

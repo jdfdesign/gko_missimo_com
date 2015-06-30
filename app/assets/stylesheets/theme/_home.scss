@@ -3,14 +3,11 @@
   margin-bottom: $line-height-computed * 2;
   background-color: #9a9b9d;
   padding: $line-height-computed*4 $line-height-computed*2;
+  color: #fff;
   p {
     font-weight: 300;
     font-size: 16px;
     margin-bottom: 0;
-    span {
-      color: #fff;
-      text-decoration: underline;
-    }
   }
 }
 
@@ -24,7 +21,23 @@
 .section-stbarth {
   padding: $line-height-computed*3 $line-height-computed;
   background-color: #fff;
-  .inner {
+  .firt-row-inner {
+    display: table;
+    > p {
+      vertical-align: middle;
+      display: table-cell;
+      padding: $line-height-computed;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      span {
+        color: #fff;
+        background-color: $brand-primary;
+        padding: $line-height-computed/4;
+        display: inline-block;
+      }
+    }
+  }
+  .second-row-inner {
     padding-left: $line-height-computed;
     padding-right: $line-height-computed;
   }

@@ -1,48 +1,30 @@
 /* BUTTONS
 -------------------------------------------------- */
+.btn-white {
+  @include button-variant(#000, #fff, #fff);
+}
+.btn-gray {
+  @include button-variant(#fff, $gray, $gray);
+}
+
+.btn-green-dark {
+  @include button-variant(#fff, $green-dark, $green-dark);
+}
+
+.btn-blue-dark {
+  @include button-variant(#fff, $blue-dark, $blue-dark);
+}
+
+.btn-pink {
+  @include button-variant(#fff, #ed46a2, #ed46a2);
+}
+.btn-pink-dark {
+  @include button-variant(#fff, #B8367D, #B8367D);
+}
+.btn-facebook {
+  @include button-variant(#fff, #3b5998, #3b5998);
+}
+
 .btn {
-    //font-family: $font-family-alt;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 900;
-    border: none;
-    background: none;
-    //color: #000;
-    border-radius: 0;
-    min-width: 120px;
-    @include transition(all 0.3s ease);
-    &:hover,
-    &:focus,
-    &.active {
-        //color: #fff;
-        //background-color: #000;
-        //border-color: #000;
-    }
-}
-
-.btn-group.controls {
-    margin-top: $line-height-computed;
-    .btn:first-child {
-        border-right: none;
-        min-width: 60px;
-    }
-    .btn:last-child {
-        border-left: none;
-        min-width: 60px;
-    }
-}
-
-.btn-inverse {
-    color: #fff;
-    border-color: #fff;
-    &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-        color: #000;
-        background-color: #fff;
-        border-color: #fff;
-    }
+  text-transform: uppercase;
 }

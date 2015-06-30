@@ -1,5 +1,5 @@
-<%= link_to(record.public_url, :class => "thumbnail thumbnail-property") do %>
-  <h3 class="h4"><%= record.title %></h3>
+<%= link_to(record.public_url, :class => "thumbnail thumbnail-property annual-rental-thumbnail") do %>
+  <h3 class="h4 thumbnail-title"><%= record.title %></h3>
   <em><%= record.meta.code %></em>
   <div class="thumbnail-inner">
     <%= image_fu(record.thumbnail, "720x440#", :class => "img-responsive") %>
@@ -10,7 +10,7 @@
         <p class="thumbnail-area"><i class="fa fa-map-marker"></i> <%= record.meta.area.name %></p>
       <% end %>
       
-      <%= content_tag(:p, :class => "small thumbnail-body") do %>
+      <%= content_tag(:p, :class => "thumbnail-body") do %>
         <%= truncate_html(strip_tags(record.body), :length => 120, :omission => "...") %>
       <% end if record.body.present? %>
       

@@ -14,8 +14,7 @@ if @rental_properties_section
   <%= simple_form_for(:search, 
     :url => @rental_properties_section.public_url, 
     :method => :get,
-    :data => {:remote => true }, 
-    :html => {:class => "form-search"}) do |form| %>
+    :html => { :class => "form-search" }) do |form| %>
   <%= form.input :page, 
   :as => :hidden,
   :input_html => { :value => "1" } %>
@@ -39,7 +38,7 @@ if @rental_properties_section
         </div>
       </div>
       <div class="col-md-3">
-        <%= render "shared/area_select", :f => form %> 
+        <%= render "city_select", :f => form %>
       </div>
       <div class="col-md-3">
         <div class='form-group'>
@@ -59,7 +58,7 @@ if @rental_properties_section
       <div class="col-md-6">
         <div class='form-group'>
           <%= form.input :price, 
-          :collection => price_options,
+          :collection => ["< 999 €", "1000 € - 1999 €", "2000 - 2999 €", "3000 - 4999 €"],
           :selected => params[:search].present? ? params[:search][:price] : nil,
           :prompt => t(:'helpers.select.price_per_week.prompt').html_safe,
           :label => false,
@@ -70,7 +69,7 @@ if @rental_properties_section
       <div class="col-md-3">
         <div class='form-group'>
           <%= form.input :order, 
-          :collection => [:title, :price],
+          :collection => [[:title, :by_title], [:price, :by_price]],
           :selected => params[:search].present? ? params[:search][:order] : nil,
           :prompt => t(:'helpers.select.order.prompt').html_safe,
           :label => false,
@@ -79,7 +78,7 @@ if @rental_properties_section
         </div>
      </div>
       <div class="col-md-3">
-       <%= form.button 'submit', t('search'), :class => "submit-search" %>
+       <%= form.button 'submit', t('search'), :class => "submit-search btn btn-green-dark" %>
      </div>
     </div>
   <% end %>

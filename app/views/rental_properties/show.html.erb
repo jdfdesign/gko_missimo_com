@@ -34,7 +34,7 @@ end
 <article class="property rental-property">
   <!-- Header
   ================================================== -->
-  <div class='row row-padded'>
+  <div class='row'>
     <div class='col-sm-8'>
       <h1><%= @rental_property.title %></h1>
       <%= flags.compact.join(" - ").html_safe %>
@@ -86,15 +86,14 @@ end
       <div class='row row-padded'>
         <div class='col-sm-12'>
           <%= render_copy_text(resource.body) %>
-            <% if @rental_property.meta and @rental_property.meta.video_url.present? %>
-              <br/>
-              <div class="embed-responsive embed-responsive-16by9 hidden-print">
-                <iframe src="//player.vimeo.com/video/<%= @rental_property.meta.video_url %>"></iframe>
-              </div>
-            <% end %>
-          </div>
+          <% if @rental_property.meta and @rental_property.meta.video_url.present? %>
+            <br/>
+            <div class="embed-responsive embed-responsive-16by9 hidden-print">
+              <iframe src="//player.vimeo.com/video/<%= @rental_property.meta.video_url %>"></iframe>
+            </div>
+          <% end %>
         </div>
-
+      </div>
 
       <hr class="hr-border-success">
 
@@ -126,8 +125,8 @@ end
       <%= render :partial => 'rental_property_inquiries/form' %>
       <!-- Map
       ================================================== -->
-      <%= render('google_map', :point => @rental_property.lat_long) if @rental_property.lat_long.present? %>
-
+      <%#= render('google_map', :point => @rental_property.lat_long) if @rental_property.lat_long.present? %>
+      <%= content_tag(:div, "", :class => "map-canvas", :data => { :point => @rental_property.lat_long }) if @rental_property.lat_long.present? %>
     </div>
   </div>
 </article>

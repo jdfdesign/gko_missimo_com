@@ -1,3 +1,5 @@
+/* FORM
+-------------------------------------------------- */
 abbr {
   color: $brand-success;
 }
@@ -31,10 +33,11 @@ span.valid{
   background-color:#22b573; 
   color: #fff;
 }
-
-.form-contact {
-  .btn-submit {
-    text-transform: uppercase;
-    color: $text-color;
+/* SEARCH FORM
+-------------------------------------------------- */
+.form-newsletter {
+  margin-bottom: $line-height-computed;
+  .form-control {
+    max-width: 100%;
   }
 }

@@ -1,0 +1,43 @@
+<%= link_to(record.public_url, :class => "thumbnail thumbnail-property") do %>
+  <h3 class="h4 thumbnail-title"><%= record.title %></h3>
+  <em><%= record.meta.code %></em>
+  <div class="thumbnail-inner">
+    <%= image_fu(record.thumbnail, "720x440#", :class => "img-responsive") %>
+  
+    <div class="caption">
+     	
+      <% if record.meta.area %>
+        <p class="thumbnail-area"><i class="fa fa-map-marker"></i> <%= record.meta.area.name %></p>
+      <% end %>
+      
+      <%= content_tag(:p, :class => "thumbnail-body") do %>
+        <%= truncate_html(strip_tags(record.body), :length => 120, :omission => "...") %>
+      <% end if record.body.present? %>
+      
+      <p class="thumbnail-price"><%= rental_min_price_value(record) %></p>
+    </div>
+    
+    <div class="thumbnail-badges">
+      <% unless record.badge.blank? %>
+        <span class="thumbnail-badge"><%= record.badge %></span>
+      <% end %>
+      <% unless record.info_title.blank? %>
+        <span class="thumbnail-info"><%= record.info_title %></span>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="thumbnail-infos">
+    <p>
+      <%= realty_meta_tag("bedroom_count", record.bedroom_count) if record.bedroom_count %><br/>
+      <%= realty_meta_tag("bathroom_count", record.bathroom_count) if record.bathroom_count %>
+    </p>
+    <ul class="list-inline thumbnail-icons">
+    <% record.stickers.each do |s| %>
+      <%= content_tag :li do %>
+        <%= image_tag "icon_#{s.css}.svg", :alt => s.name, :class => "thumbnail-icon" %>
+      <% end if s.css.present? %>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

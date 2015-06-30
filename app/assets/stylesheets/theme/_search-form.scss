@@ -1,4 +1,8 @@
-
+.btn-search-collapse {
+  input {
+    font-size: 16px;
+  }
+}
 
 /* FORM
 -------------------------------------------------- */
@@ -35,7 +39,7 @@
 
 
 #global-search-panel {
-
+  background-color: $brand-success;
   .nav-pills {
     text-align: left;
     padding: 22px;
@@ -60,4 +64,6 @@
     
   }
 }
-
+#global-search-panel.bg-primary {
+  background-color: $brand-primary;
+}

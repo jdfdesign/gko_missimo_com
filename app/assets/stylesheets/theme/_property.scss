@@ -1,3 +1,14 @@
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin property-variant($color, $background) {
+  
+}
+
+
 /* GLOBAL
 -------------------------------------------------- */
 .row-padded {
@@ -10,6 +21,8 @@
 }
 
 .property {
+  
+  padding-top: $line-height-computed * 2;
   
   h1 {
     margin-top: 0;
@@ -140,8 +153,6 @@
  }
 }
 
-
-
 /* RATES
 -------------------------------------------------- */
 .realty-seasons {
@@ -172,4 +183,3 @@
   font-size: 16px;
   line-height: 24px;
 }
-

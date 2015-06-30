@@ -2,36 +2,36 @@
   :url => sale_property_inquiries_path, 
   :method => :post, 
   :remote => true, 
-  :html => {:class => "form-contact"}) do |form| %>
+  :html => {:class => "sale_property_inquiry"}) do |f| %>
   <%= hidden_field_tag(:return_to, request.url) %>
-  <%= form.hidden_field :site_id, :value => site.id %>
-  <%= form.hidden_field :property_id %>
+  <%= f.hidden_field :site_id, :value => site.id %>
+  <%= f.hidden_field :property_id %>
   <%= render 'flash' %>
-  <%= form.error_notification %>
+  <%= f.error_notification %>
 
     <div class="form-group">
-        <%= form.input :name, 
+        <%= f.input :name, 
 		:hint => false, :input_html => { :class => "form-control" }  %>
     </div>
       <div class="form-group">
-        <%= form.input :email, 
+        <%= f.input :email, 
 		:hint => false, :input_html => { :class => "form-control" } %>
     </div>
     <div class="form-group">
-        <%= form.input :phone, 
+        <%= f.input :phone, 
 		:hint => false, 
 		:required => false, :input_html => { :class => "form-control" } %>
     </div>
 
 	  <div class="form-group">
-      <%= form.input :message, 
+      <%= f.input :message, 
 		:as => :text, 
 		:hint => false, 
 		:input_html => { :rows => 8, :class => "form-control" } %>
     </div> 
-  <%= render 'anti_spam_field', :f => form %>
+  <%= render 'anti_spam_field', :f => f %>
   <div class='form-group'>
-    <%= form.button :submit, t("send_inquiry"), :class => "btn btn-primary btn-submit" %>
+    <%= f.button :submit, t("send_inquiry"), :class => "btn btn-primary btn-submit" %>
   </div>
   <p id="thanks" data-alert="" class="alert alert-success"><%= t("gko.inquiry_thanks") %></p>
 <% end %>  

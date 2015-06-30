@@ -1,9 +1,53 @@
 .sale-property {
   .property-sticker,
   .property-status {
-    background-color: $brand-primary;
+    background-color: $brand-primary !important;
   }
+  
+  h1, h2, h3, 
+  h4, h5, h6,
   abbr {
-    color: $brand-primary;
+    color: $brand-primary !important;
   }
 } 
+
+.thumbnail-property.sale-property-thumbnail {
+  .thumbnail-title {
+    color: $brand-primary !important;
+  }
+  .thumbnail-inner {
+    .caption {
+      .thumbnail-price,
+      .thumbnail-area {
+        color: $brand-primary !important;
+      }
+    }
+  }
+}
+
+
+.annual-rental {
+  .property-sticker,
+  .property-status {
+    background-color: $pink !important;
+  }
+  h1, h2, h3, 
+  h4, h5, h6,
+  abbr {
+    color: $pink !important;
+  }
+} 
+
+.thumbnail-property.annual-rental-thumbnail {
+  .thumbnail-title {
+    color: $pink !important;
+  }
+  .thumbnail-inner {
+    .caption {
+      .thumbnail-price,
+      .thumbnail-area {
+        color: $pink !important;
+      }
+    }
+  }
+}

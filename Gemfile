@@ -8,7 +8,7 @@ group :assets do
 end
 
 group :production do
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.18" do
+  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.19" do
      gem 'gko_core'
      gem 'gko_auth'
      gem 'gko_documents'
@@ -17,8 +17,9 @@ group :production do
      gem 'gko_categories'
     gem 'gko_stickers'
   end
-  gem 'gko_realty', '= 0.3.0', :git => 'git@github.com:jdfdesign/gko-realty.git'
+  gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git', :tag => "v0.3.1"
 end
+
 
 #group :development do
 #  gem "gko_core", :path => '~/Github/gko_cms3/gko_core'
@@ -29,7 +30,7 @@ end
 #  gem "gko_categories", :path => '~/Github/gko_cms3/gko_categories'
 #  gem "gko_stickers", :path => '~/Github/gko_cms3/gko_stickers'
 #  gem "gko_realty", :path => '~/Github/gko/gko_realty' 
-#end
+  #end
 
 gem "money", "= 5.0.0"
 gem "eu_central_bank", "~> 0.3.2"

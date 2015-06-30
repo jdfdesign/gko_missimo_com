@@ -10,7 +10,6 @@ if @sale_section
 <%= simple_form_for(:search, 
   :url => @sale_section.public_url, 
   :method => :get,
-  :data => {:remote => true }, 
   :html => {:class => "form-search"}) do |form| %>
     <div class="row">
       <div class="col-md-3">
@@ -30,7 +29,7 @@ if @sale_section
       <div class="col-md-3">
         <div class='form-group'>
           <%= form.input :order, 
-           :collection => [:title, :price],
+           :collection => [[:title, :by_title], [:price, :by_price]],
            :selected => params[:search].present? ? params[:search][:order] : nil,
            :prompt => t(:'helpers.select.order.prompt').html_safe,
            :label => false,
@@ -52,7 +51,7 @@ if @sale_section
         </div>
       </div>
       <div class="col-md-3">
-        <%= form.button 'submit', t('search'), :class => "submit-search" %>
+        <%= form.button 'submit', t('search'), :class => "submit-search btn btn-blue-dark" %>
       </div>
     </div>
   <% end %>

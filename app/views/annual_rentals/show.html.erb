@@ -24,10 +24,10 @@ end
 
 <%= render "filter" %>
 
-<article class="property rental-property">
+<article class="property annual-rental">
   <!-- Header
   ================================================== -->
-  <div class='row row-padded'>
+  <div class='row'>
     <div class='col-sm-8'>
       <h1><%= @annual_rental.title %></h1>
       <%= flags.compact.join(" - ").html_safe %>
@@ -72,18 +72,17 @@ end
         </div>
       </div>
 
-      <hr class="hr-border-success">
+      <hr class="hr-border-pink">
 
       <!-- Description
       ================================================== -->
       <div class='row row-padded'>
         <div class='col-sm-12'>
           <%= render_copy_text(resource.body) %>
-          </div>
         </div>
+      </div>
 
-
-      <hr class="hr-border-success">
+      <hr class="hr-border-pink">
 
       <!-- Socials
       ================================================== -->
@@ -101,7 +100,7 @@ end
       <!-- Contact form
       ================================================== -->
       <h3 class="h4 text-uppercase"><%= t(:'realty.request_availability') %></h3>
-      <%= render :partial => 'rental_property_inquiries/form' %>
+      <%= render :partial => 'annual_rental_inquiries/form' %>
       <!-- Map
       ================================================== -->
       <%= render('google_map', :point => @annual_rental.lat_long) if @annual_rental.lat_long.present? %>

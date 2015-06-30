@@ -10756,19 +10756,21 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   margin-right: -5px;
 }
 
-/* line 1, ../../app/assets/stylesheets/theme/_form.scss */
+/* FORM
+-------------------------------------------------- */
+/* line 3, ../../app/assets/stylesheets/theme/_form.scss */
 abbr {
   color: #98bf3f;
 }
 
-/* line 4, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 6, ../../app/assets/stylesheets/theme/_form.scss */
 span.error, span.valid {
   position: absolute;
   top: 0;
   right: 1em;
 }
 
-/* line 9, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 11, ../../app/assets/stylesheets/theme/_form.scss */
 span.error, span.valid {
   width: 44px;
   height: 44px;
@@ -10777,17 +10779,17 @@ span.error, span.valid {
   background-repeat: no-repeat;
 }
 
-/* line 16, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 18, ../../app/assets/stylesheets/theme/_form.scss */
 span.error {
   background-image: url(/assets/error.svg);
 }
 
-/* line 19, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 21, ../../app/assets/stylesheets/theme/_form.scss */
 span.valid {
   background-image: url(/assets/valid.svg);
 }
 
-/* line 23, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 25, ../../app/assets/stylesheets/theme/_form.scss */
 .alert {
   display: none;
   border: 0;
@@ -10796,64 +10798,83 @@ span.valid {
   color: #fff;
 }
 
-/* line 30, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 32, ../../app/assets/stylesheets/theme/_form.scss */
 .alert-success {
   background-color: #22b573;
   color: #fff;
 }
 
-/* line 36, ../../app/assets/stylesheets/theme/_form.scss */
-.form-contact .btn-submit {
-  text-transform: uppercase;
-  color: #333333;
+/* SEARCH FORM
+-------------------------------------------------- */
+/* line 38, ../../app/assets/stylesheets/theme/_form.scss */
+.form-newsletter {
+  margin-bottom: 22px;
+}
+/* line 40, ../../app/assets/stylesheets/theme/_form.scss */
+.form-newsletter .form-control {
+  max-width: 100%;
+}
+
+/* line 2, ../../app/assets/stylesheets/theme/_search-form.scss */
+.btn-search-collapse input {
+  font-size: 16px;
 }
 
 /* FORM
 -------------------------------------------------- */
-/* line 5, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 9, ../../app/assets/stylesheets/theme/_search-form.scss */
 .form-search-wrapper {
   padding: 22px;
 }
 
-/* line 11, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 15, ../../app/assets/stylesheets/theme/_search-form.scss */
 .form-search .form-control {
   background-color: #fff;
   color: #333333;
   border: 1px solid #fff;
 }
-/* line 17, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 21, ../../app/assets/stylesheets/theme/_search-form.scss */
 .form-search input, .form-search select, .form-search textarea {
   width: 100%;
 }
 
-/* line 28, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 32, ../../app/assets/stylesheets/theme/_search-form.scss */
 .tab-pane-sales {
   background-color: #40c7f4;
 }
 
-/* line 32, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 36, ../../app/assets/stylesheets/theme/_search-form.scss */
 .tab-pane-rentals {
   background-color: #98bf3f;
 }
 
-/* line 39, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 41, ../../app/assets/stylesheets/theme/_search-form.scss */
+#global-search-panel {
+  background-color: #98bf3f;
+}
+/* line 43, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills {
   text-align: left;
   padding: 22px;
 }
-/* line 44, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 48, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li > a {
   color: #eeeeee;
   background-color: #9a9b9d;
 }
-/* line 49, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 53, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.active > a {
   color: white;
   background-color: #41c7f4;
 }
-/* line 53, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 57, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.active > a:hover, #global-search-panel .nav-pills > li.active > a:focus {
   color: white;
+  background-color: #41c7f4;
+}
+
+/* line 67, ../../app/assets/stylesheets/theme/_search-form.scss */
+#global-search-panel.bg-primary {
   background-color: #41c7f4;
 }
 
@@ -10898,55 +10919,72 @@ span.valid {
 .navbar {
   border: none;
 }
-/* line 4, ../../app/assets/stylesheets/theme/_navbar.scss */
-.navbar li > a {
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-/* line 15, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 6, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar .dropdown-menu {
   font-size: 13px;
 }
-/* line 18, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 9, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar .dropdown-menu > li > a {
   color: white;
 }
-/* line 21, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 12, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar .dropdown-menu > li > a:hover, .navbar .dropdown-menu > li > a:focus {
   color: #404344;
   background-color: #41c7f4;
 }
 
-/* line 28, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 19, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar-nav > li > a {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* line 26, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand {
-  width: 200px;
+  width: 280px;
   height: auto;
 }
 
+/* line 31, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar-brand-baseline {
+  width: 280px;
+  height: auto;
+  float: none;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+/* line 39, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar-default {
+  background-color: #fff;
+}
+/* line 41, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar-default .navbar-collapse {
+  background-color: #404344;
+}
+
 @media (min-width: 768px) {
-  /* line 40, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 47, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     padding-bottom: 0;
   }
 }
 @media (min-width: 768px) {
-  /* line 47, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 54, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar > .container-fluid {
     padding: 0;
   }
 
-  /* line 50, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 57, ../../app/assets/stylesheets/theme/_navbar.scss */
   .container-fluid > .navbar-header {
     float: none !important;
     text-align: center;
     background-color: #f6f6f6;
   }
 
-  /* line 56, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 63, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     float: none;
     display: inline-block;
@@ -10955,22 +10993,32 @@ span.valid {
     padding: 12px 15px 0 15px;
   }
 
-  /* line 64, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 71, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav {
     width: 100%;
     text-align: center;
   }
-  /* line 67, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 74, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li {
     float: none;
     display: inline-block;
   }
+  /* line 77, ../../app/assets/stylesheets/theme/_navbar.scss */
+  .navbar-nav > li > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  /* line 84, ../../app/assets/stylesheets/theme/_navbar.scss */
+  .navbar-default {
+    background-color: #404344;
+  }
 }
-/* line 76, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 90, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li {
   padding: 42.5px 10px;
 }
-/* line 80, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 94, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a {
   padding: 0;
   border-bottom: 3px solid #404344;
@@ -10979,13 +11027,13 @@ span.valid {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 86, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 100, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a:hover, #locales > li > a:focus {
   border-bottom-color: #404344;
   background-color: transparent;
 }
 
-/* line 92, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 106, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-form {
   position: absolute;
   right: 0px;
@@ -10995,7 +11043,7 @@ span.valid {
   margin-bottom: 0;
 }
 
-/* line 107, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 121, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact {
   font: 0/0 a;
   color: transparent;
@@ -11003,13 +11051,17 @@ span.valid {
   background-color: transparent;
   border: 0;
 }
-/* line 111, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 125, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:before {
   color: #fff;
   font: normal normal normal 18px/1 FontAwesome;
 }
+/* line 131, ../../app/assets/stylesheets/theme/_navbar.scss */
+#contact:hover, #contact:focus {
+  background-color: #41c7f4;
+}
 
-/* line 117, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 136, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage {
   font: 0/0 a;
   color: transparent;
@@ -11017,10 +11069,14 @@ span.valid {
   background-color: transparent;
   border: 0;
 }
-/* line 121, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 140, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:before {
   color: #fff;
   font: normal normal normal 18px/1 FontAwesome;
+}
+/* line 145, ../../app/assets/stylesheets/theme/_navbar.scss */
+#homepage:hover, #homepage:focus {
+  background-color: #41c7f4;
 }
 
 /* PANELS
@@ -11100,6 +11156,314 @@ span.valid {
 /* line 68, ../../app/assets/stylesheets/theme/_panels.scss */
 .panel-title a.collapsed .th-icon-close {
   display: none;
+}
+
+/* BUTTONS
+-------------------------------------------------- */
+/* line 3, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn-white {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-white:hover, .btn-white:focus, .btn-white.focus, .btn-white:active, .btn-white.active, .open > .btn-white.dropdown-toggle {
+  color: black;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-white:active, .btn-white.active, .open > .btn-white.dropdown-toggle {
+  background-image: none;
+}
+/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-white.disabled, .btn-white.disabled:hover, .btn-white.disabled:focus, .btn-white.disabled.focus, .btn-white.disabled:active, .btn-white.disabled.active, .btn-white[disabled], .btn-white[disabled]:hover, .btn-white[disabled]:focus, .btn-white[disabled].focus, .btn-white[disabled]:active, .btn-white[disabled].active, fieldset[disabled] .btn-white, fieldset[disabled] .btn-white:hover, fieldset[disabled] .btn-white:focus, fieldset[disabled] .btn-white.focus, fieldset[disabled] .btn-white:active, fieldset[disabled] .btn-white.active {
+  background-color: white;
+  border-color: white;
+}
+/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-white .badge {
+  color: white;
+  background-color: black;
+}
+
+/* line 6, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn-gray {
+  color: white;
+  background-color: #555555;
+  border-color: #555555;
+}
+/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-gray:hover, .btn-gray:focus, .btn-gray.focus, .btn-gray:active, .btn-gray.active, .open > .btn-gray.dropdown-toggle {
+  color: white;
+  background-color: #3c3c3c;
+  border-color: #373737;
+}
+/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-gray:active, .btn-gray.active, .open > .btn-gray.dropdown-toggle {
+  background-image: none;
+}
+/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-gray.disabled, .btn-gray.disabled:hover, .btn-gray.disabled:focus, .btn-gray.disabled.focus, .btn-gray.disabled:active, .btn-gray.disabled.active, .btn-gray[disabled], .btn-gray[disabled]:hover, .btn-gray[disabled]:focus, .btn-gray[disabled].focus, .btn-gray[disabled]:active, .btn-gray[disabled].active, fieldset[disabled] .btn-gray, fieldset[disabled] .btn-gray:hover, fieldset[disabled] .btn-gray:focus, fieldset[disabled] .btn-gray.focus, fieldset[disabled] .btn-gray:active, fieldset[disabled] .btn-gray.active {
+  background-color: #555555;
+  border-color: #555555;
+}
+/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-gray .badge {
+  color: #555555;
+  background-color: white;
+}
+
+/* line 10, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn-green-dark {
+  color: white;
+  background-color: #559300;
+  border-color: #559300;
+}
+/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-green-dark:hover, .btn-green-dark:focus, .btn-green-dark.focus, .btn-green-dark:active, .btn-green-dark.active, .open > .btn-green-dark.dropdown-toggle {
+  color: white;
+  background-color: #386000;
+  border-color: #325600;
+}
+/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-green-dark:active, .btn-green-dark.active, .open > .btn-green-dark.dropdown-toggle {
+  background-image: none;
+}
+/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-green-dark.disabled, .btn-green-dark.disabled:hover, .btn-green-dark.disabled:focus, .btn-green-dark.disabled.focus, .btn-green-dark.disabled:active, .btn-green-dark.disabled.active, .btn-green-dark[disabled], .btn-green-dark[disabled]:hover, .btn-green-dark[disabled]:focus, .btn-green-dark[disabled].focus, .btn-green-dark[disabled]:active, .btn-green-dark[disabled].active, fieldset[disabled] .btn-green-dark, fieldset[disabled] .btn-green-dark:hover, fieldset[disabled] .btn-green-dark:focus, fieldset[disabled] .btn-green-dark.focus, fieldset[disabled] .btn-green-dark:active, fieldset[disabled] .btn-green-dark.active {
+  background-color: #559300;
+  border-color: #559300;
+}
+/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-green-dark .badge {
+  color: #559300;
+  background-color: white;
+}
+
+/* line 14, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn-blue-dark {
+  color: white;
+  background-color: #0099c5;
+  border-color: #0099c5;
+}
+/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-blue-dark:hover, .btn-blue-dark:focus, .btn-blue-dark.focus, .btn-blue-dark:active, .btn-blue-dark.active, .open > .btn-blue-dark.dropdown-toggle {
+  color: white;
+  background-color: #007192;
+  border-color: #006988;
+}
+/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-blue-dark:active, .btn-blue-dark.active, .open > .btn-blue-dark.dropdown-toggle {
+  background-image: none;
+}
+/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-blue-dark.disabled, .btn-blue-dark.disabled:hover, .btn-blue-dark.disabled:focus, .btn-blue-dark.disabled.focus, .btn-blue-dark.disabled:active, .btn-blue-dark.disabled.active, .btn-blue-dark[disabled], .btn-blue-dark[disabled]:hover, .btn-blue-dark[disabled]:focus, .btn-blue-dark[disabled].focus, .btn-blue-dark[disabled]:active, .btn-blue-dark[disabled].active, fieldset[disabled] .btn-blue-dark, fieldset[disabled] .btn-blue-dark:hover, fieldset[disabled] .btn-blue-dark:focus, fieldset[disabled] .btn-blue-dark.focus, fieldset[disabled] .btn-blue-dark:active, fieldset[disabled] .btn-blue-dark.active {
+  background-color: #0099c5;
+  border-color: #0099c5;
+}
+/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-blue-dark .badge {
+  color: #0099c5;
+  background-color: white;
+}
+
+/* line 18, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn-pink {
+  color: white;
+  background-color: #ed46a2;
+  border-color: #ed46a2;
+}
+/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink:hover, .btn-pink:focus, .btn-pink.focus, .btn-pink:active, .btn-pink.active, .open > .btn-pink.dropdown-toggle {
+  color: white;
+  background-color: #e8188b;
+  border-color: #e01685;
+}
+/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink:active, .btn-pink.active, .open > .btn-pink.dropdown-toggle {
+  background-image: none;
+}
+/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink.disabled, .btn-pink.disabled:hover, .btn-pink.disabled:focus, .btn-pink.disabled.focus, .btn-pink.disabled:active, .btn-pink.disabled.active, .btn-pink[disabled], .btn-pink[disabled]:hover, .btn-pink[disabled]:focus, .btn-pink[disabled].focus, .btn-pink[disabled]:active, .btn-pink[disabled].active, fieldset[disabled] .btn-pink, fieldset[disabled] .btn-pink:hover, fieldset[disabled] .btn-pink:focus, fieldset[disabled] .btn-pink.focus, fieldset[disabled] .btn-pink:active, fieldset[disabled] .btn-pink.active {
+  background-color: #ed46a2;
+  border-color: #ed46a2;
+}
+/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink .badge {
+  color: #ed46a2;
+  background-color: white;
+}
+
+/* line 21, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn-pink-dark {
+  color: white;
+  background-color: #b8367d;
+  border-color: #b8367d;
+}
+/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink-dark:hover, .btn-pink-dark:focus, .btn-pink-dark.focus, .btn-pink-dark:active, .btn-pink-dark.active, .open > .btn-pink-dark.dropdown-toggle {
+  color: white;
+  background-color: #912a62;
+  border-color: #89285d;
+}
+/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink-dark:active, .btn-pink-dark.active, .open > .btn-pink-dark.dropdown-toggle {
+  background-image: none;
+}
+/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink-dark.disabled, .btn-pink-dark.disabled:hover, .btn-pink-dark.disabled:focus, .btn-pink-dark.disabled.focus, .btn-pink-dark.disabled:active, .btn-pink-dark.disabled.active, .btn-pink-dark[disabled], .btn-pink-dark[disabled]:hover, .btn-pink-dark[disabled]:focus, .btn-pink-dark[disabled].focus, .btn-pink-dark[disabled]:active, .btn-pink-dark[disabled].active, fieldset[disabled] .btn-pink-dark, fieldset[disabled] .btn-pink-dark:hover, fieldset[disabled] .btn-pink-dark:focus, fieldset[disabled] .btn-pink-dark.focus, fieldset[disabled] .btn-pink-dark:active, fieldset[disabled] .btn-pink-dark.active {
+  background-color: #b8367d;
+  border-color: #b8367d;
+}
+/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-pink-dark .badge {
+  color: #b8367d;
+  background-color: white;
+}
+
+/* line 24, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook.focus, .btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+  color: white;
+  background-color: #2d4373;
+  border-color: #2a3f6c;
+}
+/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
+  background-image: none;
+}
+/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-facebook.disabled, .btn-facebook.disabled:hover, .btn-facebook.disabled:focus, .btn-facebook.disabled.focus, .btn-facebook.disabled:active, .btn-facebook.disabled.active, .btn-facebook[disabled], .btn-facebook[disabled]:hover, .btn-facebook[disabled]:focus, .btn-facebook[disabled].focus, .btn-facebook[disabled]:active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook, fieldset[disabled] .btn-facebook:hover, fieldset[disabled] .btn-facebook:focus, fieldset[disabled] .btn-facebook.focus, fieldset[disabled] .btn-facebook:active, fieldset[disabled] .btn-facebook.active {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-facebook .badge {
+  color: #3b5998;
+  background-color: white;
+}
+
+/* line 28, ../../app/assets/stylesheets/theme/_buttons.scss */
+.btn {
+  text-transform: uppercase;
+}
+
+/* line 2, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property {
+  padding: 0;
+  border: none;
+}
+/* line 5, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property:hover {
+  text-decoration: none;
+}
+/* line 9, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 16px 0 4px 0;
+  color: #98bf3f;
+}
+/* line 14, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-title + em {
+  color: #777777;
+}
+/* line 19, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner {
+  position: relative;
+  padding: 0;
+  border: none;
+}
+/* line 26, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner .caption {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  padding: 16px;
+  color: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 39, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner .caption .thumbnail-price,
+.thumbnail-property .thumbnail-inner .caption .thumbnail-area {
+  color: #98bf3f;
+}
+/* line 44, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner .thumbnail-badges {
+  position: absolute;
+  top: 7px;
+  margin: 0;
+  color: #fff;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 56, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner .thumbnail-badges .thumbnail-info {
+  background-color: #03A9F4;
+  padding: 8px;
+}
+/* line 60, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner .thumbnail-badges .thumbnail-badge {
+  background-color: #FF5252 !important;
+  padding: 8px;
+}
+/* line 67, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner:hover .thumbnail-badges {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+/* line 70, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-inner:hover .caption {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+/* line 76, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-infos {
+  display: table;
+  background-color: #555555;
+  color: #fff;
+  width: 100%;
+  padding: 16px;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+}
+/* line 84, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-infos p {
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 92, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-icons {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  margin: 0;
+}
+/* line 97, ../../app/assets/stylesheets/theme/_thumbnails.scss */
+.thumbnail-property .thumbnail-icons > li > img {
+  width: 30px;
+  height: 30px;
 }
 
 /* line 1, ../../app/assets/stylesheets/theme/_page_header.scss */
@@ -11684,31 +12048,22 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   font-size: 10px;
 }
 
-/* line 49, ../../app/assets/stylesheets/theme/_footer.scss */
-.newsletter form input, .newsletter form select, .newsletter form textarea {
-  width: 100%;
-}
-
 /* line 1, ../../app/assets/stylesheets/theme/_home.scss */
 .section-presentation {
   margin-top: 44px;
   margin-bottom: 44px;
   background-color: #9a9b9d;
   padding: 88px 44px;
+  color: #fff;
 }
-/* line 6, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 7, ../../app/assets/stylesheets/theme/_home.scss */
 .section-presentation p {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 0;
 }
-/* line 10, ../../app/assets/stylesheets/theme/_home.scss */
-.section-presentation p span {
-  color: #fff;
-  text-decoration: underline;
-}
 
-/* line 17, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 14, ../../app/assets/stylesheets/theme/_home.scss */
 .section-title {
   font-weight: 700;
   color: #333333;
@@ -11716,29 +12071,48 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   padding-left: 22px;
 }
 
-/* line 24, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 21, ../../app/assets/stylesheets/theme/_home.scss */
 .section-stbarth {
   padding: 66px 22px;
   background-color: #fff;
 }
-/* line 27, ../../app/assets/stylesheets/theme/_home.scss */
-.section-stbarth .inner {
+/* line 24, ../../app/assets/stylesheets/theme/_home.scss */
+.section-stbarth .firt-row-inner {
+  display: table;
+}
+/* line 26, ../../app/assets/stylesheets/theme/_home.scss */
+.section-stbarth .firt-row-inner > p {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 22px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+/* line 32, ../../app/assets/stylesheets/theme/_home.scss */
+.section-stbarth .firt-row-inner > p span {
+  color: #fff;
+  background-color: #41c7f4;
+  padding: 5.5px;
+  display: inline-block;
+}
+/* line 40, ../../app/assets/stylesheets/theme/_home.scss */
+.section-stbarth .second-row-inner {
   padding-left: 22px;
   padding-right: 22px;
 }
 
-/* line 33, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 46, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers {
   padding: 22px;
   background-color: #fff;
 }
-/* line 37, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 50, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail {
   position: relative;
   padding: 0;
   border: none;
 }
-/* line 41, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 54, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail .caption {
   position: absolute;
   width: 100%;
@@ -11752,7 +12126,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-/* line 52, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 65, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail .caption:before {
   content: '';
   display: block;
@@ -11768,7 +12142,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 64, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 77, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail .caption .title {
   display: table;
   height: 100%;
@@ -11779,7 +12153,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   margin: 0;
   color: #fff;
 }
-/* line 73, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 86, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail .caption .title span {
   color: #fff;
   text-transform: uppercase;
@@ -11790,70 +12164,74 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   vertical-align: middle;
   display: table-cell;
 }
-/* line 88, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 101, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail:hover .caption:before {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-/* line 95, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 108, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail.green .caption::before {
   background-color: #98bf40 !important;
 }
-/* line 98, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 111, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail.pink .caption::before {
   background-color: #ed46a2 !important;
 }
-/* line 101, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 114, ../../app/assets/stylesheets/theme/_home.scss */
 .section-offers .thumbnail.blue .caption::before {
   background-color: #40c7f4 !important;
 }
 
 /* GLOBAL
 -------------------------------------------------- */
-/* line 3, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 14, ../../app/assets/stylesheets/theme/_property.scss */
 .row-padded {
   padding-top: 22px;
   padding-bottom: 22px;
 }
 
-/* line 8, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 19, ../../app/assets/stylesheets/theme/_property.scss */
 .left-col {
   border-right: 1px solid #555555;
 }
 
-/* line 14, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 23, ../../app/assets/stylesheets/theme/_property.scss */
+.property {
+  padding-top: 44px;
+}
+/* line 27, ../../app/assets/stylesheets/theme/_property.scss */
 .property h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 19, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 32, ../../app/assets/stylesheets/theme/_property.scss */
 .property .flexslider {
   margin-bottom: 0 !important;
 }
-/* line 23, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 36, ../../app/assets/stylesheets/theme/_property.scss */
 .property #carousel img {
   display: block;
   opacity: .5;
   cursor: pointer;
 }
-/* line 28, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 41, ../../app/assets/stylesheets/theme/_property.scss */
 .property #carousel img:hover {
   opacity: 1;
 }
-/* line 31, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 44, ../../app/assets/stylesheets/theme/_property.scss */
 .property #carousel .flex-active-slide img {
   opacity: 1;
   cursor: default;
 }
 
-/* line 37, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 50, ../../app/assets/stylesheets/theme/_property.scss */
 .share-links {
   float: right;
 }
 
 /* HEADER
 -------------------------------------------------- */
-/* line 44, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 57, ../../app/assets/stylesheets/theme/_property.scss */
 .property-min-price {
   background-color: #555555;
   color: #fff;
@@ -11861,7 +12239,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   padding: 2px 6px;
 }
 
-/* line 51, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 64, ../../app/assets/stylesheets/theme/_property.scss */
 .property-status {
   background-color: #98bf3f;
   color: #fff;
@@ -11870,42 +12248,42 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   text-transform: uppercase;
 }
 
-/* line 60, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 73, ../../app/assets/stylesheets/theme/_property.scss */
 .rental-property h1, .rental-property h2, .rental-property h3, .rental-property h4 {
   color: #98bf3f !important;
 }
 
-/* line 67, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 80, ../../app/assets/stylesheets/theme/_property.scss */
 .property-info,
 .property-promo-text {
   background-color: #03A9F4;
   color: #fff;
   border-radius: 0;
 }
-/* line 71, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 84, ../../app/assets/stylesheets/theme/_property.scss */
 .property-info h4,
 .property-promo-text h4 {
   color: #fff;
   margin-top: 0;
 }
 
-/* line 77, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 90, ../../app/assets/stylesheets/theme/_property.scss */
 .property-promo-text {
   background-color: #FF5252 !important;
 }
 
 /* STICKERS
 -------------------------------------------------- */
-/* line 84, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 97, ../../app/assets/stylesheets/theme/_property.scss */
 .stickers-nav > li {
   margin-top: 2px;
 }
-/* line 86, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 99, ../../app/assets/stylesheets/theme/_property.scss */
 .stickers-nav > li > a {
   text-align: left;
   padding: 4px 8px;
 }
-/* line 90, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 103, ../../app/assets/stylesheets/theme/_property.scss */
 .stickers-nav > li > a:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -11917,7 +12295,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   padding-right: 8px;
 }
 
-/* line 99, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 112, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker {
   background-color: #98bf3f;
   background-size: 40px 40px;
@@ -11927,43 +12305,43 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   vertical-align: middle;
   padding: 14px 1px 14px 54px;
 }
-/* line 108, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 121, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.pool {
   background-image: url("/assets/icon_pool.svg");
 }
-/* line 111, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 124, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.view {
   background-image: url("/assets/icon_view.svg");
 }
-/* line 114, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 127, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.sport {
   background-image: url("/assets/icon_sport.svg");
 }
-/* line 117, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 130, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.jaccuzzi {
   background-image: url("/assets/icon_jaccuzzi.svg");
 }
 
-/* line 122, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 135, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
 }
-/* line 127, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 140, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details strong {
   color: #000;
 }
-/* line 130, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 143, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details hr {
   margin: 22px 0;
 }
-/* line 133, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 146, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details a {
   color: #333333;
 }
-/* line 136, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 149, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details a:focus, .widget-details a:hover {
   color: #41c7f4;
   text-decoration: none;
@@ -11971,41 +12349,41 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 
 /* RATES
 -------------------------------------------------- */
-/* line 147, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 158, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-seasons {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 150, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 161, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-seasons ul {
   list-style-type: none;
 }
 
-/* line 154, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 165, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-season-title {
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 22px;
   margin-bottom: 11px;
 }
-/* line 159, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 170, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-season-title span {
   font-weight: 300;
   color: #333333;
   text-transform: normal;
 }
 
-/* line 165, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 176, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-rates {
   padding-left: 8px;
 }
 
-/* line 168, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 179, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-rates > li {
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 171, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 182, ../../app/assets/stylesheets/theme/_property.scss */
 .price_notes_extra {
   font-size: 16px;
   line-height: 24px;
@@ -12014,276 +12392,115 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 /* line 3, ../../app/assets/stylesheets/theme/_sale_property.scss */
 .sale-property .property-sticker,
 .sale-property .property-status {
-  background-color: #41c7f4;
+  background-color: #41c7f4 !important;
 }
-/* line 6, ../../app/assets/stylesheets/theme/_sale_property.scss */
+/* line 9, ../../app/assets/stylesheets/theme/_sale_property.scss */
+.sale-property h1, .sale-property h2, .sale-property h3,
+.sale-property h4, .sale-property h5, .sale-property h6,
 .sale-property abbr {
-  color: #41c7f4;
+  color: #41c7f4 !important;
+}
+
+/* line 15, ../../app/assets/stylesheets/theme/_sale_property.scss */
+.thumbnail-property.sale-property-thumbnail .thumbnail-title {
+  color: #41c7f4 !important;
+}
+/* line 21, ../../app/assets/stylesheets/theme/_sale_property.scss */
+.thumbnail-property.sale-property-thumbnail .thumbnail-inner .caption .thumbnail-price,
+.thumbnail-property.sale-property-thumbnail .thumbnail-inner .caption .thumbnail-area {
+  color: #41c7f4 !important;
+}
+
+/* line 31, ../../app/assets/stylesheets/theme/_sale_property.scss */
+.annual-rental .property-sticker,
+.annual-rental .property-status {
+  background-color: #ed46a2 !important;
+}
+/* line 36, ../../app/assets/stylesheets/theme/_sale_property.scss */
+.annual-rental h1, .annual-rental h2, .annual-rental h3,
+.annual-rental h4, .annual-rental h5, .annual-rental h6,
+.annual-rental abbr {
+  color: #ed46a2 !important;
+}
+
+/* line 42, ../../app/assets/stylesheets/theme/_sale_property.scss */
+.thumbnail-property.annual-rental-thumbnail .thumbnail-title {
+  color: #ed46a2 !important;
+}
+/* line 48, ../../app/assets/stylesheets/theme/_sale_property.scss */
+.thumbnail-property.annual-rental-thumbnail .thumbnail-inner .caption .thumbnail-price,
+.thumbnail-property.annual-rental-thumbnail .thumbnail-inner .caption .thumbnail-area {
+  color: #ed46a2 !important;
 }
 
 /* FIX FOR GMAP BUG
 -------------------------------------------------- */
-/* line 28, ../../app/assets/stylesheets/public.css.scss */
-#map-canvas {
+/* line 40, ../../app/assets/stylesheets/public.css.scss */
+.map-canvas {
   height: 400px;
 }
-/* line 30, ../../app/assets/stylesheets/public.css.scss */
-#map-canvas img {
+/* line 42, ../../app/assets/stylesheets/public.css.scss */
+.map-canvas img {
   max-width: none;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
+/* line 50, ../../app/assets/stylesheets/public.css.scss */
+#footer .map-canvas {
+  height: 280px;
+}
+
 /* GLOBAL
 -------------------------------------------------- */
-/* line 41, ../../app/assets/stylesheets/public.css.scss */
+@media (min-width: 992px) {
+  /* line 58, ../../app/assets/stylesheets/public.css.scss */
+  .main-container {
+    max-width: 900px;
+  }
+}
+/* line 62, ../../app/assets/stylesheets/public.css.scss */
 .no-border {
   border: none !important;
 }
 
-/* line 45, ../../app/assets/stylesheets/public.css.scss */
+/* line 65, ../../app/assets/stylesheets/public.css.scss */
 .bg-success {
-  background-color: #98bf3f !important;
+  background-color: #98bf3f;
 }
 
-/* line 49, ../../app/assets/stylesheets/public.css.scss */
+/* line 68, ../../app/assets/stylesheets/public.css.scss */
+.bg-pink {
+  background-color: #ed46a2;
+}
+
+/* line 71, ../../app/assets/stylesheets/public.css.scss */
 .text-success {
-  color: #98bf3f !important;
+  color: #98bf3f;
 }
 
-/* line 53, ../../app/assets/stylesheets/public.css.scss */
-.main-container,
-.footer-container {
-  max-width: 1020px;
+/* line 74, ../../app/assets/stylesheets/public.css.scss */
+.text-pink {
+  color: #ed46a2;
 }
 
-/* line 57, ../../app/assets/stylesheets/public.css.scss */
+/* line 77, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-primary {
   border-color: #41c7f4;
 }
 
-/* line 60, ../../app/assets/stylesheets/public.css.scss */
+/* line 80, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-success {
   border-color: #98bf3f;
 }
 
-/* line 64, ../../app/assets/stylesheets/public.css.scss */
-.btn-gray {
-  color: white;
-  background-color: #555555;
-  border-color: #555555;
-}
-/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-gray:hover, .btn-gray:focus, .btn-gray.focus, .btn-gray:active, .btn-gray.active, .open > .btn-gray.dropdown-toggle {
-  color: white;
-  background-color: #3c3c3c;
-  border-color: #373737;
-}
-/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-gray:active, .btn-gray.active, .open > .btn-gray.dropdown-toggle {
-  background-image: none;
-}
-/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-gray.disabled, .btn-gray.disabled:hover, .btn-gray.disabled:focus, .btn-gray.disabled.focus, .btn-gray.disabled:active, .btn-gray.disabled.active, .btn-gray[disabled], .btn-gray[disabled]:hover, .btn-gray[disabled]:focus, .btn-gray[disabled].focus, .btn-gray[disabled]:active, .btn-gray[disabled].active, fieldset[disabled] .btn-gray, fieldset[disabled] .btn-gray:hover, fieldset[disabled] .btn-gray:focus, fieldset[disabled] .btn-gray.focus, fieldset[disabled] .btn-gray:active, fieldset[disabled] .btn-gray.active {
-  background-color: #555555;
-  border-color: #555555;
-}
-/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-gray .badge {
-  color: #555555;
-  background-color: white;
-}
-
-/* line 68, ../../app/assets/stylesheets/public.css.scss */
-.btn-pink {
-  color: white;
-  background-color: #ed46a2;
+/* line 83, ../../app/assets/stylesheets/public.css.scss */
+.hr-border-pink {
   border-color: #ed46a2;
 }
-/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-pink:hover, .btn-pink:focus, .btn-pink.focus, .btn-pink:active, .btn-pink.active, .open > .btn-pink.dropdown-toggle {
-  color: white;
-  background-color: #e8188b;
-  border-color: #e01685;
-}
-/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-pink:active, .btn-pink.active, .open > .btn-pink.dropdown-toggle {
-  background-image: none;
-}
-/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-pink.disabled, .btn-pink.disabled:hover, .btn-pink.disabled:focus, .btn-pink.disabled.focus, .btn-pink.disabled:active, .btn-pink.disabled.active, .btn-pink[disabled], .btn-pink[disabled]:hover, .btn-pink[disabled]:focus, .btn-pink[disabled].focus, .btn-pink[disabled]:active, .btn-pink[disabled].active, fieldset[disabled] .btn-pink, fieldset[disabled] .btn-pink:hover, fieldset[disabled] .btn-pink:focus, fieldset[disabled] .btn-pink.focus, fieldset[disabled] .btn-pink:active, fieldset[disabled] .btn-pink.active {
-  background-color: #ed46a2;
-  border-color: #ed46a2;
-}
-/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-pink .badge {
-  color: #ed46a2;
-  background-color: white;
-}
 
-/* line 72, ../../app/assets/stylesheets/public.css.scss */
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
-  border-color: #3b5998;
-}
-/* line 16, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-facebook:hover, .btn-facebook:focus, .btn-facebook.focus, .btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
-  color: white;
-  background-color: #2d4373;
-  border-color: #2a3f6c;
-}
-/* line 23, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-facebook:active, .btn-facebook.active, .open > .btn-facebook.dropdown-toggle {
-  background-image: none;
-}
-/* line 34, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-facebook.disabled, .btn-facebook.disabled:hover, .btn-facebook.disabled:focus, .btn-facebook.disabled.focus, .btn-facebook.disabled:active, .btn-facebook.disabled.active, .btn-facebook[disabled], .btn-facebook[disabled]:hover, .btn-facebook[disabled]:focus, .btn-facebook[disabled].focus, .btn-facebook[disabled]:active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook, fieldset[disabled] .btn-facebook:hover, fieldset[disabled] .btn-facebook:focus, fieldset[disabled] .btn-facebook.focus, fieldset[disabled] .btn-facebook:active, fieldset[disabled] .btn-facebook.active {
-  background-color: #3b5998;
-  border-color: #3b5998;
-}
-/* line 40, ../../app/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-facebook .badge {
-  color: #3b5998;
-  background-color: white;
-}
-
-/* line 76, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property {
-  padding: 0;
-  border: none;
-}
-/* line 81, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property:hover {
-  text-decoration: none;
-}
-/* line 85, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 16px 0 4px 0;
-  color: #98bf3f;
-}
-/* line 92, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner {
-  position: relative;
-  padding: 0;
-  border: none;
-  font-size: 14px !important;
-  font-weight: 300 !important;
-}
-/* line 99, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner .caption {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #000;
-  padding: 16px;
-  color: #fff;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-/* line 112, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner .caption .thumbnail-price,
-.thumbnail-property .thumbnail-inner .caption .thumbnail-area {
-  color: #98bf3f;
-}
-/* line 117, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner .thumbnail-badges {
-  position: absolute;
-  top: 7px;
-  margin: 0;
-  color: #fff;
-  left: 0;
-  width: 100%;
-  text-transform: uppercase;
-  font-size: 10px;
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-/* line 129, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner .thumbnail-badges .thumbnail-info {
-  background-color: #03A9F4;
-  padding: 8px;
-}
-/* line 133, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner .thumbnail-badges .thumbnail-badge {
-  background-color: #FF5252 !important;
-  padding: 8px;
-}
-/* line 140, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner:hover .thumbnail-badges {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-/* line 143, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-inner:hover .caption {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-/* line 149, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-infos {
-  display: table;
-  background-color: #555555;
-  color: #fff;
-  width: 100%;
-  padding: 16px;
-  font-size: 14px !important;
-  font-weight: 300 !important;
-}
-/* line 157, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-infos p {
-  margin: 0;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: left;
-}
-/* line 165, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-icons {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: right;
-  margin: 0;
-}
-/* line 170, ../../app/assets/stylesheets/public.css.scss */
-.thumbnail-property .thumbnail-icons > li > img {
-  width: 24px;
-  height: 24px;
-}
-
-@media (max-width: 768px) {
-  /* line 15, ../../app/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-  .post-item:nth-child(2n):before, .post-item:nth-child(2n):after {
-    content: " ";
-    display: table;
-  }
-  /* line 19, ../../app/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-  .post-item:nth-child(2n):after {
-    clear: both;
-  }
-}
-@media (min-width: 992px) {
-  /* line 15, ../../app/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-  .post-item:nth-child(3n):before, .post-item:nth-child(3n):after {
-    content: " ";
-    display: table;
-  }
-  /* line 19, ../../app/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-  .post-item:nth-child(3n):after {
-    clear: both;
-  }
-}
-
-/* line 193, ../../app/assets/stylesheets/public.css.scss */
+/* line 87, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
   width: 100%;
   height: 160px;
@@ -12292,13 +12509,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   background-image: url(/assets/bg-header.jpg);
 }
 
-/* line 204, ../../app/assets/stylesheets/public.css.scss */
+/* line 98, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder.parallax-background {
   height: 120%;
   top: -10%;
 }
 
-/* line 209, ../../app/assets/stylesheets/public.css.scss */
+/* line 103, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder,
 .hover-background .foreground-image-holder {
   -webkit-transition: all 0.3s ease-out;
@@ -12306,7 +12523,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   transition: all 0.3s ease-out;
 }
 
-/* line 212, ../../app/assets/stylesheets/public.css.scss */
+/* line 106, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder {
   height: 110%;
   width: 110%;

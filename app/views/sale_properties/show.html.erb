@@ -27,13 +27,12 @@ if @sale_property.meta and @sale_property.meta.code.present?
 end
 
 %>
-<% content_for :page_header do -%>
-  <%= render "filter" %>
-<% end %>
+<%= render "filter" %>
+
 <article class="property sale-property">
   <!-- Header
   ================================================== -->
-  <div class='row row-padded'>
+  <div class='row'>
     <div class='col-sm-8'>
       <h1><%= @sale_property.title %></h1>
       <%= flags.compact.join(" - ").html_safe %>

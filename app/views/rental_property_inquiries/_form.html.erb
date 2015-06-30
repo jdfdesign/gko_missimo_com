@@ -1,8 +1,10 @@
 <%= simple_form_for(:rental_property_inquiry, 
   :url => rental_property_inquiries_path, 
   :method => :post,
-  :remote => true, 
-  :html => {:class => "form-contact"}) do |form| %>
+  :html => {
+    :role => "form",
+    :class => "form-contact",
+    :data => { :remote => true, :toggle => :validator } }) do |form| %>
   <%= hidden_field_tag(:return_to, request.url) %>
   <%= form.hidden_field :site_id, :value => site.id %>
   <%= form.hidden_field :property_id %>
