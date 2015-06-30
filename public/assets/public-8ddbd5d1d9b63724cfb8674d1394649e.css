@@ -10925,15 +10925,16 @@ span.valid {
 }
 /* line 9, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar .dropdown-menu > li > a {
-  color: white;
-}
-/* line 12, ../../app/assets/stylesheets/theme/_navbar.scss */
-.navbar .dropdown-menu > li > a:hover, .navbar .dropdown-menu > li > a:focus {
   color: #404344;
+  text-transform: uppercase;
+}
+/* line 13, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar .dropdown-menu > li > a:hover, .navbar .dropdown-menu > li > a:focus {
+  color: white;
   background-color: #41c7f4;
 }
 
-/* line 19, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 20, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-nav > li > a {
   font-size: 15px;
   font-weight: 300;
@@ -10941,13 +10942,13 @@ span.valid {
   letter-spacing: 1px;
 }
 
-/* line 26, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 27, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand {
   width: 280px;
   height: auto;
 }
 
-/* line 31, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 32, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand-baseline {
   width: 280px;
   height: auto;
@@ -10956,35 +10957,35 @@ span.valid {
   padding: 0 15px;
 }
 
-/* line 39, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 40, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-default {
   background-color: #fff;
 }
-/* line 41, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 42, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-default .navbar-collapse {
   background-color: #404344;
 }
 
 @media (min-width: 768px) {
-  /* line 47, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 48, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     padding-bottom: 0;
   }
 }
 @media (min-width: 768px) {
-  /* line 54, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 55, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar > .container-fluid {
     padding: 0;
   }
 
-  /* line 57, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 58, ../../app/assets/stylesheets/theme/_navbar.scss */
   .container-fluid > .navbar-header {
     float: none !important;
     text-align: center;
     background-color: #f6f6f6;
   }
 
-  /* line 63, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 64, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     float: none;
     display: inline-block;
@@ -10993,47 +10994,53 @@ span.valid {
     padding: 12px 15px 0 15px;
   }
 
-  /* line 71, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 72, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav {
     width: 100%;
     text-align: center;
   }
-  /* line 74, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 75, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li {
     float: none;
     display: inline-block;
   }
-  /* line 77, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 78, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li > a {
     padding-top: 8px;
     padding-bottom: 8px;
   }
 
-  /* line 84, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 85, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-default {
     background-color: #404344;
   }
 }
 /* line 90, ../../app/assets/stylesheets/theme/_navbar.scss */
-#locales > li {
-  padding: 42.5px 10px;
+#locales {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  margin-top: 36.5px;
+  margin-bottom: 36.5px;
 }
-/* line 94, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 101, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a {
-  padding: 0;
-  border-bottom: 3px solid #404344;
-  font-size: 13px;
+  padding: 6px;
+  background-color: #404344;
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 100, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 109, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales > li > a:hover, #locales > li > a:focus {
-  border-bottom-color: #404344;
-  background-color: transparent;
+  background-color: #41c7f4;
+  color: #404344;
 }
 
-/* line 106, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 115, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-form {
   position: absolute;
   right: 0px;
@@ -11043,7 +11050,7 @@ span.valid {
   margin-bottom: 0;
 }
 
-/* line 121, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 130, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact {
   font: 0/0 a;
   color: transparent;
@@ -11051,17 +11058,17 @@ span.valid {
   background-color: transparent;
   border: 0;
 }
-/* line 125, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 134, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:before {
   color: #fff;
   font: normal normal normal 18px/1 FontAwesome;
 }
-/* line 131, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 140, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:hover, #contact:focus {
   background-color: #41c7f4;
 }
 
-/* line 136, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 145, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage {
   font: 0/0 a;
   color: transparent;
@@ -11069,12 +11076,12 @@ span.valid {
   background-color: transparent;
   border: 0;
 }
-/* line 140, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 149, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:before {
   color: #fff;
   font: normal normal normal 18px/1 FontAwesome;
 }
-/* line 145, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 154, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:hover, #homepage:focus {
   background-color: #41c7f4;
 }

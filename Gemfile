@@ -30,7 +30,7 @@ end
 #  gem "gko_categories", :path => '~/Github/gko_cms3/gko_categories'
 #  gem "gko_stickers", :path => '~/Github/gko_cms3/gko_stickers'
 #  gem "gko_realty", :path => '~/Github/gko/gko_realty' 
-  #end
+#end
 
 gem "money", "= 5.0.0"
 gem "eu_central_bank", "~> 0.3.2"
