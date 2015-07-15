@@ -21,12 +21,6 @@
   input, select, textarea {
     width: 100%;
   }
-  
-  .last-row {
-    .form-group {
-      //margin-bottom: 0;
-    }
-  }
 }
 
 .tab-pane-sales {
@@ -36,7 +30,6 @@
 .tab-pane-rentals {
   background-color: #98bf3f;
 }
-
 
 #global-search-panel {
   background-color: $brand-success;
@@ -57,6 +50,28 @@
           &:focus {
             color: white;
             background-color: #41c7f4;
+          }
+        }
+      }
+      &.bg-success.active {
+        > a {
+          color: white;
+          background-color: $green-dark;
+          &:hover, 
+          &:focus {
+            color: white;
+            background-color: $green-dark;
+          }
+        }
+      }
+      &.bg-primary.active {
+        > a {
+          color: white;
+          background-color: $blue-dark;
+          &:hover, 
+          &:focus {
+            color: white;
+            background-color: $blue-dark;
           }
         }
       }

@@ -10,6 +10,7 @@ $(document).ready(function() {
   var win = $( window );
   
   $('.datepicker').datepicker();
+  $('[data-toggle="tooltip"]').tooltip();
 
  //===========================================================
  // BACKGROUND IMAGE

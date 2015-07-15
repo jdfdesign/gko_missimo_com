@@ -35,7 +35,9 @@
     <ul class="list-inline thumbnail-icons">
     <% record.stickers.each do |s| %>
       <%= content_tag :li do %>
-        <%= image_tag "icon_#{s.css}.svg", :alt => s.name, :class => "thumbnail-icon" %>
+        <%= image_tag "icon_#{s.css}.svg", :alt => s.name, :class => "thumbnail-icon", 
+            :data => { :toggle => "tooltip", :placement => "top" }, 
+            :title => s.name %>
       <% end if s.css.present? %>
     <% end %>
     </ul>
