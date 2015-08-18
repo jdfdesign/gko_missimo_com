@@ -40,5 +40,5 @@ gem "whenever", "~> 0.7.3"
 gem "nokogiri", "~> 1.5.1"
 # https://github.com/Nerian/bootstrap-datepicker-rails
 gem 'bootstrap-datepicker-rails', '1.3.1.1'
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-binary', "0.9.9.3"
+gem 'wicked_pdf', "0.11.0"
