@@ -10,7 +10,6 @@
 }
 
 .property {
-  
   padding-top: $line-height-computed * 2;
   
   h1 {
@@ -64,7 +63,6 @@
   }
 }
 
-
 .property-info,
 .property-promo-text {
     background-color: #03A9F4;
@@ -106,18 +104,19 @@
   color: #fff;
   vertical-align: middle;
   padding: 14px 1px 14px 54px;
-  //height: 40px;
+  
+  // Use absolute url for PDF generation
   &.pool {
-    background-image: url(image_path('icon_pool.svg'))
+    background-image: image_url('icon_pool.svg');
   }
   &.view {
-    background-image: url(image_path('icon_view.svg'))
+    background-image: image_url('icon_view.svg');
   }
   &.sport {
-    background-image: url(image_path('icon_sport.svg'))
+    background-image: image_url('icon_sport.svg');
   }
   &.jacuzzi {
-    background-image: url(image_path('icon_jacuzzi.svg'))
+    background-image: image_url('icon_jacuzzi.svg');
   }
 }
 
@@ -172,3 +171,4 @@
   font-size: 16px;
   line-height: 24px;
 }
+

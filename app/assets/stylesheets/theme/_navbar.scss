@@ -101,25 +101,54 @@
     }
   }
 }
-#locales {
+#locales-menu {
   position: relative;
   float: right;
   margin-right: $navbar-padding-horizontal;
   @include navbar-vertical-align(34px);
+  .btn {
+    text-transform: capitalize !important;
+    font-size: 13px;
+    padding: 3px 6px;
+  } 
+  .triangle-bottom-left {
+    position: absolute;
+    bottom: -20px;
+    left: 12%;
+    display: block;
+    width: 0;
+    height: 0;
+    vertical-align: bottom;
+    border-top: 20px solid $brand-success;
+    border-right: 20px solid transparent;
+  }
+  
+  .dropdown-menu {
+    background-color: $navbar-default-bg;
+    left: auto;
+    right: 96%;
+    top: 110%;
     > li > a {
-      padding: 6px;
-      background-color: $navbar-default-bg;
-      color: $navbar-default-link-color;
-      font-size: 11px;
-      text-transform: uppercase;
-      @include transition(all 0.3s ease);
-      &:hover,
-      &:focus {
-        background-color: $navbar-default-link-hover-bg;
-        color: $navbar-default-link-hover-color;
+      color: #fff;
+      background-color: transparent;
+      &:hover {
+        color: $brand-success;
+        background-color: transparent;
       }
     }
+    
+    .triangle-top-right {
+      position: absolute;
+      top: -20px;
+      right: 6%;
+      display: block;
+    	width: 0;
+    	height: 0;
+      border-bottom: 20px solid $navbar-default-bg;
+      border-left: 20px solid transparent;
+    }
   }
+}
 .navbar-form {
   position: absolute;
   right: 0px;
@@ -128,12 +157,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-// #locales-menu {
-//     position: absolute;
-//     right: 20px;
-//     top: 26px;
-//     z-index: 1;
-// }
+
 
 #contact {
   @extend .fa;

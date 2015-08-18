@@ -51,6 +51,23 @@ $(document).ready(function() {
      $("#global-search-panel").removeClass("bg-primary");
    }
  })
+ 
+ $("#global-search-panel").on("show.bs.collapse", function(e) {
+   $("#global-news-panel").collapse('hide');
+ })
+ 
+ $("#global-news-panel").on("show.bs.collapse", function(e) {
+   $("#global-search-panel").collapse('hide');
+   $('#global-news-slider').flexslider({
+     animation: "slide",
+     controlNav: true,
+     animationLoop: true,
+     slideshow: false,
+     directionNav: false
+   });
+ })
+ 
+
 
  //===========================================================
  // RENT INQUIRY
@@ -145,6 +162,8 @@ $(window).load(function(){
     itemMargin: 5,
     asNavFor: '#slider'
   });
+  
+
 
   $('#slider').flexslider({
     animation: "slide",

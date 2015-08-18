@@ -4,7 +4,7 @@
     <i class="fa fa-envelope"></i>
   <% end %>
 
-  <%= link_to "#", :alt => "Download PDF", :class => "btn btn-pink" do %>
+  <%= link_to(request.fullpath, { :format => :pdf }, { :alt => "Download PDF", :class => "btn btn-pink" }) do %>
     PDF
   <% end %>
   <%= link_to "https://www.facebook.com/sharer/sharer.php", :target => "_blank", :alt => "share on facebook", :class => "btn btn-facebook" do %>

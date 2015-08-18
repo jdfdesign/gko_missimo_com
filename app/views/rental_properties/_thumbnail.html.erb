@@ -1,4 +1,4 @@
-<%= link_to(record.public_url, :class => "thumbnail thumbnail-property") do %>
+<%= link_to(record.public_url, :class => "thumbnail thumbnail-property rental-property-thumbnail") do %>
   <h3 class="h4 thumbnail-title"><%= record.title %></h3>
   <em><%= record.meta.code %></em>
   <div class="thumbnail-inner">
@@ -39,6 +39,7 @@
             :data => { :toggle => "tooltip", :placement => "top" }, 
             :title => s.name %>
       <% end if s.css.present? %>
+      
     <% end %>
     </ul>
   </div>

@@ -37,6 +37,7 @@ end
   <div class='row'>
     <div class='col-sm-8'>
       <h1><%= @rental_property.title %></h1>
+      <%#= image_tag resource.thumbnail.url(:host => "http://localhost:3000" ) %>
       <%= flags.compact.join(" - ").html_safe %>
     </div>
     <div class='col-sm-4'>

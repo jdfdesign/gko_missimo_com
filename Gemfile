@@ -8,16 +8,17 @@ group :assets do
 end
 
 group :production do
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.19" do
-     gem 'gko_core'
-     gem 'gko_auth'
-     gem 'gko_documents'
-     gem 'gko_inquiries'
-     gem 'gko_features'
-     gem 'gko_categories'
+  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.22" do
+    gem 'gko_core'
+    gem 'gko_auth'
+    gem 'gko_documents'
+    gem 'gko_inquiries'
+    gem 'gko_features'
+    gem 'gko_categories'
     gem 'gko_stickers'
+    gem 'gko_blog'
   end
-  gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git', :tag => "v0.3.1"
+  gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git', :tag => "v0.3.2"
 end
 
 
@@ -29,6 +30,7 @@ end
 #  gem "gko_features", :path => '~/Github/gko_cms3/gko_features'
 #  gem "gko_categories", :path => '~/Github/gko_cms3/gko_categories'
 #  gem "gko_stickers", :path => '~/Github/gko_cms3/gko_stickers'
+#  gem "gko_blog", :path => '~/Github/gko_cms3/gko_blog'
 #  gem "gko_realty", :path => '~/Github/gko/gko_realty' 
 #end
 
@@ -38,5 +40,5 @@ gem "whenever", "~> 0.7.3"
 gem "nokogiri", "~> 1.5.1"
 # https://github.com/Nerian/bootstrap-datepicker-rails
 gem 'bootstrap-datepicker-rails', '1.3.1.1'
-#gem 'wicked_pdf'
-#gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'

@@ -1,4 +1,3 @@
-$font-family-alt:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $logo-height-sm: 107px;
 $logo-height-sm-min: 107px;
 
@@ -27,13 +26,14 @@ $blue-dark: #0099c5;
 @import "theme/page_header";
 @import "theme/flexslider";
 @import "theme/custom_flexslider";
-//@import "theme/sections";
 @import "theme/footer";
 @import "theme/home";
 
 @import "theme/property";
 @import "theme/sale_property";
 
+@import "theme/posts";
+@import "theme/pdf";
 
 /* FIX FOR GMAP BUG
 -------------------------------------------------- */
@@ -68,6 +68,9 @@ $blue-dark: #0099c5;
 .bg-pink {
   background-color: $pink;
 }
+.bg-blue {
+  background-color: $brand-primary;
+}
 .text-success {
   color: $brand-success;
 }
@@ -85,13 +88,9 @@ $blue-dark: #0099c5;
 }
 
 .background-image-holder {
-  //position: absolute;
-  //top: 0px;
-  //left: 0px;
   width: 100%;
   height: 160px;
   background-size: cover !important;
-  //z-index: 0;
   background-position: 50% 50% !important;
   background-image: image-url("bg-header.jpg");
 }
@@ -107,6 +106,40 @@ $blue-dark: #0099c5;
   height: 110%;
   width: 110%;
 }
+
+.tooltip.top .tooltip-arrow {
+    bottom: 0;
+    left: 20%;
+    margin: auto !important;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.rental-property-thumbnail {
+  .tooltip-inner {
+    background-color: $brand-success !important;
+  }
+  .tooltip.top .tooltip-arrow {
+    border-top-color: $brand-success !important;
+  }
+}
+.annual-rental-thumbnail {
+  .tooltip-inner {
+    background-color: $pink !important;
+  }
+  .tooltip.top .tooltip-arrow {
+    border-top-color: $pink !important;
+  }
+}
+.sale-property-thumbnail {
+  .tooltip-inner {
+    background-color: $brand-primary !important;
+  }
+  .tooltip.top .tooltip-arrow {
+    border-top-color: $brand-primary !important;
+  }
+}
+
 
 @media print {
   img {

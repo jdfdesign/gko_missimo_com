@@ -6349,7 +6349,7 @@ button.close {
 .tooltip-inner {
   max-width: 200px;
   padding: 3px 8px;
-  color: white;
+  color: #555555;
   text-align: center;
   text-decoration: none;
   background-color: #98bf3f;
@@ -10815,85 +10815,81 @@ span.valid {
   max-width: 100%;
 }
 
-/* line 2, ../../app/assets/stylesheets/theme/_search-form.scss */
-.btn-search-collapse input {
-  font-size: 16px;
-}
-
 /* FORM
 -------------------------------------------------- */
-/* line 9, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 3, ../../app/assets/stylesheets/theme/_search-form.scss */
 .form-search-wrapper {
   padding: 22px;
 }
 
-/* line 15, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 9, ../../app/assets/stylesheets/theme/_search-form.scss */
 .form-search .form-control {
   background-color: #fff;
   color: #333333;
   border: 1px solid #fff;
 }
-/* line 21, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 15, ../../app/assets/stylesheets/theme/_search-form.scss */
 .form-search input, .form-search select, .form-search textarea {
   width: 100%;
 }
 
-/* line 26, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 20, ../../app/assets/stylesheets/theme/_search-form.scss */
 .tab-pane-sales {
   background-color: #40c7f4;
 }
 
-/* line 30, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 24, ../../app/assets/stylesheets/theme/_search-form.scss */
 .tab-pane-rentals {
   background-color: #98bf3f;
 }
 
-/* line 34, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 28, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel {
   background-color: #98bf3f;
+  top: -1px;
 }
-/* line 36, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 31, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills {
   text-align: left;
   padding: 22px;
 }
-/* line 41, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 36, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li > a {
   color: #eeeeee;
   background-color: #9a9b9d;
 }
-/* line 46, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 41, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.active > a {
   color: white;
   background-color: #41c7f4;
 }
-/* line 50, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 45, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.active > a:hover, #global-search-panel .nav-pills > li.active > a:focus {
   color: white;
   background-color: #41c7f4;
 }
-/* line 57, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 52, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-success.active > a {
   color: white;
   background-color: #559300;
 }
-/* line 61, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 56, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-success.active > a:hover, #global-search-panel .nav-pills > li.bg-success.active > a:focus {
   color: white;
   background-color: #559300;
 }
-/* line 68, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 63, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-primary.active > a {
   color: white;
   background-color: #0099c5;
 }
-/* line 72, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 67, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-primary.active > a:hover, #global-search-panel .nav-pills > li.bg-primary.active > a:focus {
   color: white;
   background-color: #0099c5;
 }
 
-/* line 82, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 77, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel.bg-primary {
   background-color: #41c7f4;
 }
@@ -11058,7 +11054,7 @@ span.valid {
   }
 }
 /* line 104, ../../app/assets/stylesheets/theme/_navbar.scss */
-#locales {
+#locales-menu {
   position: relative;
   float: right;
   margin-right: 15px;
@@ -11066,23 +11062,53 @@ span.valid {
   margin-bottom: 36.5px;
 }
 /* line 109, ../../app/assets/stylesheets/theme/_navbar.scss */
-#locales > li > a {
-  padding: 6px;
-  background-color: #404344;
-  color: white;
-  font-size: 11px;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+#locales-menu .btn {
+  text-transform: capitalize !important;
+  font-size: 13px;
+  padding: 3px 6px;
 }
-/* line 117, ../../app/assets/stylesheets/theme/_navbar.scss */
-#locales > li > a:hover, #locales > li > a:focus {
-  background-color: #41c7f4;
-  color: #404344;
+/* line 114, ../../app/assets/stylesheets/theme/_navbar.scss */
+#locales-menu .triangle-bottom-left {
+  position: absolute;
+  bottom: -20px;
+  left: 12%;
+  display: block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border-top: 20px solid #98bf3f;
+  border-right: 20px solid transparent;
+}
+/* line 126, ../../app/assets/stylesheets/theme/_navbar.scss */
+#locales-menu .dropdown-menu {
+  background-color: #404344;
+  left: auto;
+  right: 96%;
+  top: 110%;
+}
+/* line 131, ../../app/assets/stylesheets/theme/_navbar.scss */
+#locales-menu .dropdown-menu > li > a {
+  color: #fff;
+  background-color: transparent;
+}
+/* line 134, ../../app/assets/stylesheets/theme/_navbar.scss */
+#locales-menu .dropdown-menu > li > a:hover {
+  color: #98bf3f;
+  background-color: transparent;
+}
+/* line 140, ../../app/assets/stylesheets/theme/_navbar.scss */
+#locales-menu .dropdown-menu .triangle-top-right {
+  position: absolute;
+  top: -20px;
+  right: 6%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #404344;
+  border-left: 20px solid transparent;
 }
 
-/* line 123, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 152, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-form {
   position: absolute;
   right: 0px;
@@ -11092,7 +11118,7 @@ span.valid {
   margin-bottom: 0;
 }
 
-/* line 138, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 162, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact {
   font: 0/0 a;
   color: transparent;
@@ -11103,17 +11129,17 @@ span.valid {
   background-color: #98bf3f;
   border-bottom: 8px solid #98bf3f;
 }
-/* line 145, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 169, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:before {
   font: normal normal normal 18px/1 FontAwesome;
 }
-/* line 149, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 173, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:hover, #contact:focus {
   color: #fff;
   background-color: #98bf3f;
 }
 
-/* line 155, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 179, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage {
   font: 0/0 a;
   color: transparent;
@@ -11124,11 +11150,11 @@ span.valid {
   background-color: #41c7f4;
   border-bottom: 8px solid #41c7f4;
 }
-/* line 162, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 186, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:before {
   font: normal normal normal 18px/1 FontAwesome;
 }
-/* line 166, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 190, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:hover, #homepage:focus {
   color: #fff;
   background-color: #41c7f4;
@@ -11531,21 +11557,88 @@ span.valid {
 /* line 6, ../../app/assets/stylesheets/theme/_page_header.scss */
 .page-header .btn-search-collapse {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 15px;
   z-index: 1000;
-  background-color: #fff;
   font-size: 32px;
-  color: #777777;
 }
-/* line 14, ../../app/assets/stylesheets/theme/_page_header.scss */
+/* line 12, ../../app/assets/stylesheets/theme/_page_header.scss */
 .page-header .btn-search-collapse i {
-  color: #41c7f4 !important;
+  color: #fff !important;
   margin-right: 14px;
 }
-/* line 18, ../../app/assets/stylesheets/theme/_page_header.scss */
+/* line 16, ../../app/assets/stylesheets/theme/_page_header.scss */
 .page-header .btn-search-collapse span {
   font-size: 22px;
+  color: white;
+}
+/* line 20, ../../app/assets/stylesheets/theme/_page_header.scss */
+.page-header .btn-search-collapse input {
+  font-size: 16px;
+  background-color: transparent;
+  vertical-align: middle;
+  color: white;
+}
+/* line 103, ../../app/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+.page-header .btn-search-collapse input::-moz-placeholder {
+  color: white;
+  opacity: 1;
+}
+/* line 107, ../../app/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+.page-header .btn-search-collapse input:-ms-input-placeholder {
+  color: white;
+}
+/* line 108, ../../app/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+.page-header .btn-search-collapse input::-webkit-input-placeholder {
+  color: white;
+}
+/* line 28, ../../app/assets/stylesheets/theme/_page_header.scss */
+.page-header .btn-news-collapse {
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  right: 15px;
+  z-index: 1000;
+  font-size: 16px;
+  white-space: normal;
+  text-align: left;
+  padding: 0;
+  vertical-align: middle;
+  border: none;
+  text-transform: none;
+  height: 60px;
+}
+/* line 42, ../../app/assets/stylesheets/theme/_page_header.scss */
+.page-header .btn-news-collapse img {
+  float: left;
+  margin-right: 8px;
+}
+/* line 46, ../../app/assets/stylesheets/theme/_page_header.scss */
+.page-header .btn-news-collapse span {
+  padding: 0 8px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  float: left;
+}
+/* line 55, ../../app/assets/stylesheets/theme/_page_header.scss */
+.page-header .btn-news-collapse i {
+  float: right;
+  padding: 0 8px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+}
+
+/* line 68, ../../app/assets/stylesheets/theme/_page_header.scss */
+#global-news-panel {
+  padding: 20px;
+  background-color: #fff;
 }
 
 /*
@@ -11947,7 +12040,7 @@ html[xmlns] .flexslider .slides {
 }
 /* line 32, ../../app/assets/stylesheets/theme/_custom_flexslider.scss */
 #hero-slider .slide-link {
-  background: #98bf3f;
+  background: #555555;
   margin: 0;
   bottom: 0;
   width: 100;
@@ -11956,13 +12049,13 @@ html[xmlns] .flexslider .slides {
 }
 /* line 39, ../../app/assets/stylesheets/theme/_custom_flexslider.scss */
 #hero-slider .slide-link a {
-  color: #333333;
+  color: white;
   text-transform: uppercase;
   display: block;
 }
 /* line 43, ../../app/assets/stylesheets/theme/_custom_flexslider.scss */
 #hero-slider .slide-link a:hover {
-  color: #fff;
+  color: #98bf3f;
   text-decoration: none;
 }
 
@@ -12044,6 +12137,18 @@ html[xmlns] .flexslider .slides {
 /* line 101, ../../app/assets/stylesheets/theme/_custom_flexslider.scss */
 .flexslider:hover .flex-direction-nav .flex-next:hover:before {
   color: #333333;
+}
+
+/* line 106, ../../app/assets/stylesheets/theme/_custom_flexslider.scss */
+#global-news-slider {
+  position: relative;
+  padding: 20px 20px 60px 20px;
+}
+/* line 109, ../../app/assets/stylesheets/theme/_custom_flexslider.scss */
+#global-news-slider .flex-control-nav {
+  bottom: 0;
+  width: auto;
+  right: 0;
 }
 
 /* line 1, ../../app/assets/stylesheets/theme/_footer.scss */
@@ -12254,39 +12359,39 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 .property {
   padding-top: 44px;
 }
-/* line 16, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 15, ../../app/assets/stylesheets/theme/_property.scss */
 .property h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 21, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 20, ../../app/assets/stylesheets/theme/_property.scss */
 .property .flexslider {
   margin-bottom: 0 !important;
 }
-/* line 25, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 24, ../../app/assets/stylesheets/theme/_property.scss */
 .property #carousel img {
   display: block;
   opacity: .5;
   cursor: pointer;
 }
-/* line 30, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 29, ../../app/assets/stylesheets/theme/_property.scss */
 .property #carousel img:hover {
   opacity: 1;
 }
-/* line 33, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 32, ../../app/assets/stylesheets/theme/_property.scss */
 .property #carousel .flex-active-slide img {
   opacity: 1;
   cursor: default;
 }
 
-/* line 39, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 38, ../../app/assets/stylesheets/theme/_property.scss */
 .share-links {
   float: right;
 }
 
 /* HEADER
 -------------------------------------------------- */
-/* line 46, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 45, ../../app/assets/stylesheets/theme/_property.scss */
 .property-min-price {
   background-color: #555555;
   color: #fff;
@@ -12294,7 +12399,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   padding: 2px 6px;
 }
 
-/* line 53, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 52, ../../app/assets/stylesheets/theme/_property.scss */
 .property-status {
   background-color: #98bf3f;
   color: #fff;
@@ -12303,42 +12408,42 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   text-transform: uppercase;
 }
 
-/* line 62, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 61, ../../app/assets/stylesheets/theme/_property.scss */
 .rental-property h1, .rental-property h2, .rental-property h3, .rental-property h4 {
   color: #98bf3f !important;
 }
 
-/* line 69, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 67, ../../app/assets/stylesheets/theme/_property.scss */
 .property-info,
 .property-promo-text {
   background-color: #03A9F4;
   color: #fff;
   border-radius: 0;
 }
-/* line 73, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 71, ../../app/assets/stylesheets/theme/_property.scss */
 .property-info h4,
 .property-promo-text h4 {
   color: #fff;
   margin-top: 0;
 }
 
-/* line 79, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 77, ../../app/assets/stylesheets/theme/_property.scss */
 .property-promo-text {
   background-color: #FF5252 !important;
 }
 
 /* STICKERS
 -------------------------------------------------- */
-/* line 86, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 84, ../../app/assets/stylesheets/theme/_property.scss */
 .stickers-nav > li {
   margin-top: 2px;
 }
-/* line 88, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 86, ../../app/assets/stylesheets/theme/_property.scss */
 .stickers-nav > li > a {
   text-align: left;
   padding: 4px 8px;
 }
-/* line 92, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 90, ../../app/assets/stylesheets/theme/_property.scss */
 .stickers-nav > li > a:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -12350,7 +12455,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   padding-right: 8px;
 }
 
-/* line 101, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 99, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker {
   background-color: #98bf3f;
   background-size: 40px 40px;
@@ -12360,43 +12465,43 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   vertical-align: middle;
   padding: 14px 1px 14px 54px;
 }
-/* line 110, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 109, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.pool {
-  background-image: url("/assets/icon_pool.svg");
+  background-image: url(/assets/icon_pool.svg);
 }
-/* line 113, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 112, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.view {
-  background-image: url("/assets/icon_view.svg");
+  background-image: url(/assets/icon_view.svg);
 }
-/* line 116, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 115, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.sport {
-  background-image: url("/assets/icon_sport.svg");
+  background-image: url(/assets/icon_sport.svg);
 }
-/* line 119, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 118, ../../app/assets/stylesheets/theme/_property.scss */
 .property-sticker.jacuzzi {
-  background-image: url("/assets/icon_jacuzzi.svg");
+  background-image: url(/assets/icon_jacuzzi.svg);
 }
 
-/* line 124, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 123, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
 }
-/* line 129, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 128, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details strong {
   color: #000;
 }
-/* line 132, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 131, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details hr {
   margin: 22px 0;
 }
-/* line 135, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 134, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details a {
   color: #333333;
 }
-/* line 138, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 137, ../../app/assets/stylesheets/theme/_property.scss */
 .widget-details a:focus, .widget-details a:hover {
   color: #41c7f4;
   text-decoration: none;
@@ -12404,41 +12509,41 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 
 /* RATES
 -------------------------------------------------- */
-/* line 147, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 146, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-seasons {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 150, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 149, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-seasons ul {
   list-style-type: none;
 }
 
-/* line 154, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 153, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-season-title {
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 22px;
   margin-bottom: 11px;
 }
-/* line 159, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 158, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-season-title span {
   font-weight: 300;
   color: #333333;
   text-transform: normal;
 }
 
-/* line 165, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 164, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-rates {
   padding-left: 8px;
 }
 
-/* line 168, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 167, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-rates > li {
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 171, ../../app/assets/stylesheets/theme/_property.scss */
+/* line 170, ../../app/assets/stylesheets/theme/_property.scss */
 .price_notes_extra {
   font-size: 16px;
   line-height: 24px;
@@ -12488,6 +12593,56 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   color: #ed46a2 !important;
 }
 
+/* line 3, ../../app/assets/stylesheets/theme/_posts.scss */
+.posts h3 {
+  margin-top: 0;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* line 2, ../../app/assets/stylesheets/theme/_pdf.scss */
+.pdf {
+  background-color: transparent !important;
+  display: inline-block;
+  clear: both;
+  page-break-after: auto;
+  margin-bottom: 80px !important;
+}
+/* line 8, ../../app/assets/stylesheets/theme/_pdf.scss */
+.pdf .brand {
+  width: 300px !important;
+  height: auto !important;
+  display: block !important;
+  margin-bottom: 20px;
+}
+/* line 14, ../../app/assets/stylesheets/theme/_pdf.scss */
+.pdf .footer {
+  background-color: transparent !important;
+  color: #333333 !important;
+  font-size: 12px !important;
+  padding: 30px 0 !important;
+  border-top: 1px solid #777777;
+}
+/* line 20, ../../app/assets/stylesheets/theme/_pdf.scss */
+.pdf .footer a {
+  color: #98bf3f;
+}
+/* line 25, ../../app/assets/stylesheets/theme/_pdf.scss */
+.pdf .property-sticker {
+  position: relative;
+}
+/* line 27, ../../app/assets/stylesheets/theme/_pdf.scss */
+.pdf .property-sticker img {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  left: 6px;
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
 /* FIX FOR GMAP BUG
 -------------------------------------------------- */
 /* line 40, ../../app/assets/stylesheets/public.css.scss */
@@ -12531,31 +12686,36 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 }
 
 /* line 71, ../../app/assets/stylesheets/public.css.scss */
+.bg-blue {
+  background-color: #41c7f4;
+}
+
+/* line 74, ../../app/assets/stylesheets/public.css.scss */
 .text-success {
   color: #98bf3f;
 }
 
-/* line 74, ../../app/assets/stylesheets/public.css.scss */
+/* line 77, ../../app/assets/stylesheets/public.css.scss */
 .text-pink {
   color: #ed46a2;
 }
 
-/* line 77, ../../app/assets/stylesheets/public.css.scss */
+/* line 80, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-primary {
   border-color: #41c7f4;
 }
 
-/* line 80, ../../app/assets/stylesheets/public.css.scss */
+/* line 83, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-success {
   border-color: #98bf3f;
 }
 
-/* line 83, ../../app/assets/stylesheets/public.css.scss */
+/* line 86, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-pink {
   border-color: #ed46a2;
 }
 
-/* line 87, ../../app/assets/stylesheets/public.css.scss */
+/* line 90, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
   width: 100%;
   height: 160px;
@@ -12564,13 +12724,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   background-image: url(/assets/bg-header.jpg);
 }
 
-/* line 98, ../../app/assets/stylesheets/public.css.scss */
+/* line 97, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder.parallax-background {
   height: 120%;
   top: -10%;
 }
 
-/* line 103, ../../app/assets/stylesheets/public.css.scss */
+/* line 102, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder,
 .hover-background .foreground-image-holder {
   -webkit-transition: all 0.3s ease-out;
@@ -12578,8 +12738,44 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   transition: all 0.3s ease-out;
 }
 
-/* line 106, ../../app/assets/stylesheets/public.css.scss */
+/* line 105, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder {
   height: 110%;
   width: 110%;
+}
+
+/* line 110, ../../app/assets/stylesheets/public.css.scss */
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 20%;
+  margin: auto !important;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+/* line 119, ../../app/assets/stylesheets/public.css.scss */
+.rental-property-thumbnail .tooltip-inner {
+  background-color: #98bf3f !important;
+}
+/* line 122, ../../app/assets/stylesheets/public.css.scss */
+.rental-property-thumbnail .tooltip.top .tooltip-arrow {
+  border-top-color: #98bf3f !important;
+}
+
+/* line 127, ../../app/assets/stylesheets/public.css.scss */
+.annual-rental-thumbnail .tooltip-inner {
+  background-color: #ed46a2 !important;
+}
+/* line 130, ../../app/assets/stylesheets/public.css.scss */
+.annual-rental-thumbnail .tooltip.top .tooltip-arrow {
+  border-top-color: #ed46a2 !important;
+}
+
+/* line 135, ../../app/assets/stylesheets/public.css.scss */
+.sale-property-thumbnail .tooltip-inner {
+  background-color: #41c7f4 !important;
+}
+/* line 138, ../../app/assets/stylesheets/public.css.scss */
+.sale-property-thumbnail .tooltip.top .tooltip-arrow {
+  border-top-color: #41c7f4 !important;
 }
