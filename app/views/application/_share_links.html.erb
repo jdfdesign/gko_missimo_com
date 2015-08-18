@@ -4,9 +4,7 @@
     <i class="fa fa-envelope"></i>
   <% end %>
 
-  <%= link_to(request.fullpath, { :format => :pdf }, { :alt => "Download PDF", :class => "btn btn-pink" }) do %>
-    PDF
-  <% end %>
+  <%= link_to("PDF", params.merge(:format => :pdf), :alt => "Download PDF", :class => "btn btn-pink") %>
   <%= link_to "https://www.facebook.com/sharer/sharer.php", :target => "_blank", :alt => "share on facebook", :class => "btn btn-facebook" do %>
     <i class="fa fa-facebook-official text-white"></i> Share on Facebook
   <% end %>
