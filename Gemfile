@@ -21,7 +21,6 @@ group :production do
   gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git', :tag => "v0.3.2"
 end
 
-
 #group :development do
 #  gem "gko_core", :path => '~/Github/gko_cms3/gko_core'
 #  gem "gko_auth", :path => '~/Github/gko_cms3/gko_auth'
@@ -39,6 +38,6 @@ gem "eu_central_bank", "~> 0.3.2"
 gem "whenever", "~> 0.7.3"
 gem "nokogiri", "~> 1.5.1"
 # https://github.com/Nerian/bootstrap-datepicker-rails
-gem 'bootstrap-datepicker-rails', '1.3.1.1'
-gem 'wkhtmltopdf-binary', "0.9.9.3"
-gem 'wicked_pdf', "0.11.0"
+gem 'bootstrap-datepicker-rails', '= 1.3.1.1'
+gem 'wkhtmltopdf-binary', "= 0.9.9.3"
+gem 'wicked_pdf', "= 0.11.0"
