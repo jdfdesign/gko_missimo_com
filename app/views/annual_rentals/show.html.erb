@@ -32,7 +32,9 @@ end
     </div>
     <div class='col-sm-4'>
         <p class="property-min-price"><%= annual_price_value(@annual_rental) %> / month</p>
-        <p class="property-status"><%= "Status".html_safe %></p>
+        <% if @annual_rental.meta.statute %>
+        <p class="property-status bg-pink"><%= raw @annual_rental.meta.statute.title %></p>
+        <% end %>
     </div>
   </div>
   <div class='row row-padded'>

@@ -41,6 +41,11 @@
     padding-left: $line-height-computed;
     padding-right: $line-height-computed;
   }
+  
+  .embed-video-container {
+    padding-top: $line-height-computed;
+    padding-bottom: $line-height-computed;
+  }
 }
 
 .section-offers {

@@ -50,7 +50,7 @@
 }
 
 .property-status {
-  background-color: $brand-success;
+  background-color: $brand-primary;
   color: #fff;
   margin-bottom: 0;
   padding: 2px 6px;
@@ -59,7 +59,7 @@
 
 .rental-property {
   h1, h2, h3, h4 {
-    color: $brand-success !important;
+    color: $brand-primary !important;
   }
 }
 
@@ -97,7 +97,7 @@
 }
 
 .property-sticker {
-  background-color: $brand-success;
+  background-color: $brand-primary;
   background-size: 40px 40px;
   background-repeat: no-repeat;
   background-position: 6px center;
@@ -112,8 +112,8 @@
   &.view {
     background-image: image_url('icon_view.svg');
   }
-  &.sport {
-    background-image: image_url('icon_sport.svg');
+  &.gym {
+    background-image: image_url('icon_gym.svg');
   }
   &.jacuzzi {
     background-image: image_url('icon_jacuzzi.svg');

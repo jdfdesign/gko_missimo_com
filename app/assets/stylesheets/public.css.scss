@@ -6,8 +6,8 @@ $logo-height-sm-min: 107px;
 -------------------------------------------------- */
 @import "theme/variables";
 
-$green: $brand-primary;
-$blue: $brand-success;
+$blue: $brand-primary;
+$green: $brand-success;
 $pink: #ed46a2;
 $green-dark: #559300;
 $blue-dark: #0099c5;
@@ -38,7 +38,7 @@ $blue-dark: #0099c5;
 /* FIX FOR GMAP BUG
 -------------------------------------------------- */
 .map-canvas {
-  height: 400px;
+  height: 300px;
   img {
     max-width: none;
     vertical-align: middle;
@@ -48,7 +48,7 @@ $blue-dark: #0099c5;
 }
 
 #footer .map-canvas {
-  height: 280px;
+  height: 200px;
 }
 
 /* GLOBAL
@@ -56,13 +56,13 @@ $blue-dark: #0099c5;
 
 @media (min-width: $screen-md-min) {
   .main-container {
-    max-width: 900px;
+    max-width: 800px;
   }
 }
 .no-border {
   border: none !important;
 }
-.bg-success {
+.bg-green {
   background-color: $brand-success;
 }
 .bg-pink {
@@ -71,7 +71,7 @@ $blue-dark: #0099c5;
 .bg-blue {
   background-color: $brand-primary;
 }
-.text-success {
+.text-green {
   color: $brand-success;
 }
 .text-pink {
@@ -80,7 +80,7 @@ $blue-dark: #0099c5;
 .hr-border-primary {
   border-color: $brand-primary;
 }
-.hr-border-success {
+.hr-border-green {
   border-color: $brand-success;
 }
 .hr-border-pink {
@@ -117,10 +117,10 @@ $blue-dark: #0099c5;
 
 .rental-property-thumbnail {
   .tooltip-inner {
-    background-color: $brand-success !important;
+    background-color: $brand-primary !important;
   }
   .tooltip.top .tooltip-arrow {
-    border-top-color: $brand-success !important;
+    border-top-color: $brand-primary !important;
   }
 }
 .annual-rental-thumbnail {
@@ -133,10 +133,10 @@ $blue-dark: #0099c5;
 }
 .sale-property-thumbnail {
   .tooltip-inner {
-    background-color: $brand-primary !important;
+    background-color: $brand-success !important;
   }
   .tooltip.top .tooltip-arrow {
-    border-top-color: $brand-primary !important;
+    border-top-color: $brand-success !important;
   }
 }
 

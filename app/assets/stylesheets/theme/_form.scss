@@ -1,7 +1,7 @@
 /* FORM
 -------------------------------------------------- */
 abbr {
-  color: $brand-success;
+  color: $brand-primary;
 }
 span.error,span.valid{
   position: absolute;
@@ -40,4 +40,8 @@ span.valid{
   .form-control {
     max-width: 100%;
   }
+}
+
+.sale_property_inquiry abbr {
+  color: $brand-success;
 }

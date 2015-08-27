@@ -1,9 +1,9 @@
 GIT
   remote: git@github.com:jdfdesign/gko-realty.git
-  revision: 567b1331e45c57f56d42fa499c626a0e36a073b3
-  tag: v0.3.3
+  revision: bdaa0d7e24b164b2b0fa508f0524f891c990ae0f
+  tag: v0.4.0
   specs:
-    gko_realty (0.3.3)
+    gko_realty (0.4.0)
       gko_core
 
 GIT
@@ -119,7 +119,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
     chronic (0.6.7)
-    codemirror-rails (5.5)
+    codemirror-rails (5.6)
       railties (>= 3.0, < 5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -191,7 +191,7 @@ GEM
       i18n (~> 0.4)
       json
     multi_json (1.11.2)
-    mysql2 (0.3.19)
+    mysql2 (0.3.20)
     nested_set (1.7.1)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
@@ -280,7 +280,7 @@ GEM
     wicked_pdf (0.11.0)
       rails
     will_paginate (3.0.7)
-    wkhtmltopdf-binary (0.9.9)
+    wkhtmltopdf-binary (0.9.9.3)
 
 PLATFORMS
   ruby
@@ -305,4 +305,4 @@ DEPENDENCIES
   uglifier (~> 2.4.0)
   whenever (~> 0.7.3)
   wicked_pdf (= 0.11.0)
-  wkhtmltopdf-binary (= 0.9.9)
+  wkhtmltopdf-binary (= 0.9.9.3)

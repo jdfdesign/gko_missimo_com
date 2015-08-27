@@ -3,6 +3,7 @@ en:
   want_to_rent: 'I want to rent'
   want_to_buy: 'I want to buy'  
   listing: Listing
+  language: Language
   description: Description
   details: Details
   informations: Informations
@@ -15,7 +16,6 @@ en:
   sale_properties:
     collection:
       empty: "Please contact us for our selection of properties for sale."
-
   helpers:
     select:
       lifestyle:

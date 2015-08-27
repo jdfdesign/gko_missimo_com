@@ -1,13 +1,29 @@
 fr:
   listing: Listing
-  about_us: A propos de Remax
+  searching: 'Vous recherchez…'
+  want_to_rent: 'Je veux louer'
+  want_to_buy: 'Je veux acheter'  
+  listing: Listing
+  language: Langage
   description: Description
   details: Details
   informations: Informations
   home_sb: "<strong>Nichée entre la mer des Caraïbes et l'Océan Atlantique, au nord de l'Arc Antillais</strong> St-Barth, peitie île de 25 km2 allie avec bonheur modernisme et traditions. Elle a su préserver le charme de sa nature sauvage et son environnement précieux.<br\>St-Barth c'est aussi 17 plages, une capitale, Gustavia, des villages, une hostellerie de luxe mais aussi des auberges de charme pour le plus grand plaisir de ses visiteurs."
   realty:
-    view_all_promotions: View all promotions
+    view_all_promotions: Voir toutes les promotions
     price_notes: "All rates are based on 7 nights and include an escort to your villa upon arrival, welcome gift and daily maid service (except Sundays & Public Holidays).<br/>Currency conversion provided for information only and subject to confirmation through our agents."
   sale_properties:
     collection:
       empty: "Nous avons de nombreux biens à vous proposer, n'hésitez pas à nous contacter."
+  helpers:
+    select:
+      lifestyle:
+        prompt: "lifestyles"
+      order:
+        prompt: "Trier par"
+      price_per_week:
+        prompt: "Prix par semaine"
+      price_per_month:
+        prompt: "Prix par mois"
+      price:
+        prompt: "Prix"

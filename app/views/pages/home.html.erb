@@ -147,12 +147,17 @@ mais n’en reste pas moins une <strong>agence à taille humaine.</strong></p>
        <%= link_to("Partez à l'aventure", @rent_section.public_url, :class => "btn btn-white") %></p>
        
      </div>
-     <div class="second-row-inner">
+     <div class="col-md-6 second-row-inner">
        <h2 class="text-uppercase">Perles des Caraibes</h2>
        <p><%= t("home_sb").html_safe %></p>
        <%= link_to(@sbhpage.public_url, :class => "btn btn-primary") do %>
           <%= raw("Read more") %> <i class="fa fa-chevron-right"></i>
         <% end if @sbhpage = site.sections.named("stbarth") %>
+     </div>
+     <div class="col-md-6 embed-video-container">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X0adEFCKshA" allowfullscreen></iframe>
+       </div>
      </div>
   </div>
 </div>

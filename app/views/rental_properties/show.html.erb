@@ -37,12 +37,13 @@ end
   <div class='row'>
     <div class='col-sm-8'>
       <h1><%= @rental_property.title %></h1>
-      <%#= image_tag resource.thumbnail.url(:host => "http://localhost:3000" ) %>
       <%= flags.compact.join(" - ").html_safe %>
     </div>
     <div class='col-sm-4'>
         <p class="property-min-price"><%= t(:'realty.price_from') %><%= rental_min_price_value(@rental_property) %> / week</p>
-        <p class="property-status"><%= "Status".html_safe %></p>
+        <% if @rental_property.meta.statute %>
+        <p class="property-status"><%= raw @rental_property.meta.statute.title %></p>
+        <% end %>
     </div>
   </div>
   <div class='row row-padded'>
@@ -80,7 +81,7 @@ end
         </div>
       </div>
 
-      <hr class="hr-border-success">
+      <hr class="hr-border-primary">
 
       <!-- Description
       ================================================== -->
@@ -96,7 +97,7 @@ end
         </div>
       </div>
 
-      <hr class="hr-border-success">
+      <hr class="hr-border-primary">
 
       <!-- Rates
       ================================================== -->

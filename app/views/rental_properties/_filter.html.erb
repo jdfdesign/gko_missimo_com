@@ -6,7 +6,7 @@
   <div class="container main-container">
     <div class="row">
       <div class="col-xs-12">
-        <a class="btn btn-success btn-search-collapse" data-toggle="collapse" href="#rental-properties-form" aria-expanded="false" aria-controls="collapseExample">
+        <a class="btn btn-primary btn-search-collapse" data-toggle="collapse" href="#rental-properties-form" aria-expanded="false" aria-controls="collapseExample">
           <i class="fa fa-search"></i>
           <input type="text" class="no-border" id="search-input" placeholder="<%= t('searching') %>">
         </a>
@@ -15,6 +15,6 @@
   </div>
 </div>
 <% end %>
-<div class="collapse fade in bg-success form-search-wrapper" id="rental-properties-form">
+<div class="collapse fade in bg-primary form-search-wrapper" id="rental-properties-form">
   <%= render "rental_properties/filter_form" %>
 </div>
