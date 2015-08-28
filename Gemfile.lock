@@ -304,4 +304,4 @@ DEPENDENCIES
   uglifier (~> 2.4.0)
   whenever (~> 0.7.3)
   wicked_pdf (~> 0.9.10)
-  wkhtmltopdf-binary (~> 0.9.9)
+  wkhtmltopdf-binary (~> 0.9.9.3)
