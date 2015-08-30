@@ -28,7 +28,7 @@ end
 
 %>
 
-<article class="property rental-property">
+<article class="property sale-property">
   <!-- Header
   ================================================== -->
   <div class="row">
@@ -38,7 +38,9 @@ end
     </div>
     <div class='pull-right'>
         <p class="property-min-price"><%= sale_price_value(@sale_property, true) %></p>
-        <p class="property-status"><%= "Status".html_safe %></p>
+        <% if @sale_property.meta.statute %>
+        <p class="property-status bg-success"><%= raw @sale_property.meta.statute.title %></p>
+        <% end %>
     </div>
   </div>
   <div class="row row-padded">

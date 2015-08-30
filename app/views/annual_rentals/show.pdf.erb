@@ -20,7 +20,7 @@ if @annual_rental.meta and @annual_rental.meta.code.present?
 end
 %>
 
-<article class="property rental-property">
+<article class="property annual-rental">
   <!-- Header
   ================================================== -->
   <div class="row">
@@ -30,7 +30,9 @@ end
     </div>
     <div class='pull-right'>
         <p class="property-min-price"><%= annual_price_value(@annual_rental) %> / month</p>
-        <p class="property-status"><%= "Status".html_safe %></p>
+        <% if @annual_rental.meta.statute %>
+        <p class="property-status bg-pink"><%= raw @annual_rental.meta.statute.title %></p>
+        <% end %>
     </div>
   </div>
   <div class="row row-padded">
@@ -58,7 +60,7 @@ end
         
      </div> 
      
-      <hr class="clearfix hr-border-success">
+      <hr class="clearfix hr-border-pink">
 
       <!-- Description
       ================================================== -->
