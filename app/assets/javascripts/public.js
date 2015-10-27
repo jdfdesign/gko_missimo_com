@@ -73,6 +73,96 @@ $(document).ready(function() {
  // RENT INQUIRY
  //===========================================================
  
+  $('.inquiry:first')
+    .on("ajax:beforeSend", function(evt, xhr, settings) {
+      $('span.error').fadeOut('slow');
+      $('span.valid').fadeOut('slow');
+      $('#thanks').hide();
+      $('#error').hide();
+      $('#timedout').hide();
+      $('#state').hide();
+      
+      var error = false,
+          name_field = $('#inquiry_name'),
+          name_val = name_field.val();
+          
+      if ( !name_val.replace(/\s+/g, '').length ) {
+        name_field.parent().parent().addClass('has-error');
+        error = true;
+      }
+      
+      var phone_field = $('#inquiry_phone'),
+          phone_val = phone_field.val();
+      
+      if ( !phone_val.replace(/\s+/g, '').length ) {
+        phone_field.parent().parent().addClass('has-error');
+        error = true;
+      }
+      
+      var subject_field = $('#inquiry_phone'),
+          subject_val = phone_field.val();
+  
+      if ( !subject_val.replace(/\s+/g, '').length ) {
+        subject_field.parent().parent().addClass('has-error');
+        error = true;
+      }
+
+      var checkEmail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      var email = $('#inquiry_email').val();
+
+      if ( !email.replace(/\s+/g, '').length ) {
+        $('#inquiry_email').parent().parent().addClass('has-error');
+        error = true;
+      } else if (!checkEmail.test(email)) {
+        $('#inquiry_email').parent().parent().addClass('has-error');
+        error = true;
+      }
+
+      var message = $('#inquiry_message').val();
+      if ( !message.replace(/\s+/g, '').length ) {
+        $('#inquiry_message').parent().parent().addClass('has-error');
+        error = true;
+      }
+
+      if (error == true) {
+        $('#error').fadeIn('slow');
+        setTimeout(function() {
+          $('#error').fadeOut('slow');
+        }, 3000);
+        return false;
+      }
+      else {
+        $('#inquiry_name').parent().parent().removeClass('has-error');
+        $('#inquiry_email').parent().parent().removeClass('has-error');
+        $('#inquiry_phone').parent().parent().removeClass('has-error');
+        $('#inquiry_subject').parent().parent().removeClass('has-error');
+        $('#inquiry_message').parent().parent().removeClass('has-error');
+      }
+    })
+    .on("ajax:error", function(evt, xhr, status, error) {
+      if (error == "timeout") {
+        $('#timedout').fadeIn('slow');
+        setTimeout(function() {
+          $('#timedout').fadeOut('slow');
+        }, 3000);
+      } else {
+        $('#state').fadeIn('slow');
+        $("#state").html('The following error occured: ' + error + '');
+        setTimeout(function() {
+          $('#state').fadeOut('slow');
+        }, 3000);
+      }
+    })
+    .on("ajax:success", function(evt, data, status, xhr) {
+      console.log("success")
+      $('#thanks').fadeIn('slow');
+      $('input:not(:submit)').val('');
+      $('textarea').val('');
+      setTimeout(function() {
+        $('#thanks').fadeOut('slow');
+      }, 4000);
+    })
+
  //===========================================================
  // SALE INQUIRY
  //===========================================================
@@ -148,7 +238,6 @@ $(document).ready(function() {
         $('#thanks').fadeOut('slow');
       }, 4000);
     })
-
 });
 
 $(window).load(function(){

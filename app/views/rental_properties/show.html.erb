@@ -41,8 +41,14 @@ end
     </div>
     <div class='col-sm-4'>
         <p class="property-min-price"><%= t(:'realty.price_from') %><%= rental_min_price_value(@rental_property) %> / week</p>
-        <% if @rental_property.meta.statute %>
-        <p class="property-status"><%= raw @rental_property.meta.statute.title %></p>
+        <% if @rental_property.meta.badge %>
+        <p class="property-status property-badge"><%= raw @rental_property.meta.badge %></p>
+        <% end %>
+        <% if @rental_property.meta.info_title %>
+        <p class="property-status property-info"><%= raw @rental_property.meta.info_title %></p>
+        <% end %>
+        <% if @rental_property.meta.end_display %>
+        <p class="property-status"><%= raw t("realty.coup_de_cœur") %></p>
         <% end %>
     </div>
   </div>

@@ -16,6 +16,11 @@
       
       <p class="thumbnail-price"><%= annual_price_value(record) %></p>
     </div>
+    <% unless record.meta.statute.blank? %>
+      <div class="thumbnail-badges">
+        <p class="thumbnail-badge"><%= record.meta.statute.title %></p>
+      </div>
+    <% end %>
 
   </div>
   

@@ -55,7 +55,14 @@
   margin-bottom: 0;
   padding: 2px 6px;
   text-transform: uppercase;
+  .property-info {
+    background-color: #03A9F4 !important;
+  }
+  .property-badge {
+    background-color: #FF5252 !important;
+  }
 }
+
 
 .rental-property {
   h1, h2, h3, h4 {

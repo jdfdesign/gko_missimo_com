@@ -19,10 +19,13 @@
     
     <div class="thumbnail-badges">
       <% unless record.badge.blank? %>
-        <span class="thumbnail-badge"><%= record.badge %></span>
+        <p class="thumbnail-badge"><%= record.badge %></p>
       <% end %>
       <% unless record.info_title.blank? %>
-        <span class="thumbnail-info"><%= record.info_title %></span>
+        <p class="thumbnail-badge"><%= record.info_title %></p>
+      <% end %>
+      <% if record.meta.end_display %>
+        <p class="thumbnail-badge"><i class="fa fa-heart"></i></p>
       <% end %>
     </div>
   </div>

@@ -15,10 +15,20 @@
 }
 
 .navbar-nav > li > a {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+// Home
+.navbar-nav > li:first-child {
+  background-color: $brand-primary;
+}
+
+// mail
+.navbar-nav > li:last-child {
+  background-color: $brand-success;
 }
 
 .navbar-brand {
@@ -76,16 +86,32 @@
     padding: 0 15px 15px 15px;
   }
   
+  .navbar-collapse:before, .navbar-collapse:after {
+    content: " ";
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .navbar-nav:before, .navbar-nav:after {
+    content: " ";
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
   .navbar-nav {
-    width: 100%;
+    float: none;
     text-align: center;
     > li {
-      float: none;
-      display: inline-block;
+      height: 100%;
+      //float: none;
+      display: inline;
       border-left: 1px solid $gray-darker;
+      margin-left: -2px;
       > a {
-         padding-top: 8px;
-         padding-bottom: 2px;
+         padding-top: 2px;
+         padding-bottom: 1px;
        }
     }
   }
@@ -103,14 +129,30 @@
   }
 }
 #locales-menu {
-  position: relative;
-  float: right;
-  margin-right: $navbar-padding-horizontal;
-  @include navbar-vertical-align(34px);
+  position: absolute;
+  right: 64px;
+  top: 36px;
+  @media (min-width: $grid-float-breakpoint) {
+    right: 15px;
+  }
   .btn {
     text-transform: capitalize !important;
     font-size: 13px;
     padding: 3px 6px;
+    color: #fff;
+    background-color: $navbar-default-bg;
+    border-color: $navbar-default-bg;
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $brand-success;
+      border-color: $brand-success;
+      .triangle-bottom-left {
+        border-top-color: $brand-success;
+      }
+    }
   } 
   .triangle-bottom-left {
     position: absolute;
@@ -120,7 +162,7 @@
     width: 0;
     height: 0;
     vertical-align: bottom;
-    border-top: 20px solid $brand-success;
+    border-top: 20px solid $navbar-default-bg;
     border-right: 20px solid transparent;
   }
   
@@ -166,9 +208,11 @@
   @include text-hide();
   color: #fff;
   background-color: $brand-success;
-  border-bottom: 8px solid $brand-success;
+  padding-top: 8px;
+  padding-bottom: 7px;
   &:before {
-    font: normal normal normal 18px/1 FontAwesome;
+    font: normal normal normal 20px/1 FontAwesome;
+    line-height: 22px;
   }
   &:hover,
   &:focus {
@@ -183,9 +227,11 @@
   @include text-hide();
   color: #fff;
   background-color: $brand-primary;
-  border-bottom: 8px solid $brand-primary;
+  padding-top: 9px;
+  padding-bottom: 7px;
   &:before {
-    font: normal normal normal 18px/1 FontAwesome;
+    font: normal normal normal 22px/1 FontAwesome;
+    line-height: 22px;
   }
   &:hover,
   &:focus {

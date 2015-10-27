@@ -43,23 +43,19 @@
 
     .thumbnail-badges {
       position: absolute;
-      top: 7px;
+      top: 12px;
       margin: 0;
-      color: #fff;
+      color: $text-color;
       left: 0;
-      width: 100%;
       text-transform: uppercase;
-     // font-size: 10px;
       @include opacity(1);
       @include transition(all 0.5s ease);
-
-      .thumbnail-info {
-        background-color: #03A9F4;
-        padding: 8px;
-      }
-      .thumbnail-badge {
-        background-color: #FF5252 !important;
-        padding: 8px;
+      
+      > p {
+        background-color: $pink !important;
+        padding: 4px 8px 4px 32px;
+        margin-top: 6px;
+        display: table;
       }
     }
 
