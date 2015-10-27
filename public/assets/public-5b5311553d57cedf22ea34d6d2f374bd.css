@@ -11038,42 +11038,44 @@ span.valid {
   }
 
   /* line 89, ../../app/assets/stylesheets/theme/_navbar.scss */
-  .navbar-collapse:before, .navbar-collapse:after {
-    content: " ";
-    display: table;
-    /* Allow the centering to work */
-    margin: 0 auto;
-    text-align: center;
+  .navbar-collapse {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
   }
 
-  /* line 96, ../../app/assets/stylesheets/theme/_navbar.scss */
-  .navbar-nav:before, .navbar-nav:after {
-    content: " ";
-    display: table;
-    /* Allow the centering to work */
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  /* line 103, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 99, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav {
     float: none;
     text-align: center;
+    clear: left;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    text-align: center;
   }
-  /* line 106, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 110, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li {
-    height: 100%;
-    display: inline;
     border-left: 1px solid #222222;
-    margin-left: -2px;
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    right: 50%;
   }
-  /* line 112, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 118, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li > a {
-    padding-top: 2px;
-    padding-bottom: 1px;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 3px;
   }
 
-  /* line 119, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 126, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-default .navbar-nav > li > a {
     background-color: transparent;
     border-bottom: 6px solid transparent;
@@ -11081,26 +11083,26 @@ span.valid {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-  /* line 124, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 131, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     border-bottom-color: #98bf3f;
     color: #98bf3f;
     background-color: transparent;
   }
 }
-/* line 131, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 138, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu {
   position: absolute;
   right: 64px;
   top: 36px;
 }
 @media (min-width: 768px) {
-  /* line 131, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 138, ../../app/assets/stylesheets/theme/_navbar.scss */
   #locales-menu {
     right: 15px;
   }
 }
-/* line 138, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 145, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .btn {
   text-transform: capitalize !important;
   font-size: 13px;
@@ -11109,16 +11111,16 @@ span.valid {
   background-color: #404344;
   border-color: #404344;
 }
-/* line 149, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 156, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .btn:hover, #locales-menu .btn:focus, #locales-menu .btn.focus, #locales-menu .btn:active, #locales-menu .btn.active {
   background-color: #98bf3f;
   border-color: #98bf3f;
 }
-/* line 152, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 159, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .btn:hover .triangle-bottom-left, #locales-menu .btn:focus .triangle-bottom-left, #locales-menu .btn.focus .triangle-bottom-left, #locales-menu .btn:active .triangle-bottom-left, #locales-menu .btn.active .triangle-bottom-left {
   border-top-color: #98bf3f;
 }
-/* line 157, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 164, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .triangle-bottom-left {
   position: absolute;
   bottom: -20px;
@@ -11130,24 +11132,24 @@ span.valid {
   border-top: 20px solid #404344;
   border-right: 20px solid transparent;
 }
-/* line 169, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 176, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu {
   background-color: #404344;
   left: auto;
   right: 96%;
   top: 110%;
 }
-/* line 174, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 181, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu > li > a {
   color: #fff;
   background-color: transparent;
 }
-/* line 177, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 184, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu > li > a:hover {
   color: #98bf3f;
   background-color: transparent;
 }
-/* line 183, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 190, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu .triangle-top-right {
   position: absolute;
   top: -20px;
@@ -11159,7 +11161,7 @@ span.valid {
   border-left: 20px solid transparent;
 }
 
-/* line 195, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 202, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-form {
   position: absolute;
   right: 0px;
@@ -11169,7 +11171,7 @@ span.valid {
   margin-bottom: 0;
 }
 
-/* line 205, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 212, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact {
   font: 0/0 a;
   color: transparent;
@@ -11181,18 +11183,18 @@ span.valid {
   padding-top: 8px;
   padding-bottom: 7px;
 }
-/* line 213, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 220, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:before {
   font: normal normal normal 20px/1 FontAwesome;
   line-height: 22px;
 }
-/* line 218, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 225, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:hover, #contact:focus {
   color: #fff;
   background-color: #98bf3f;
 }
 
-/* line 224, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 231, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage {
   font: 0/0 a;
   color: transparent;
@@ -11204,12 +11206,12 @@ span.valid {
   padding-top: 9px;
   padding-bottom: 7px;
 }
-/* line 232, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 239, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:before {
   font: normal normal normal 22px/1 FontAwesome;
   line-height: 22px;
 }
-/* line 237, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 244, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:hover, #homepage:focus {
   color: #fff;
   background-color: #41c7f4;
