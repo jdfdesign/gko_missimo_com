@@ -1,3 +1,5 @@
+<% @rental_properties_section ||= site.rental_property_lists.live.first %>
+
 <% content_for :page_header do -%>
 <div class="page-header">   
   <div class="background-image-holder">
@@ -8,7 +10,7 @@
       <div class="col-xs-12">
         <a class="btn btn-primary btn-search-collapse" data-toggle="collapse" href="#rental-properties-form" aria-expanded="false" aria-controls="collapseExample">
           <i class="fa fa-search"></i>
-          <input type="text" class="no-border" id="search-input" placeholder="<%= t('searching') %>">
+          <input type="text" class="no-border" id="search-input" placeholder="<%= t('searching') %>" data-url="<%= @rental_properties_section.public_url %>">
         </a>
     </div>
     </div>

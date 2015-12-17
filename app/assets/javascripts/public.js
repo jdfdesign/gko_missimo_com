@@ -2,6 +2,7 @@
 //= require themes/validator
 //= require themes/jquery.flexslider
 //= require themes/bootstrap-datepicker
+//= require bootstrap-multiselect
 
 $(document).ready(function() {
 
@@ -11,6 +12,9 @@ $(document).ready(function() {
   
   $('.datepicker').datepicker();
   $('[data-toggle="tooltip"]').tooltip();
+  $('.js-multiple-select').multiselect({
+    numberDisplayed: 1
+  });
 
  //===========================================================
  // BACKGROUND IMAGE
@@ -66,6 +70,23 @@ $(document).ready(function() {
      directionNav: false
    });
  })
+ 
+ $(document).keypress(function(e) {
+     if(e.which == 13) {
+       var input = $('#search-input');
+       if (input.length > 0 && input.is(":focus") && input.val().length > 3) {
+         var params = {
+           search: {
+             with_title: input.val()
+           }
+         };
+         //var shallowEncoded = $.param( params, true );
+         alert($.param( params ));
+         document.location.href = input.data("url") + "?" + $.param( params );
+       }
+     }
+ });
+
  
 
 

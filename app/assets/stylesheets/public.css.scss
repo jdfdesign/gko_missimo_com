@@ -16,6 +16,7 @@ $blue-dark: #0099c5;
 @import "bootstrap/bootstrap";
 @import "font-awesome-4.2.0/font-awesome";
 @import "theme/bootstrap-datepicker3";
+@import "bootstrap-multiselect";
 @import "theme/form";
 @import "theme/search-form";
 @import "theme/navs";
@@ -92,7 +93,7 @@ $blue-dark: #0099c5;
   height: 160px;
   background-size: cover !important;
   background-position: 50% 50% !important;
-  background-image: image-url("bg-header.jpg");
+  //background-image: image-url("bg-header.jpg");
 }
 .background-image-holder.parallax-background {
   height: 120%;

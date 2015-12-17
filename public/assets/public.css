@@ -7196,16 +7196,6 @@ button.close {
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-/* FONT PATH
- * -------------------------- */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.2.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* line 4, ../../app/assets/stylesheets/font-awesome-4.2.0/_core.scss */
 .fa, #contact, #homepage {
   display: inline-block;
@@ -10756,6 +10746,61 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   margin-right: -5px;
 }
 
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container .input-group {
+  margin: 5px;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container > li {
+  padding: 0;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container > li > a.multiselect-all label {
+  font-weight: 700;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container > li > label.multiselect-group {
+  margin: 0;
+  padding: 3px 20px;
+  height: 100%;
+  font-weight: 700;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container > li > a > label {
+  margin: 0;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container > li > a > label.radio, .multiselect-container > li > a > label.checkbox {
+  margin: 0;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.multiselect-container > li > a > label > input[type=checkbox] {
+  margin-bottom: 5px;
+}
+
+/* line 1, ../../../../.rvm/gems/ruby-1.8.7-p374/gems/bootstrap-multiselect-rails-0.0.4/vendor/assets/stylesheets/bootstrap-multiselect.css */
+.btn-group > .btn-group:nth-child(2) > .multiselect.btn {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
 /* FORM
 -------------------------------------------------- */
 /* line 3, ../../app/assets/stylesheets/theme/_form.scss */
@@ -10837,64 +10882,95 @@ span.valid {
 .form-search input, .form-search select, .form-search textarea {
   width: 100%;
 }
-
 /* line 20, ../../app/assets/stylesheets/theme/_search-form.scss */
+.form-search .multiselect-container > li > a > label > input[type=checkbox] {
+  width: auto !important;
+}
+/* line 24, ../../app/assets/stylesheets/theme/_search-form.scss */
+.form-search .multiselect-container > li > a > label {
+  padding: 3px 20px 3px 40px;
+}
+/* line 28, ../../app/assets/stylesheets/theme/_search-form.scss */
+.form-search .select .btn-group {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+/* line 32, ../../app/assets/stylesheets/theme/_search-form.scss */
+.form-search .select .btn-group > .btn {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  text-transform: none;
+}
+/* line 37, ../../app/assets/stylesheets/theme/_search-form.scss */
+.form-search .select .btn-group button {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+/* line 42, ../../app/assets/stylesheets/theme/_search-form.scss */
+.form-search .select .btn-group .multiselect-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 49, ../../app/assets/stylesheets/theme/_search-form.scss */
 .tab-pane-sales {
   background-color: #40c7f4;
 }
 
-/* line 24, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 53, ../../app/assets/stylesheets/theme/_search-form.scss */
 .tab-pane-rentals {
   background-color: #98bf3f;
 }
 
-/* line 28, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 57, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel {
   background-color: #98bf3f;
   top: -1px;
 }
-/* line 31, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 60, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills {
   text-align: left;
   padding: 22px;
 }
-/* line 36, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 65, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li > a {
   color: #eeeeee;
   background-color: #9a9b9d;
 }
-/* line 41, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 70, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.active > a {
   color: white;
   background-color: #41c7f4;
 }
-/* line 45, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 74, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.active > a:hover, #global-search-panel .nav-pills > li.active > a:focus {
   color: white;
   background-color: #41c7f4;
 }
-/* line 52, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 81, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-success.active > a {
   color: white;
   background-color: #559300;
 }
-/* line 56, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 85, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-success.active > a:hover, #global-search-panel .nav-pills > li.bg-success.active > a:focus {
   color: white;
   background-color: #559300;
 }
-/* line 63, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 92, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-primary.active > a {
   color: white;
   background-color: #0099c5;
 }
-/* line 67, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 96, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel .nav-pills > li.bg-primary.active > a:hover, #global-search-panel .nav-pills > li.bg-primary.active > a:focus {
   color: white;
   background-color: #0099c5;
 }
 
-/* line 77, ../../app/assets/stylesheets/theme/_search-form.scss */
+/* line 106, ../../app/assets/stylesheets/theme/_search-form.scss */
 #global-search-panel.bg-primary {
   background-color: #41c7f4;
 }
@@ -12714,11 +12790,11 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 
 /* FIX FOR GMAP BUG
 -------------------------------------------------- */
-/* line 40, ../../app/assets/stylesheets/public.css.scss */
+/* line 41, ../../app/assets/stylesheets/public.css.scss */
 .map-canvas {
   height: 300px;
 }
-/* line 42, ../../app/assets/stylesheets/public.css.scss */
+/* line 43, ../../app/assets/stylesheets/public.css.scss */
 .map-canvas img {
   max-width: none;
   vertical-align: middle;
@@ -12726,7 +12802,7 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 50, ../../app/assets/stylesheets/public.css.scss */
+/* line 51, ../../app/assets/stylesheets/public.css.scss */
 #footer .map-canvas {
   height: 200px;
 }
@@ -12734,72 +12810,71 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 /* GLOBAL
 -------------------------------------------------- */
 @media (min-width: 992px) {
-  /* line 58, ../../app/assets/stylesheets/public.css.scss */
+  /* line 59, ../../app/assets/stylesheets/public.css.scss */
   .main-container {
     max-width: 800px;
   }
 }
-/* line 62, ../../app/assets/stylesheets/public.css.scss */
+/* line 63, ../../app/assets/stylesheets/public.css.scss */
 .no-border {
   border: none !important;
 }
 
-/* line 65, ../../app/assets/stylesheets/public.css.scss */
+/* line 66, ../../app/assets/stylesheets/public.css.scss */
 .bg-green {
   background-color: #98bf3f;
 }
 
-/* line 68, ../../app/assets/stylesheets/public.css.scss */
+/* line 69, ../../app/assets/stylesheets/public.css.scss */
 .bg-pink {
   background-color: #ed46a2;
 }
 
-/* line 71, ../../app/assets/stylesheets/public.css.scss */
+/* line 72, ../../app/assets/stylesheets/public.css.scss */
 .bg-blue {
   background-color: #41c7f4;
 }
 
-/* line 74, ../../app/assets/stylesheets/public.css.scss */
+/* line 75, ../../app/assets/stylesheets/public.css.scss */
 .text-green {
   color: #98bf3f;
 }
 
-/* line 77, ../../app/assets/stylesheets/public.css.scss */
+/* line 78, ../../app/assets/stylesheets/public.css.scss */
 .text-pink {
   color: #ed46a2;
 }
 
-/* line 80, ../../app/assets/stylesheets/public.css.scss */
+/* line 81, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-primary {
   border-color: #41c7f4;
 }
 
-/* line 83, ../../app/assets/stylesheets/public.css.scss */
+/* line 84, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-green {
   border-color: #98bf3f;
 }
 
-/* line 86, ../../app/assets/stylesheets/public.css.scss */
+/* line 87, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-pink {
   border-color: #ed46a2;
 }
 
-/* line 90, ../../app/assets/stylesheets/public.css.scss */
+/* line 91, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
   width: 100%;
   height: 160px;
   background-size: cover !important;
   background-position: 50% 50% !important;
-  background-image: url(/assets/bg-header.jpg);
 }
 
-/* line 97, ../../app/assets/stylesheets/public.css.scss */
+/* line 98, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder.parallax-background {
   height: 120%;
   top: -10%;
 }
 
-/* line 102, ../../app/assets/stylesheets/public.css.scss */
+/* line 103, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder,
 .hover-background .foreground-image-holder {
   -webkit-transition: all 0.3s ease-out;
@@ -12807,13 +12882,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   transition: all 0.3s ease-out;
 }
 
-/* line 105, ../../app/assets/stylesheets/public.css.scss */
+/* line 106, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder {
   height: 110%;
   width: 110%;
 }
 
-/* line 110, ../../app/assets/stylesheets/public.css.scss */
+/* line 111, ../../app/assets/stylesheets/public.css.scss */
 .tooltip.top .tooltip-arrow {
   bottom: 0;
   left: 20%;
@@ -12822,29 +12897,29 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   border-left: 10px solid transparent;
 }
 
-/* line 119, ../../app/assets/stylesheets/public.css.scss */
+/* line 120, ../../app/assets/stylesheets/public.css.scss */
 .rental-property-thumbnail .tooltip-inner {
   background-color: #41c7f4 !important;
 }
-/* line 122, ../../app/assets/stylesheets/public.css.scss */
+/* line 123, ../../app/assets/stylesheets/public.css.scss */
 .rental-property-thumbnail .tooltip.top .tooltip-arrow {
   border-top-color: #41c7f4 !important;
 }
 
-/* line 127, ../../app/assets/stylesheets/public.css.scss */
+/* line 128, ../../app/assets/stylesheets/public.css.scss */
 .annual-rental-thumbnail .tooltip-inner {
   background-color: #ed46a2 !important;
 }
-/* line 130, ../../app/assets/stylesheets/public.css.scss */
+/* line 131, ../../app/assets/stylesheets/public.css.scss */
 .annual-rental-thumbnail .tooltip.top .tooltip-arrow {
   border-top-color: #ed46a2 !important;
 }
 
-/* line 135, ../../app/assets/stylesheets/public.css.scss */
+/* line 136, ../../app/assets/stylesheets/public.css.scss */
 .sale-property-thumbnail .tooltip-inner {
   background-color: #98bf3f !important;
 }
-/* line 138, ../../app/assets/stylesheets/public.css.scss */
+/* line 139, ../../app/assets/stylesheets/public.css.scss */
 .sale-property-thumbnail .tooltip.top .tooltip-arrow {
   border-top-color: #98bf3f !important;
 }

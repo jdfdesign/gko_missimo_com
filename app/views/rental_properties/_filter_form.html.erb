@@ -47,10 +47,10 @@ if @rental_properties_section
           :selected => params[:search].present? ? params[:search][:with_sticker] : nil,
           :label_method => :name,
           :value_method => :id,
-          :prompt => "Options",
+          #:prompt => "Options",
           :label => false,
           :as => :select,
-          :input_html => { :class => "form-control" } %>
+          :input_html => { :multiple => true, :class => "js-multiple-select form-control" } %>
         </div>
       </div>
     </div>
