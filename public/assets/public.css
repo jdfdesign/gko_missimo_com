@@ -588,7 +588,7 @@ h4, .h4 {
 
 /* line 51, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h5, .h5 {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* line 52, ../../app/assets/stylesheets/bootstrap/_type.scss */
@@ -11031,7 +11031,7 @@ span.valid {
   background-color: #98bf3f;
 }
 
-/* line 17, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 16, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-nav > li > a {
   font-size: 14px;
   font-weight: 300;
@@ -11039,24 +11039,24 @@ span.valid {
   letter-spacing: 1px;
 }
 
-/* line 25, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 23, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-nav > li:first-child {
   background-color: #41c7f4;
 }
 
-/* line 30, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 27, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-nav > li:last-child {
   background-color: #98bf3f;
 }
 
-/* line 34, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 30, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand {
   width: 280px;
   height: auto;
   padding-top: 24px;
 }
 
-/* line 40, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 35, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand-baseline {
   width: 280px;
   height: auto;
@@ -11065,16 +11065,16 @@ span.valid {
   padding: 0 15px;
 }
 
-/* line 48, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 42, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-default {
   background-color: #fff;
 }
-/* line 50, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 44, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-default .navbar-collapse {
   background-color: #404344;
 }
 
-/* line 57, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 50, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
@@ -11082,59 +11082,58 @@ span.valid {
 }
 
 @media (min-width: 768px) {
-  /* line 62, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 54, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     padding-bottom: 0;
   }
 }
 @media (min-width: 768px) {
-  /* line 69, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 59, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar > .container-fluid {
     padding: 0;
   }
 
-  /* line 72, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 62, ../../app/assets/stylesheets/theme/_navbar.scss */
   .container-fluid > .navbar-header {
     float: none !important;
     text-align: center;
     background-color: #f6f6f6;
   }
 
-  /* line 78, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 67, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand {
     float: none;
     display: inline-block;
     width: 340px;
-    padding: 30px 15px 0 15px;
+    padding: 30px 15px 0;
   }
 
-  /* line 85, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 73, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-brand-baseline {
-    padding: 0 15px 15px 15px;
+    padding: 0 15px 15px;
   }
 
-  /* line 89, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 76, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-collapse {
     float: left;
     width: 100%;
-    overflow: hidden;
     position: relative;
+    text-align: center;
+  }
+  /* line 82, ../../app/assets/stylesheets/theme/_navbar.scss */
+  .navbar-collapse.collapse {
+    height: 38px !important;
   }
 
-  /* line 99, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 87, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav {
     float: none;
-    text-align: center;
-    clear: left;
-    float: left;
+    display: inline-block;
     list-style: none;
     margin: 0;
     padding: 0;
-    position: relative;
-    left: 50%;
-    text-align: center;
   }
-  /* line 110, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 93, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li {
     border-left: 1px solid #222222;
     display: block;
@@ -11142,16 +11141,15 @@ span.valid {
     list-style: none;
     margin: 0;
     position: relative;
-    right: 50%;
   }
-  /* line 118, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 100, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-nav > li > a {
     display: block;
     padding-top: 8px;
     padding-bottom: 3px;
   }
 
-  /* line 126, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 107, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-default .navbar-nav > li > a {
     background-color: transparent;
     border-bottom: 6px solid transparent;
@@ -11159,26 +11157,26 @@ span.valid {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-  /* line 131, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 112, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     border-bottom-color: #98bf3f;
     color: #98bf3f;
     background-color: transparent;
   }
 }
-/* line 138, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 119, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu {
   position: absolute;
   right: 64px;
   top: 36px;
 }
 @media (min-width: 768px) {
-  /* line 138, ../../app/assets/stylesheets/theme/_navbar.scss */
+  /* line 119, ../../app/assets/stylesheets/theme/_navbar.scss */
   #locales-menu {
     right: 15px;
   }
 }
-/* line 145, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 126, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .btn {
   text-transform: capitalize !important;
   font-size: 13px;
@@ -11187,16 +11185,16 @@ span.valid {
   background-color: #404344;
   border-color: #404344;
 }
-/* line 156, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 137, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .btn:hover, #locales-menu .btn:focus, #locales-menu .btn.focus, #locales-menu .btn:active, #locales-menu .btn.active {
   background-color: #98bf3f;
   border-color: #98bf3f;
 }
-/* line 159, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 140, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .btn:hover .triangle-bottom-left, #locales-menu .btn:focus .triangle-bottom-left, #locales-menu .btn.focus .triangle-bottom-left, #locales-menu .btn:active .triangle-bottom-left, #locales-menu .btn.active .triangle-bottom-left {
   border-top-color: #98bf3f;
 }
-/* line 164, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 145, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .triangle-bottom-left {
   position: absolute;
   bottom: -20px;
@@ -11208,24 +11206,24 @@ span.valid {
   border-top: 20px solid #404344;
   border-right: 20px solid transparent;
 }
-/* line 176, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 156, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu {
   background-color: #404344;
   left: auto;
   right: 96%;
   top: 110%;
 }
-/* line 181, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 161, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu > li > a {
   color: #fff;
   background-color: transparent;
 }
-/* line 184, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 164, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu > li > a:hover {
   color: #98bf3f;
   background-color: transparent;
 }
-/* line 190, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 169, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .dropdown-menu .triangle-top-right {
   position: absolute;
   top: -20px;
@@ -11237,17 +11235,17 @@ span.valid {
   border-left: 20px solid transparent;
 }
 
-/* line 202, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 181, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-form {
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 4px;
   z-index: 1;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 212, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 189, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact {
   font: 0/0 a;
   color: transparent;
@@ -11259,18 +11257,18 @@ span.valid {
   padding-top: 8px;
   padding-bottom: 7px;
 }
-/* line 220, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 197, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:before {
   font: normal normal normal 20px/1 FontAwesome;
   line-height: 22px;
 }
-/* line 225, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 202, ../../app/assets/stylesheets/theme/_navbar.scss */
 #contact:hover, #contact:focus {
   color: #fff;
   background-color: #98bf3f;
 }
 
-/* line 231, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 207, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage {
   font: 0/0 a;
   color: transparent;
@@ -11282,12 +11280,12 @@ span.valid {
   padding-top: 9px;
   padding-bottom: 7px;
 }
-/* line 239, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 215, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:before {
   font: normal normal normal 22px/1 FontAwesome;
   line-height: 22px;
 }
-/* line 244, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 220, ../../app/assets/stylesheets/theme/_navbar.scss */
 #homepage:hover, #homepage:focus {
   color: #fff;
   background-color: #41c7f4;
@@ -12667,12 +12665,12 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 /* line 160, ../../app/assets/stylesheets/theme/_property.scss */
 .realty-season-title {
   font-size: 14px;
-  text-transform: uppercase;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 /* line 165, ../../app/assets/stylesheets/theme/_property.scss */
-.realty-season-title span {
+.realty-season-title span.minimum-night,
+.realty-season-title span.dates {
   font-weight: 300;
   color: #333333;
   text-transform: normal;
@@ -12804,63 +12802,80 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
 
 /* line 51, ../../app/assets/stylesheets/public.css.scss */
 #footer .map-canvas {
-  height: 200px;
+  height: 140px;
+  width: 200px;
+  float: right;
 }
 
 /* GLOBAL
 -------------------------------------------------- */
+/* line 60, ../../app/assets/stylesheets/public.css.scss */
+p {
+  font-size: 12px;
+}
+
+/* line 63, ../../app/assets/stylesheets/public.css.scss */
+.copy-text {
+  font-size: 12px;
+}
+/* line 65, ../../app/assets/stylesheets/public.css.scss */
+.copy-text table {
+  width: 100%;
+  font-size: inherit;
+}
+
 @media (min-width: 992px) {
-  /* line 59, ../../app/assets/stylesheets/public.css.scss */
+  /* line 72, ../../app/assets/stylesheets/public.css.scss */
   .main-container {
     max-width: 800px;
   }
 }
-/* line 63, ../../app/assets/stylesheets/public.css.scss */
+/* line 76, ../../app/assets/stylesheets/public.css.scss */
 .no-border {
   border: none !important;
 }
 
-/* line 66, ../../app/assets/stylesheets/public.css.scss */
+/* line 79, ../../app/assets/stylesheets/public.css.scss */
 .bg-green {
   background-color: #98bf3f;
 }
 
-/* line 69, ../../app/assets/stylesheets/public.css.scss */
+/* line 82, ../../app/assets/stylesheets/public.css.scss */
 .bg-pink {
   background-color: #ed46a2;
 }
 
-/* line 72, ../../app/assets/stylesheets/public.css.scss */
+/* line 85, ../../app/assets/stylesheets/public.css.scss */
 .bg-blue {
   background-color: #41c7f4;
 }
 
-/* line 75, ../../app/assets/stylesheets/public.css.scss */
+/* line 88, ../../app/assets/stylesheets/public.css.scss */
 .text-green {
   color: #98bf3f;
 }
 
-/* line 78, ../../app/assets/stylesheets/public.css.scss */
+/* line 91, ../../app/assets/stylesheets/public.css.scss */
 .text-pink {
   color: #ed46a2;
 }
 
-/* line 81, ../../app/assets/stylesheets/public.css.scss */
+/* line 94, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-primary {
   border-color: #41c7f4;
 }
 
-/* line 84, ../../app/assets/stylesheets/public.css.scss */
+/* line 97, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-green {
   border-color: #98bf3f;
 }
 
-/* line 87, ../../app/assets/stylesheets/public.css.scss */
+/* line 100, ../../app/assets/stylesheets/public.css.scss */
 .hr-border-pink {
   border-color: #ed46a2;
 }
 
-/* line 91, ../../app/assets/stylesheets/public.css.scss */
+/* line 104, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
   width: 100%;
   height: 160px;
@@ -12868,13 +12883,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   background-position: 50% 50% !important;
 }
 
-/* line 98, ../../app/assets/stylesheets/public.css.scss */
+/* line 111, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder.parallax-background {
   height: 120%;
   top: -10%;
 }
 
-/* line 103, ../../app/assets/stylesheets/public.css.scss */
+/* line 116, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder,
 .hover-background .foreground-image-holder {
   -webkit-transition: all 0.3s ease-out;
@@ -12882,13 +12897,13 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   transition: all 0.3s ease-out;
 }
 
-/* line 106, ../../app/assets/stylesheets/public.css.scss */
+/* line 119, ../../app/assets/stylesheets/public.css.scss */
 .hover-background .background-image-holder {
   height: 110%;
   width: 110%;
 }
 
-/* line 111, ../../app/assets/stylesheets/public.css.scss */
+/* line 124, ../../app/assets/stylesheets/public.css.scss */
 .tooltip.top .tooltip-arrow {
   bottom: 0;
   left: 20%;
@@ -12897,29 +12912,29 @@ footer .nav > li > a:hover, footer .nav > li > a:focus {
   border-left: 10px solid transparent;
 }
 
-/* line 120, ../../app/assets/stylesheets/public.css.scss */
+/* line 133, ../../app/assets/stylesheets/public.css.scss */
 .rental-property-thumbnail .tooltip-inner {
   background-color: #41c7f4 !important;
 }
-/* line 123, ../../app/assets/stylesheets/public.css.scss */
+/* line 136, ../../app/assets/stylesheets/public.css.scss */
 .rental-property-thumbnail .tooltip.top .tooltip-arrow {
   border-top-color: #41c7f4 !important;
 }
 
-/* line 128, ../../app/assets/stylesheets/public.css.scss */
+/* line 141, ../../app/assets/stylesheets/public.css.scss */
 .annual-rental-thumbnail .tooltip-inner {
   background-color: #ed46a2 !important;
 }
-/* line 131, ../../app/assets/stylesheets/public.css.scss */
+/* line 144, ../../app/assets/stylesheets/public.css.scss */
 .annual-rental-thumbnail .tooltip.top .tooltip-arrow {
   border-top-color: #ed46a2 !important;
 }
 
-/* line 136, ../../app/assets/stylesheets/public.css.scss */
+/* line 149, ../../app/assets/stylesheets/public.css.scss */
 .sale-property-thumbnail .tooltip-inner {
   background-color: #98bf3f !important;
 }
-/* line 139, ../../app/assets/stylesheets/public.css.scss */
+/* line 152, ../../app/assets/stylesheets/public.css.scss */
 .sale-property-thumbnail .tooltip.top .tooltip-arrow {
   border-top-color: #98bf3f !important;
 }

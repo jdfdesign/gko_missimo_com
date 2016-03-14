@@ -164,7 +164,7 @@ $(document).ready(function() {
   //===========================================================
   // NAVIGATION
   //===========================================================
-  
+
   // Nav Sticky
 
   $(window).scroll(function() {
@@ -207,7 +207,7 @@ $(document).ready(function() {
   //===========================================================
   // LOGO SIZE
   //===========================================================
-  
+
   // Detect logo dimensions and add correct class
 
   // var logoImage = $('.top-bar .logo:first-of-type');
@@ -322,11 +322,11 @@ $(document).ready(function() {
   } else {
     $('body').addClass('pointer');
   }
-  
+
   //===========================================================
   // SLIDERS
   //===========================================================
-  
+
   // Slider Initializations
 
   $('.testimonials-slider').flexslider({
@@ -386,7 +386,7 @@ $(document).ready(function() {
   //===========================================================
   // TABS
   //===========================================================
-  
+
   // Feature Selector
 
   $('.selector-tabs li').click(function() {
@@ -398,11 +398,11 @@ $(document).ready(function() {
     $(this).closest('.feature-selector').find('.selector-content').children('li').removeClass('active');
     $(this).closest('.feature-selector').find('.selector-content').children('li:nth-child(' + activeTab + ')').addClass('active');
   });
-  
+
   //===========================================================
   // BACKGROUND IMAGE
   //===========================================================
-  
+
   // Append .background-image-holder <img>'s as CSS backgrounds
 
   $('.background-image-holder').each(function() {
@@ -411,7 +411,7 @@ $(document).ready(function() {
     $(this).children('img').hide();
     $(this).css('background-position', '50% 0%');
   });
-  
+
   //===========================================================
   // ACCORDION
   //===========================================================
@@ -471,7 +471,7 @@ $(document).ready(function() {
   //===========================================================
   // MAPS
   //===========================================================
-  
+
   // Map Holder Overlay
 
   // $('.map-holder').click(function() {
@@ -635,7 +635,7 @@ function initialize_map() {
     var point = $map.data("point").split(",");
     var latlng = new google.maps.LatLng(point[0],point[1]);
     var map_options = {
-      zoom: 15,
+      zoom: 14,
       center: latlng,
       scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP

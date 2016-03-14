@@ -11,16 +11,16 @@
 
 .property {
   padding-top: $line-height-computed * 2;
-  
+
   h1 {
     margin-top: 0;
     margin-bottom: 0;
   }
-  
+
   .flexslider {
     margin-bottom: 0 !important;
   }
-  
+
   #carousel img {
     display: block;
     opacity: .5;
@@ -93,7 +93,7 @@
     > a {
       text-align: left;
       padding: 4px 8px;
-      
+
       &:before {
         @include fa-icon;
         content: $fa-var-eye;
@@ -111,7 +111,7 @@
   color: #fff;
   vertical-align: middle;
   padding: 14px 1px 14px 54px;
-  
+
   // Use absolute url for PDF generation
   &.pool {
     background-image: image_url('icon_pool.svg');
@@ -143,8 +143,8 @@
         &:focus,
         &:hover {
          color: $headings-color;
-         text-decoration: none; 
-     } 
+         text-decoration: none;
+     }
  }
 }
 
@@ -159,10 +159,10 @@
 }
 .realty-season-title {
   font-size: 14px;
-  text-transform: uppercase;
   margin-top: $line-height-computed;
-  margin-bottom: $line-height-computed / 2; 
-  span {
+  margin-bottom: $line-height-computed / 2;
+  span.minimum-night,
+  span.dates {
     font-weight: 300;
     color: $text-color;
     text-transform: normal;
@@ -178,4 +178,3 @@
   font-size: 16px;
   line-height: 24px;
 }
-

@@ -9,7 +9,7 @@ $(document).ready(function() {
   "use strict";
 
   var win = $( window );
-  
+
   $('.datepicker').datepicker();
   $('[data-toggle="tooltip"]').tooltip();
   $('.js-multiple-select').multiselect({
@@ -19,7 +19,7 @@ $(document).ready(function() {
  //===========================================================
  // BACKGROUND IMAGE
  //===========================================================
- 
+
  // Append .background-image-holder <img>'s as CSS backgrounds
  $('.background-image-holder').each(function() {
    var imgSrc = $(this).children('img').attr('src');
@@ -31,22 +31,22 @@ $(document).ready(function() {
  //===========================================================
  // RESIZE
  //===========================================================
- 
+
  $( window ).resize(function() {
-   
+
    var width = $(window).width();
 
    if ( width >= 768 ) {
      //console.log($(".equal-height > .col-left").height());
      $(".equal-height > .col-right > .thumbnail > .background-image-holder").css("height", $(".equal-height > .col-left").height() - 22);
    }
-   
+
  });
 
  //===========================================================
  // COLLAPSE
  //===========================================================
- 
+
  $("#global-search-panel a[data-toggle='tab']").on("show.bs.tab", function(e) {
    if( $(e.target).attr('href') === '#sale-properties-panel' ) {
      $("#global-search-panel").addClass("bg-primary");
@@ -55,11 +55,11 @@ $(document).ready(function() {
      $("#global-search-panel").removeClass("bg-primary");
    }
  })
- 
+
  $("#global-search-panel").on("show.bs.collapse", function(e) {
    $("#global-news-panel").collapse('hide');
  })
- 
+
  $("#global-news-panel").on("show.bs.collapse", function(e) {
    $("#global-search-panel").collapse('hide');
    $('#global-news-slider').flexslider({
@@ -70,7 +70,7 @@ $(document).ready(function() {
      directionNav: false
    });
  })
- 
+
  $(document).keypress(function(e) {
      if(e.which == 13) {
        var input = $('#search-input');
@@ -81,19 +81,19 @@ $(document).ready(function() {
            }
          };
          //var shallowEncoded = $.param( params, true );
-         alert($.param( params ));
+         //alert($.param( params ));
          document.location.href = input.data("url") + "?" + $.param( params );
        }
      }
  });
 
- 
+
 
 
  //===========================================================
  // RENT INQUIRY
  //===========================================================
- 
+
   $('.inquiry:first')
     .on("ajax:beforeSend", function(evt, xhr, settings) {
       $('span.error').fadeOut('slow');
@@ -102,27 +102,27 @@ $(document).ready(function() {
       $('#error').hide();
       $('#timedout').hide();
       $('#state').hide();
-      
+
       var error = false,
           name_field = $('#inquiry_name'),
           name_val = name_field.val();
-          
+
       if ( !name_val.replace(/\s+/g, '').length ) {
         name_field.parent().parent().addClass('has-error');
         error = true;
       }
-      
+
       var phone_field = $('#inquiry_phone'),
           phone_val = phone_field.val();
-      
+
       if ( !phone_val.replace(/\s+/g, '').length ) {
         phone_field.parent().parent().addClass('has-error');
         error = true;
       }
-      
+
       var subject_field = $('#inquiry_phone'),
           subject_val = phone_field.val();
-  
+
       if ( !subject_val.replace(/\s+/g, '').length ) {
         subject_field.parent().parent().addClass('has-error');
         error = true;
@@ -187,7 +187,7 @@ $(document).ready(function() {
  //===========================================================
  // SALE INQUIRY
  //===========================================================
- 
+
   $('.sale_property_inquiry')
     .on("ajax:beforeSend", function(evt, xhr, settings) {
       $('span.error').fadeOut('slow');
@@ -196,11 +196,11 @@ $(document).ready(function() {
       $('#error').hide();
       $('#timedout').hide();
       $('#state').hide();
-      
+
       var error = false,
           name_field = $('#sale_property_inquiry_name'),
           name_val = name_field.val();
-          
+
       if ( !name_val.replace(/\s+/g, '').length ) {
         name_field.parent().parent().addClass('has-error');
         error = true;
@@ -262,7 +262,7 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
-  
+
   $('#carousel').flexslider({
     animation: "slide",
     controlNav: false,
@@ -272,7 +272,7 @@ $(window).load(function(){
     itemMargin: 5,
     asNavFor: '#slider'
   });
-  
+
 
 
   $('#slider').flexslider({
@@ -295,7 +295,7 @@ $(window).load(function(){
 
   initialize_map();
   $( window ).trigger('resize');
-  
+
 });
 
 
@@ -305,7 +305,7 @@ function initialize_map() {
       var point = $(el).data("point").split(",");
       var latlng = new google.maps.LatLng(point[0],point[1]);
       var map_options = {
-        zoom: 12,
+        zoom: 16,//12
         center: latlng,
         scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP

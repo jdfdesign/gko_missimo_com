@@ -1,7 +1,7 @@
 en:
   searching: 'You are searching…'
   want_to_rent: 'I want to rent'
-  want_to_buy: 'I want to buy'  
+  want_to_buy: 'I want to buy'
   listing: Listing
   language: Language
   description: Description
@@ -29,4 +29,5 @@ en:
         prompt: "Price per month"
       price:
         prompt: "Price"
-      
+      by_name:
+        prompt: "By name"

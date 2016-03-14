@@ -2,7 +2,7 @@ fr:
   listing: Listing
   searching: 'Vous recherchez…'
   want_to_rent: 'Je veux louer'
-  want_to_buy: 'Je veux acheter'  
+  want_to_buy: 'Je veux acheter'
   listing: Listing
   language: Langage
   description: Description
@@ -28,3 +28,5 @@ fr:
         prompt: "Prix par mois"
       price:
         prompt: "Prix"
+      by_name:
+        prompt: "Nom"

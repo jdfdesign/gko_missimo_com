@@ -3,20 +3,20 @@
   <em><%= record.meta.code %></em>
   <div class="thumbnail-inner">
     <%= image_fu(record.thumbnail, "720x440#", :class => "img-responsive") %>
-  
+
     <div class="caption">
-     	
+
       <% if record.meta.area %>
         <p class="thumbnail-area"><i class="fa fa-map-marker"></i> <%= record.meta.area.name %></p>
       <% end %>
-      
+
       <%= content_tag(:p, :class => "thumbnail-body") do %>
-        <%= truncate_html(strip_tags(record.body), :length => 120, :omission => "...") %>
+        <%= truncate_html(strip_tags(record.meta.description || record.body), :length => 120, :omission => "...") %>
       <% end if record.body.present? %>
-      
+
       <p class="thumbnail-price"><%= rental_min_price_value(record) %></p>
     </div>
-    
+
     <div class="thumbnail-badges">
       <% unless record.badge.blank? %>
         <p class="thumbnail-badge"><%= record.badge %></p>
@@ -29,7 +29,7 @@
       <% end %>
     </div>
   </div>
-  
+
   <div class="thumbnail-infos">
     <p>
       <%= realty_meta_tag("bedroom_count", record.bedroom_count) if record.bedroom_count %><br/>
@@ -38,11 +38,11 @@
     <ul class="list-inline thumbnail-icons">
     <% record.stickers.each do |s| %>
       <%= content_tag :li do %>
-        <%= image_tag "icon_#{s.css}.svg", :alt => s.name, :class => "thumbnail-icon", 
-            :data => { :toggle => "tooltip", :placement => "top" }, 
+        <%= image_tag "icon_#{s.css}.svg", :alt => s.name, :class => "thumbnail-icon",
+            :data => { :toggle => "tooltip", :placement => "top" },
             :title => s.name %>
       <% end if s.css.present? %>
-      
+
     <% end %>
     </ul>
   </div>

@@ -93,6 +93,7 @@ end
       ================================================== -->
       <div class='row row-padded'>
         <div class='col-sm-12'>
+          <%= render_copy_text(resource.meta.description) %>
           <%= render_copy_text(resource.body) %>
           <% if @rental_property.meta and @rental_property.meta.video_url.present? %>
             <br/>
@@ -109,7 +110,7 @@ end
       ================================================== -->
       <div class='row row-padded'>
         <div class='col-sm-12'>
-          <h3 class="h4 text-uppercase"><%= t(:'rates') %></h3>
+          <h3 class="h4"><%= t(:'rates') %></h3>
           <%= render 'rental_properties/seasons' %>
         </div>
       </div>

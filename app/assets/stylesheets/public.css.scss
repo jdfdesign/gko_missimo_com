@@ -49,11 +49,24 @@ $blue-dark: #0099c5;
 }
 
 #footer .map-canvas {
-  height: 200px;
+  height: 140px;
+  width: 200px;
+  float: right;
 }
 
 /* GLOBAL
 -------------------------------------------------- */
+
+p {
+  font-size: 12px;
+}
+.copy-text {
+  font-size: 12px;
+  table {
+    width: 100%;
+    font-size: inherit;
+  }
+}
 
 @media (min-width: $screen-md-min) {
   .main-container {

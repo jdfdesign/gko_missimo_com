@@ -11,18 +11,18 @@ price_options.compact.join("\n").html_safe
 @parent_stickers ||= @rental_properties_section.stickers.with_translations(I18n.locale).order('sticker_translations.name ASC')
 if @rental_properties_section
 %>
-  <%= simple_form_for(:search, 
-    :url => @rental_properties_section.public_url, 
+  <%= simple_form_for(:search,
+    :url => @rental_properties_section.public_url,
     :method => :get,
     :html => { :class => "form-search" }) do |form| %>
-  <%= form.input :page, 
+  <%= form.input :page,
   :as => :hidden,
   :input_html => { :value => "1" } %>
     <div class="row first-row">
       <div class="col-md-3">
         <div class='form-group'>
-          <%= form.input :with_category, 
-          :collection => @parent_categories, 
+          <%= form.input :with_category,
+          :collection => @parent_categories,
           :selected => params[:search].present? ? params[:search][:with_category] : nil,
           :label_method => :title,
           :value_method => :id,
@@ -42,8 +42,8 @@ if @rental_properties_section
       </div>
       <div class="col-md-3">
         <div class='form-group'>
-          <%= form.input :with_sticker, 
-          :collection => @parent_stickers, 
+          <%= form.input :with_sticker,
+          :collection => @parent_stickers,
           :selected => params[:search].present? ? params[:search][:with_sticker] : nil,
           :label_method => :name,
           :value_method => :id,
@@ -55,12 +55,14 @@ if @rental_properties_section
       </div>
     </div>
     <div class="row last-row">
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class='form-group'>
-          <%= form.input :price, 
-          :collection => ["< 999 €", "1000 € - 1999 €", "2000 - 2999 €", "3000 - 4999 €"],
-          :selected => params[:search].present? ? params[:search][:price] : nil,
-          :prompt => t(:'helpers.select.price_per_week.prompt').html_safe,
+          <%= form.input :with_title,
+          :collection => RentalProperty.published.all,
+          :selected => params[:search].present? ? params[:search][:title] : nil,
+          :label_method => :title,
+          :value_method => :title,
+          :prompt => t(:'helpers.select.by_name.prompt').html_safe,
           :label => false,
           :as => :select,
           :input_html => { :class => "form-control" } %>
@@ -68,7 +70,7 @@ if @rental_properties_section
       </div>
       <div class="col-md-3">
         <div class='form-group'>
-          <%= form.input :order, 
+          <%= form.input :order,
           :collection => [[:title, :by_title], [:price, :by_price]],
           :selected => params[:search].present? ? params[:search][:order] : nil,
           :prompt => t(:'helpers.select.order.prompt').html_safe,
