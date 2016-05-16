@@ -69,9 +69,20 @@ if @rental_properties_section
         </div>
       </div>
       <div class="col-md-3">
+      <div class='form-group'>
+      <%= form.input :price,
+        :collection => price_options,
+        :prompt => t(:'helpers.select.price.prompt').html_safe,
+        :label => false,
+        :as => :select,
+        :selected => params[:search].present? ? params[:search][:price] : nil,
+        :input_html => { :class => "form-control" } %>
+    </div>
+    </div>
+      <div class="col-md-3">
         <div class='form-group'>
           <%= form.input :order,
-          :collection => [[:title, :by_title], [:price, :by_price]],
+          :collection => [[:name, :by_title], [:price, :by_price]],
           :selected => params[:search].present? ? params[:search][:order] : nil,
           :prompt => t(:'helpers.select.order.prompt').html_safe,
           :label => false,

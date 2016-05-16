@@ -13,7 +13,10 @@ $(document).ready(function() {
   $('.datepicker').datepicker();
   $('[data-toggle="tooltip"]').tooltip();
   $('.js-multiple-select').multiselect({
-    numberDisplayed: 1
+    numberDisplayed: 1,
+    buttonText: function(options, select) {
+      return 'Options';
+    }
   });
 
  //===========================================================

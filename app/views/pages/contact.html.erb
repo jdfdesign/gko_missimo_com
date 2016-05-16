@@ -5,9 +5,9 @@
 		<%= render_html_text(resource.body) %>
 	</div>
 </div>
-<%= simple_form_for(:inquiry, :url => inquiries_path, 
-      :method => :post, 
-      :remote => true, 
+<%= simple_form_for(:inquiry, :url => inquiries_path,
+      :method => :post,
+      :remote => true,
       :html => {:class => "inquiry"}) do |f| %>
   <%= f.hidden_field :site_id, :value => site.id %>
   <%= render 'flash' %>
@@ -15,25 +15,25 @@
 <div class='row'>
   <div class="col-sm-6">
     <div class='form-group'>
-    <%= f.input :name, :placeholder => "Name", 
-                :label => false, :hint => false, 
+    <%= f.input :name, :placeholder => t("realty.placeholders.name"),
+                :label => false, :hint => false,
                 :required => true,
                 :input_html => { :class => 'form-control' } %>
     </div>
     <div class='form-group'>
-      <%= f.input :email, :placeholder => "Email", 
+      <%= f.input :email, :placeholder => t("realty.placeholders.email"),
                   :label => false, :hint => false,
                   :required => true,
                   :input_html => { :class => 'form-control' } %>
     </div>
     <div class='form-group'>
-      <%= f.input :phone, :placeholder => "Phone", 
+      <%= f.input :phone, :placeholder => t("realty.placeholders.phone"),
                   :label => false, :hint => false,
                   :required => true,
                   :input_html => { :class => 'form-control' } %>
     </div>
     <div class='form-group'>
-      <%= f.input :subject, :placeholder => "Subject", 
+      <%= f.input :subject, :placeholder => t("realty.placeholders.subject"),
                   :label => false, :hint => false,
                   :required => true,
                   :input_html => { :class => 'form-control' } %>
@@ -41,7 +41,7 @@
   </div>
   <div class="col-sm-6">
     <div class='form-group'>
-      <%= f.input :message, :as => :text, 
+      <%= f.input :message, :as => :text,
                   :placeholder => "Message",
                   :label => false, :hint => false,
                   :required => true,

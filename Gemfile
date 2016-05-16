@@ -7,8 +7,11 @@ group :assets do
   gem 'uglifier', '~> 2.4.0'
 end
 
+gem 'bcrypt', '= 3.1.10'
+gem 'mysql2', '= 0.3.20'
+
 group :production do
- git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.30" do
+ git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.31" do
    gem 'gko_core'
    gem 'gko_auth'
    gem 'gko_documents'
@@ -18,7 +21,7 @@ group :production do
    gem 'gko_stickers'
    gem 'gko_blog'
  end
- gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git', :tag => "v0.4.7"
+ gem 'gko_realty', :git => 'git@github.com:jdfdesign/gko-realty.git', :tag => "v0.4.91"
 end
 
 # group :development do

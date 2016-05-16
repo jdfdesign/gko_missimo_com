@@ -40,7 +40,7 @@ end
       <%= flags.compact.join(" - ").html_safe %>
     </div>
     <div class='col-sm-4'>
-        <p class="property-min-price"><%= t(:'realty.price_from') %><%= rental_min_price_value(@rental_property) %> / week</p>
+        <p class="property-min-price"><%= t(:'realty.price_from') %><%= rental_min_price_value(@rental_property) %> / <%= t("week")%></p>
         <% if @rental_property.meta.badge %>
         <p class="property-status property-badge"><%= raw @rental_property.meta.badge %></p>
         <% end %>

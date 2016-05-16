@@ -48,14 +48,14 @@ geom = case request.env['mobvious.device_type']
     </ul>
 
   </section>
-  
+
   <div class="container main-container">
     <div class="row">
       <div class="col-xs-6">
         <%= render "search_button" %>
       </div>
       <div class="col-xs-6">
-        <%= content_tag(:a, :class => "btn btn-pink btn-news-collapse", 
+        <%= content_tag(:a, :class => "btn btn-pink btn-news-collapse",
             :data => { :toggle => "collapse", :target => "#global-news-panel" } ) do %>
           <%= image_fu(@posts.first.thumbnail, "90x60#", :class => "img-responsive") if @posts.first.thumbnail %>
           <span><%= @posts.first.title %></span>
@@ -64,7 +64,7 @@ geom = case request.env['mobvious.device_type']
       </div>
     </div>
   </div>
-  
+
 </section>
 <% end %>
 
@@ -115,7 +115,7 @@ geom = case request.env['mobvious.device_type']
             <%= render "sale_properties/filter_form" %>
           </div>
         </div>
-      
+
       </div>
     </div>
   </div>
@@ -140,18 +140,18 @@ mais n’en reste pas moins une <strong>agence à taille humaine.</strong></p>
 <section class="section-stbarth">
  <div class="row">
    <div class="col-xs-12">
-     <h4 class="text-uppercase section-title">Welcome to Saint-Barth</h4>
+     <h4 class="text-uppercase section-title"><%= t("home_sb_title") %></h4>
      <div class="firt-row-inner background-image-holder">
        <%= image_tag("stbarthview.jpg") %>
        <p class="col-sm-6 col-sm-offset-6"><span>Missimmo</span><br/><span>vous propose une sélection</span><br/><span>des plus belles villas de Saint-Barth</span><br/>
        <%= link_to("Partez à l'aventure", @rent_section.public_url, :class => "btn btn-white") %></p>
-       
+
      </div>
      <div class="col-md-6 second-row-inner">
        <h2 class="text-uppercase">Perles des Caraibes</h2>
        <p><%= t("home_sb").html_safe %></p>
        <%= link_to(@sbhpage.public_url, :class => "btn btn-primary") do %>
-          <%= raw("Read more") %> <i class="fa fa-chevron-right"></i>
+          <%= t("home_sb_btn") %> <i class="fa fa-chevron-right"></i>
         <% end if @sbhpage = site.sections.named("stbarth") %>
      </div>
      <div class="col-md-6 embed-video-container">
@@ -166,16 +166,16 @@ mais n’en reste pas moins une <strong>agence à taille humaine.</strong></p>
 <!-- new properties
  ================================================== -->
 <section class="section-offers">
-  
+
   <div class="row">
     <div class="col-xs-12">
       <h4 class="text-uppercase section-title">Our offers</h4>
     </div>
   </div>
-  
+
   <div class="row equal-height">
     <div class="col-sm-6 col-left">
-      
+
       <%= link_to(@sannual_section.public_url, :class => "thumbnail pink" ) do %>
         <div class="img-wrapper background-image-holder">
           <%= image_tag("lifetyle_01.jpg") %>
@@ -184,7 +184,7 @@ mais n’en reste pas moins une <strong>agence à taille humaine.</strong></p>
           <h3 class="title"><span>Annual rental</span></h3>
         </div>
       <% end if @sannual_section %>
-      
+
       <%= link_to(@rent_section.public_url, :class => "thumbnail green" ) do %>
         <div class="img-wrapper background-image-holder">
           <%= image_tag("lifetyle_02.jpg") %>
@@ -193,11 +193,11 @@ mais n’en reste pas moins une <strong>agence à taille humaine.</strong></p>
           <h3 class="title"><span>Vacation villas</span></h3>
         </div>
       <% end if @rent_section %>
-      
+
     </div>
-    
+
     <div class="col-sm-6 col-right">
-      
+
       <%= link_to(@sale_section.public_url, :class => "thumbnail blue" ) do %>
         <div class="img-wrapper background-image-holder">
           <%= image_tag("lifetyle_03.jpg") %>
@@ -206,7 +206,7 @@ mais n’en reste pas moins une <strong>agence à taille humaine.</strong></p>
           <h3 class="title"><span>Real estate</span></h3>
         </div>
       <% end if @sale_section %>
-      
+
     </div>
  </div>
 </section>
