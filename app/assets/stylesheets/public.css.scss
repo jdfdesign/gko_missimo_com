@@ -52,6 +52,7 @@ $blue-dark: #0099c5;
   height: 140px;
   width: 200px;
   float: right;
+  margin-top: 12px;
 }
 
 /* GLOBAL
@@ -67,14 +68,21 @@ p {
     font-size: inherit;
   }
 }
-
-@media (min-width: $screen-md-min) {
+@media(min-width: $screen-sm-min) {
   .main-container {
-    max-width: 800px;
+    width: 816px;
+  }
+}
+@media(min-width: $screen-md-min) {
+  .main-container {
+    max-width: 816px;
   }
 }
 .no-border {
   border: none !important;
+}
+.no-margin {
+  margin: 0 !important;
 }
 .bg-green {
   background-color: $brand-success;

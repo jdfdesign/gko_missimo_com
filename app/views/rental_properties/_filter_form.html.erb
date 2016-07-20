@@ -56,7 +56,7 @@ if @rental_properties_section
     </div>
     <div class="row last-row">
       <div class="col-md-3">
-        <div class='form-group'>
+        <div class='form-group no-margin'>
           <%= form.input :with_title,
           :collection => RentalProperty.published.all,
           :selected => params[:search].present? ? params[:search][:title] : nil,
@@ -69,7 +69,7 @@ if @rental_properties_section
         </div>
       </div>
       <div class="col-md-3">
-      <div class='form-group'>
+      <div class='form-group no-margin'>
       <%= form.input :price,
         :collection => price_options,
         :prompt => t(:'helpers.select.price.prompt').html_safe,
@@ -80,9 +80,9 @@ if @rental_properties_section
     </div>
     </div>
       <div class="col-md-3">
-        <div class='form-group'>
+        <div class='form-group no-margin'>
           <%= form.input :order,
-          :collection => [[:name, :by_title], [:price, :by_price]],
+          :collection => [[t(:name), :by_title], [t(:price), :by_price]],
           :selected => params[:search].present? ? params[:search][:order] : nil,
           :prompt => t(:'helpers.select.order.prompt').html_safe,
           :label => false,

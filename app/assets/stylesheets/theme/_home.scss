@@ -1,8 +1,8 @@
 .section-presentation {
-  margin-top: $line-height-computed * 2;
-  margin-bottom: $line-height-computed * 2;
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
   background-color: #9a9b9d;
-  padding: $line-height-computed*4 $line-height-computed*2;
+  padding: $line-height-computed*2;
   color: #fff;
   p {
     font-weight: 300;
@@ -19,7 +19,7 @@
 }
 
 .section-stbarth {
-  padding: $line-height-computed*3 $line-height-computed;
+  padding: $line-height-computed;
   background-color: #fff;
   .firt-row-inner {
     display: table;
@@ -29,19 +29,15 @@
       padding: $line-height-computed;
       margin-bottom: 0;
       text-transform: uppercase;
-      span {
-        color: #fff;
-        background-color: $brand-primary;
-        padding: $line-height-computed/4;
-        display: inline-block;
-      }
+      color: #fff !important;
+      font-size: 18px;
     }
   }
   .second-row-inner {
     padding-left: $line-height-computed;
     padding-right: $line-height-computed;
   }
-  
+
   .embed-video-container {
     padding-top: $line-height-computed;
     padding-bottom: $line-height-computed;
@@ -51,7 +47,7 @@
 .section-offers {
   padding: $line-height-computed;
   background-color: #fff;
-  
+
   .thumbnail {
     position: relative;
     padding: 0;
@@ -100,7 +96,7 @@
         }
       }
     }
-    
+
     &:hover {
        .caption {
          &:before {
@@ -109,7 +105,7 @@
        }
     }
   }
-  
+
   .thumbnail.green .caption::before {
     background-color: rgba(152, 191, 64, 1) !important;
   }
@@ -120,6 +116,3 @@
     background-color: rgba(64, 199, 244, 1) !important;
   }
 }
-
-
-

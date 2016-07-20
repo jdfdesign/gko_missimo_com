@@ -54,7 +54,7 @@ if @rent_section && @sale_section
               <%= render "shared/bedroom_count_select", :f => form %>
             </div>
             <div class="col-md-2">
-              <div class='form-group'>
+              <div class='form-group no-margin'>
                 <%= form.input :with_category,
                 :collection => @lifestyle_categories,
                 :selected => params[:search].present? ? params[:search][:with_category] : nil,
@@ -93,7 +93,7 @@ if @rent_section && @sale_section
             <%= render "shared/bedroom_count_select", :f => form %>
           </div>
           <div class="col-md-2">
-            <div class='form-group'>
+            <div class='form-group no-margin'>
             <%= form.select :with_category,
             options_from_collection_for_select(@sale_section.categories, :id, :title, params[:search].present? ? params[:search][:with_category] : ''),
             { :prompt => t(:'helpers.select.category.prompt').html_safe },

@@ -40,7 +40,7 @@ if @sale_section
     </div>
     <div class="row">
       <div class="col-md-9">
-        <div class='form-group'>
+        <div class='form-group no-margin'>
           <%= form.input :price,
           :collection => price_options,
           :selected => params[:search].present? ? params[:search][:price] : nil,

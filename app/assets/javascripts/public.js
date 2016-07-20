@@ -280,9 +280,10 @@ $(window).load(function(){
 
   $('#slider').flexslider({
     animation: "slide",
-    controlNav: false,
+    controlNav: "thumbnails",
     animationLoop: false,
     slideshow: false,
+    smoothHeight: false,
     sync: "#carousel"
   });
 

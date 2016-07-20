@@ -1,6 +1,8 @@
 en:
   share_on_facebook: "Share on Facebook"
   week: week
+  name: Name
+  price: Price
   year: year
   searching: 'You are searching…'
   want_to_rent: 'I want to rent'
@@ -17,7 +19,7 @@ en:
     coup_de_cœur: Coup de cœur
     view_all_promotions: View all promotions
     price_from: "Price from "
-    price_notes: "A 10% service charge will be added to all rates. All villa prices are subject to an additional 5% Accommodation Tax. Rates are based on 2 guests per bedroom. Above rates are subject to change without any prior notice.<br/>Currency conversion provided for information only and subject to confirmation through our agents."
+    price_notes: "All rates are based on 7 nights and include meet & greet at arrival, Welcome gift and Daily maid service (except on Sunday & Public holidays). Currency conversion is provided for information only and subject to confirmation through our agents."
     specificities: Specificities
     placeholders:
       email: Email
