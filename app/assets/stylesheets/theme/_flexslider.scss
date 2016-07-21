@@ -54,9 +54,9 @@
 .flexslider .slides img {
   max-width: 100%;
   display: block;
-  //width: auto;
   margin-left: auto;
   margin-right: auto;
+  vertical-align: middle;
 }
 .flexslider .slides:after {
   content: "\0020";

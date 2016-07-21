@@ -11843,6 +11843,7 @@ span.valid {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  vertical-align: middle;
 }
 
 /* line 61, ../../app/assets/stylesheets/theme/_flexslider.scss */

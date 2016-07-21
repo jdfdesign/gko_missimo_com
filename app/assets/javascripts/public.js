@@ -276,15 +276,12 @@ $(window).load(function(){
     asNavFor: '#slider'
   });
 
-
-
   $('#slider').flexslider({
     animation: "slide",
-    controlNav: "thumbnails",
+    controlNav: true,
     animationLoop: false,
     slideshow: false,
-    smoothHeight: false,
-    sync: "#carousel"
+    sync: '#carousel'
   });
 
   $('#hero-slider').flexslider({

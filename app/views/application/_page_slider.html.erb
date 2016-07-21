@@ -5,21 +5,33 @@
   <ul class="slides">
     <% images.each do |img| %>
       <%
-        clazz = img.portrait? ? "img-vert" : "img-horiz"
         geom = case request.env['mobvious.device_type']
           when :mobile
-            img.portrait? ? "x206" : "480x206#"
-          when :tablet
-            img.portrait? ? "x658" : "1024x658#"
+            "x206"
           else
-            img.portrait? ? "x732" : "1140x732#"
+            "x520"
           end
-
-        thumb = img.thumbnail(geom).url
       %>
-      <li data-thumb="<%= thumb %>">
-        <%= image_tag(thumb, :class => clazz) %>
+      <li data-thumb = "<%= img.thumbnail(geom).url %>">
+        <%= image_fu(img, geom, :class => "img-responsive") %>
       </li>
     <% end %>
   </ul>
 </div><!--end of image slider-->
+<% if images.length > 1 %>
+<div class="flexslider" id="carousel">
+  <ul class="slides">
+    <% images.each do |img| %>
+      <%
+        geom = case request.env['mobvious.device_type']
+          when :mobile
+            "x80"
+          else
+            "x125"
+          end
+      %>
+      <li><%= image_fu(img, geom, :class => "img-responsive") %></li>
+    <% end %>
+  </ul>
+</div><!--end of image slider-->
+<% end %>
